@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNet.Identity;
+@using Store.Core.Domain.StoreTables.User;
+@using Store.Service;
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>ورود به پنل مدیریت داربست</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="/Content/Theme/assets/plugins/animate/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/Content/Theme/assets/css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="/Content/Theme/assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <!-- Icons -->
+    <link href="/Content/Theme/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/Theme/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+    <link href="/Content/Theme/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+    <link href="/Content/Theme/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+    <link href="/Content/Theme/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="/Content/Theme/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="/Content/Theme/assets/plugins/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <svg class="circular" viewbox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+        </svg>
+    </div>
+    <section id="wrapper" class="login-register">
+        <div class="login-box">
+            <div class="white-box">
+              @RenderBody()
+            </div>
+        </div>
+    </section>
+   
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Content/Theme/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+    <script src="/Content/Theme/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/Content/Theme/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="/Content/Theme/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="/Content/Theme/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <!--Wave Effects -->
+    <script src="/Content/Theme/assets/plugins/waves/waves.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/Content/Theme/assets/js/custom.js"></script>
+    <!--Style Switcher -->
+    <script src="/Content/Theme/assets/js/style-switcher.js"></script>
+</body>
+</html>

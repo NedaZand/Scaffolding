@@ -1,0 +1,116 @@
+﻿@model Store.Models.Stores.StoreRoom.ShowEquipments
+
+@if (Model.OutOutMaterial == null)
+{
+    <div class="row alert alert-warning alert-dismissable col-lg-12">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        در حال حاضر داده ای برای خروجی انبار ثبت نشده است.
+    </div>
+}
+else
+{
+    <div class="col-md-12 col-lg-12">
+        @if (Model.OutOutMaterial.Count == 0)
+        {
+            <div class="row alert alert-warning alert-dismissable col-lg-12">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                تجهیزات خروجی انبار جهت نمایش وجود ندارد.
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <div id="example_wrapper" class="dataTables_wrapper">
+                    <p class="font-bold">لیست تجهیزات خروجی</p>
+                    <table id="OutPutEquipmentGrid" class="table table-striped table-condensed table-bordered no-margin">
+                        <thead>
+                            <tr>
+                                <th>نام تجهیز</th>
+                                <th>تاریخ خروج </th>
+                                <th>تعداد خارج شده  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.OutOutMaterial)
+                            {
+                                <tr>
+                                    <td>@item.Title</td>
+                                    <td>@item.ExitDate</td>
+                                    <td>@item.Count</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+
+    </div>
+}
+<br />
+<hr />
+
+
+@if (Model.InPutMaterial == null)
+{
+    <div class="row alert alert-warning alert-dismissable col-lg-12">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        در حال حاضر داده ای برای ورودی انبار ثبت نشده است.
+    </div>
+}
+else
+{
+    <div class="col-md-12 col-lg-12">
+        @if (Model.InPutMaterial.Count == 0)
+        {
+            <div class="row alert alert-warning alert-dismissable col-lg-12">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                تجهیزات ورودی انبار جهت نمایش وجود ندارد.
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <div id="example_wrapper" class="dataTables_wrapper">
+                    <p class="font-bold">لیست تجهیزات ورودی</p>
+                    <table id="InPutEquipmentGrid" class="table table-striped table-condensed table-bordered no-margin">
+                        <thead>
+                            <tr>
+                                <th>نام تجهیز</th>
+                                <th>تاریخ ورود </th>
+                                <th>تعداد وارد شده  </th>
+                                <th>تعداد معیوب شده  </th>
+                                <th>تعداد مفقود شده  </th>
+                                <th>تعداد سالم  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.InPutMaterial)
+                            {
+                                <tr>
+                                    <td>@item.Title</td>
+                                    <td>@item.EntryDate</td>
+                                    <td>@item.Count</td>
+                                    <td>@item.DefectiveNumber</td>
+                                    <td>@item.MissingNumber</td>
+                                    <td>@item.HealthyNumber</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+
+    </div>
+}
+
+
+<script>
+    $(document).ready(function () {
+        $("#OutPutEquipmentGrid").DataTable();
+        $("#InPutEquipmentGrid").DataTable();
+    });
+</script>

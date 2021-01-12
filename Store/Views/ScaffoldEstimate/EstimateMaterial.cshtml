@@ -1,0 +1,225 @@
+﻿
+@{
+    ViewBag.Title = "EstimateMaterial";
+    string result="";
+
+    var g= ViewBag.EquipmentList;
+    string jsonObject = Newtonsoft.Json.JsonConvert.SerializeObject(g);
+    var ff = 0;
+}
+
+
+<html>
+<head>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <br />
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <span>داربست مهاری مستقل تک دیواره</span>
+            </div>
+            <div class="panel-body">
+                <div class="control-group">
+                    <div class="inc">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group m-b-40">
+                                    <label class="col-form-label">ارتفاع</label>
+                                    <input type="text" class="form-control" id="height" name="textbox" placeholder="ارتفاع" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group m-b-40">
+                                    <label class="col-form-label">طول</label>
+                                    <input type="text" class="form-control" id="tool" name="text" placeholder="طول" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group m-b-40">
+                                    <label class="col-form-label">تعداد عرض</label>
+                                    <input type="text" class="form-control" id="width" name="text" min="1" placeholder="تعداد عرض" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group m-b-40">
+                                    <label class="col-form-label">تعداد ارتفاع سطح دسترسی</label>
+                                    <input type="text" class="form-control" id="ertefa" name="text" min="1" placeholder="تعداد ارتفاع سطح دسترسی" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <button style="margin-left: 50px" class="btn btn-info pull-left" type="submit" id="append" name="append">
+                            وارد کردن عرض
+                        </button>
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+                <hr />
+                <button class="btn btn-primary" onclick="return clickedTheButton()">محاسبه</button>
+                <button class="btn btn-danger" onclick="return location.reload(true)">جدید</button>
+                <p >
+
+
+                </p>
+                <div class="white-box col-lg-6">
+                    <h3 class="box-title">لیست متریال مورد نیاز</h3>
+                    <ul class="list-group" id="myres">
+                    </ul>
+                   
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+      
+        $(document).ready(function () {
+          
+            $("#append").click(function (e) {
+                e.preventDefault();
+
+                var widths = document.getElementById('width').value;
+                var ertefa = document.getElementById('ertefa').value;
+                var button = $('#append');
+
+                for (var i = 1; i <= widths; i++) {
+                    $(".inc").append('<div class="controls  col-md-4 row">\
+                                <label class="col-form-label"> عرض ' + i + '</label>\
+                                <input class="form-control" id=' + "R" + i + ' type = "text" name = "text" placeholder =' + "عرض" + i + '>\
+                                <br>\
+                                <br>\
+                                </div>\
+                                ');
+
+                }
+
+                for (var k = 1; k <= ertefa; k++) {
+
+                    $(".inc").append('<br><br><div class="row">\
+                              <div class="col-md-4">\
+                             <div class="form-group m-b-40">\
+                            <label class= "col-form-label" > ارتفاع سطح دسترسی '+ k + '</label>\
+                            <input class="form-control" id=' + "M" + k + ' type="text" >\
+            </div>\
+        </div>\
+                            <div class="col-md-4">\
+            <div class="form-group m-b-40">\
+                            <label class="col-form-label">عرض سطح دسترسی '+ k + '</label>\
+                                    <input class="form-control" id=' + "F" + k + ' type="text" name="text" >\
+            </div>\
+        </div>\
+                            <div class="col-md-4">\
+            <div class="form-group  m-b-40">\
+                             <label class="col-form-label">حالت سطح دسترسی '+ k + ' بین 1 تا 4</label>\
+                                                <select class="form-control" id=' + "B" + k + '  name="text" ><option value="1">1<option><option value="2">2<option><option value="3">3<option><option value="4">4<option>\
+            </div>\
+        </div>\
+</div>\
+                            ');
+
+                }
+                if (widths != '') {
+
+
+                    $(button).attr('disabled', 'disabled');
+                }
+                else
+                    alert('لطفا تعداد عرض را وارد کنید');
+                return false;
+            });
+
+            $(document).on('click', '.remove_this', function () {
+                jQuery(this).parent().remove();
+                var button = $('#append');
+                $(button).removeAttr('disabled');
+                return false;
+            });
+            $("input[type=submit]").click(function (e) {
+                e.preventDefault();
+                $(this).next("[name=textbox]")
+                    .val(
+                        $.map($(".inc :text"), function (el) {
+                            return el.value
+                        }).join(",\n")
+                    )
+            })
+        });
+    </script>
+
+    <script src="~/scripts/CommonScripts/material.js"></script>
+
+    <script>
+        var arrayOfArrays;
+        $(document).ready(function () {
+           arrayOfArrays = @Html.Raw(jsonObject);
+        });
+        function clickedTheButton() {
+
+            //var widths = document.getElementById('width').value;
+            //var sum = 0;
+            //for (var i = 1; i <= widths; i++) {
+            //    alert($("#R"+i+"").val());
+            //    sum += parseInt($("#R"+i+"").val());
+            //}
+            //sum += parseInt($("#tool").val());
+            //sum += parseInt($("#height").val());
+            //alert(Math.ceil(sum / 40));
+            $("#myres").html('');
+            var no1 = document.getElementById('height').value;
+            var no2 = document.getElementById('tool').value;
+            var no3 = document.getElementById('width').value;
+
+            //تعداد ارتفاع
+            var ertefa = document.getElementById('ertefa').value;
+            var faseleDRCH = [];
+
+            var tedadFaseleCH = parseInt(no3);
+            for (let i = 1; i <= tedadFaseleCH; i++) {
+
+                var mFaseleCH = document.getElementById("R" + i).value;
+                faseleDRCH[i] = parseInt(mFaseleCH);
+
+            }
+            var jam = 0;
+            for (let i = 1; i < faseleDRCH.length; i++) {
+                jam = faseleDRCH[i] + jam;
+            }
+            var halatSD1 = [];
+            var widthMSD1 = [];
+            var heightMSD1 = [];
+            for (var i = 0; i < ertefa; i++) {//4
+                heightMSD1[i] = document.getElementById("M" + (i + 1)).value;
+                widthMSD1[i] = document.getElementById("F" + (i + 1)).value;
+                halatSD1[i] = document.getElementById("B" + (i + 1)).value;;
+                //widthCSD1[i] = widthMSD1[i] * 100;
+                //heightCSD1[i] = heightMSD1[i] * 100;
+                //tedadErtefaSD1[i] = parseInt(heightCSD1[i] / 180);
+                //tedadTolSD1[i] = parseInt(widthCSD1[i] / 240);
+
+            }
+
+
+            var x = getdar(no1, no2, no3, jam, heightMSD1, widthMSD1, halatSD1, ertefa, arrayOfArrays);
+            for (var i = 0; i < x.length; i++) {
+                
+                $("#myres").append('<li class="list-group-item node-treeview6" data-nodeid="0" style="color:undefined;background-color:undefined;"><span class="icon node-icon glyphicon glyphicon-wrench"></span>&nbsp;' + x[i][0] + '<span class="badge">' + x[i][1]+'</span></li>');
+             
+            }
+           
+            //document.getElementById("myres").innerHTML = x;
+          
+        }
+
+    </script>
+
+
+</body>
+</html>
+

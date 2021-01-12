@@ -1,0 +1,44 @@
+﻿@model Store.Models.Stores.StoreRoom.EquipmentModel
+@{
+    ViewBag.Title = "مدیریت تجهیزات ";
+}
+
+
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">فرم ثبت  تجهیزات جدید</h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+      
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/Equipment/Index">نمایش لیست تجهیزات  </a></li>
+            <li class="active">ثبت تجهیزات جدید </li>
+        </ol>
+    </div>
+  
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            @using (Ajax.BeginForm("Create", "Equipment", null, new AjaxOptions { Url = "/Equipment/Create", HttpMethod = "Post", OnSuccess = "addSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+
+                @Html.AntiForgeryToken()
+
+                @Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="/Equipment/Index"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+

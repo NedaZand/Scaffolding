@@ -1,0 +1,498 @@
+﻿@model Store.Models.Stores.AssignedWorkorderViewModel
+@{
+    /**/
+
+    ViewBag.Title = "اختصاص دستور کار";
+}
+<style>
+    .select2-container--default .select2-search--inline .select2-search__field {
+        width: 20% !important;
+    }
+
+    .disable {
+        cursor: not-allowed;
+    }
+</style>
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">فرم اختصاص دستور کار </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/AssignedTask/Index">نمایش دستور کار اختصاص یافته </a></li>
+            <li class="active">اختصاص دستور کار  </li>
+        </ol>
+    </div>
+
+</div>
+<div class="row" id="scrolltoinside">
+    <div class="col-md-12">
+        <div class="white-box">
+            <div class="panel-group" id="exampleAccordionDefault" aria-multiselectable="true" role="tablist">
+                <div class="panel">
+                    <div class="panel-heading" id="exampleHeadingDefaultOne" role="tab">
+                        <h4 class="panel-title"> <a class="font-bold collapsed" data-toggle="collapse" href="#exampleCollapseDefaultOne" data-parent="#exampleAccordionDefault" aria-expanded="false" aria-controls="exampleCollapseDefaultOne"><i class="zmdi zmdi-search zmdi-hc-fw" style="font-size:20px!important;"></i> جستجو پیشرفته </a> </h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="exampleCollapseDefaultOne" aria-labelledby="exampleHeadingDefaultOne" role="tabpanel" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body">
+                            @using (Html.BeginForm("ReportRoutin", "AssignedTask", FormMethod.Post, new { @enctype = "multipart/form-data", id = "search", @class = "", @target = "_blank" }))
+                            {
+
+                                @Html.AntiForgeryToken()
+
+                                <div class="row col-md-12">
+
+                                    <div class="col-md-3">
+                                        <div class="form-group m-b-40">
+
+                                            @Html.LabelFor(model => model.FromDate, new { @class = "col-sm-4 col-form-label " })
+
+                                            @Html.EditorFor(model => model.FromDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group m-b-40">
+
+                                            @*@Html.LabelFor(model => model.ToDate, new { @class = "col-sm-4 col-form-label " })
+
+                                                @Html.EditorFor(model => model.ToDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })*@
+                                            <label class="col-sm-12 col-form-label ">نفرا ت جاری</label>
+                                            <input type="text" class="form-control" name="CurrentPersonnel" value="30" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group m-b-40">
+
+                                            @*@Html.LabelFor(model => model.ToDate, new { @class = "col-sm-4 col-form-label " })
+
+                                                @Html.EditorFor(model => model.ToDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })*@
+                                            <label class="col-sm-12 col-form-label ">نفرا ت پروژه ای</label>
+                                            <input type="text" class="form-control" name="ProjectPersonnel" value="70" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group m-b-40">
+
+                                            @*@Html.LabelFor(model => model.ToDate, new { @class = "col-sm-4 col-form-label " })
+
+                                                @Html.EditorFor(model => model.ToDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })*@
+                                            <label class="col-sm-12 col-form-label ">نفرا ت کارهای حجیم</label>
+                                            <input type="text" class="form-control" name="BulkyPersonnel" value="32" />
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+                                    <button type="button" class="btn btn-success btn-rounded" onclick="Search()"> <i class="fa fa-search"></i> فیلتر</button>
+                                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="Cancel()"><i class="fa fa-times"></i> بازگشت</a>
+
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="section-workOrder">
+
+
+
+                @*@Html.Partial("_WorkorderList", Model)*@
+
+
+            </section>
+
+            <section id="section-routine"></section>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+
+    //$('.slimtest3').slimScroll({
+    //    height: '250px',
+    //    railVisible: true,
+    //    alwaysVisible: true
+    //});
+    function getCompanies(event, type) {
+
+        var companyId = $(event).val();
+        var getUnit = $(event).parents('div .scop').find('#UnitId').next().next();
+
+        jQuery.ajax({
+            url: "/AssignedTask/GetCompaniesByParentId",
+            datatype: "json",
+            method: "POST",
+            data: { parentId: companyId },
+            success: function (data) {
+                if (type == "section") {
+
+                    var getSection = $(event).parents('div .scop').find('#SectionId').next().next();
+
+                    $(getSection).html('');
+                    $(getUnit).html('');
+                    $.each(data, function (i, company) {
+
+                        $(getSection).append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+                }
+                else {
+
+                    $(getUnit).html('');
+                    $.each(data, function (i, company) {
+
+                        $(getUnit).append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+                }
+
+                //.each(function () {
+
+                //    if ($(this).hasClass("selectRoomType")) {
+
+
+                //    }
+
+                //    if ($(this).hasClass("roomTypeNumber")) {
+                //        number = parseInt($(this).val());
+                //    }
+
+
+
+
+                //});
+
+
+
+
+            }
+
+
+
+        });
+        getWorkorders(event);
+
+
+
+    }
+    function getWorkorders(event) {
+
+        var companyId = $(event).val();
+        jQuery.ajax({
+            url: "/AssignedTask/GetWorkOrderByCompanyID",
+            datatype: "json",
+            method: "POST",
+            data: { companyID: companyId },
+            success: function (data) {
+
+                var target = $(event).parents('div .scop').find('#WorkorderId').next().next();
+
+                $(target).html('');
+                $.each(data, function (i, company) {
+
+                    $(target).append('<option value="'
+
+                        + company.Value + '">'
+
+                        + company.Text + '</option>');
+
+                });
+                //.each(function () {
+
+                //    if ($(this).hasClass("selectRoomType")) {
+
+
+                //    }
+
+                //    if ($(this).hasClass("roomTypeNumber")) {
+                //        number = parseInt($(this).val());
+                //    }
+
+
+
+
+                //});
+
+
+
+
+            }
+
+
+
+        });
+
+
+
+
+    }
+
+    $(document).ready(function () {
+
+        $.ajax({
+            url: '/AssignedTask/getAssignedWorkorderList',
+            type: 'GET',
+            cache: false,
+            success: function (result) {
+
+                // نمایش اطلاعات دریافت شده
+                $('#section-workOrder').html(result);
+
+                //$(window).scrollTop($('.searchResult').offset().top);
+            }
+        });
+
+        $.ajax({
+            url: '/AssignedTask/getAssignedRoutinList',
+            type: 'GET',
+            cache: false,
+            success: function (result) {
+
+                $('#section-routine').html(result);
+
+
+            }
+        });
+
+        // بررسی اینکه ایجکس به پایان رسیده یا نه
+        var active = false;
+        $(document).ajaxStart(function () {
+            active = true;
+        }).ajaxStop(function () {
+            active = false;
+        });
+
+        $(document).on("click", "#section-workOrder #contentPager a[href]", function () {
+            $('#section-workOrder #contentPager .active').addClass("disable");
+            // بررسی  می کنیم که ایجکس درخواست شده به پایان رسیده تا ایجکس بعدی را ارسال کنیم
+            if (!active) {
+                $.ajax({
+                    url: $(this).attr("href"),
+                    type: 'GET',
+                    cache: false,
+                    success: function (result) {
+                        // نمایش اطلاعات دریافت شده
+                        $('#section-workOrder').html(result);
+                        $('#section-workOrder #contentPager .active').removeClass("disable");
+                        //$(window).scrollTop($('.searchResult').offset().top);
+                    }
+                });
+                return false;
+            }
+        });
+        $(document).on("click", "#section-routine #contentPager a[href]", function () {
+
+            // بررسی  می کنیم که ایجکس درخواست شده به پایان رسیده تا ایجکس بعدی را ارسال کنیم
+            if (!active) {
+                $.ajax({
+                    url: $(this).attr("href"),
+                    type: 'GET',
+                    cache: false,
+                    success: function (result) {
+
+
+                        // نمایش اطلاعات دریافت شده
+                        $('#section-routine').html(result);
+
+                        //$(window).scrollTop($('.searchResult').offset().top);
+                    }
+                });
+                return false;
+            }
+        });
+    });
+
+    function Search() {
+
+        var fromDate = $("#FromDate").val();
+        var toDate = $("#ToDate").val();
+
+
+        $.ajax({
+            url: '/AssignedTask/getAssignedWorkorderList?fromDate=' + fromDate + "&toDate=" + toDate,
+            type: 'Post',
+            cache: false,
+            success: function (result) {
+
+                // نمایش اطلاعات دریافت شده
+                $('#section-workOrder').html(result);
+
+                //$(window).scrollTop($('.searchResult').offset().top);
+            }
+        });
+
+        $.ajax({
+            url: '/AssignedTask/getAssignedRoutinList?fromDate=' + fromDate + "&toDate=" + toDate,
+            type: 'Post',
+            cache: false,
+            success: function (result) {
+                // نمایش اطلاعات دریافت شده
+                $('#section-routine').html(result);
+
+                //$(window).scrollTop($('.searchResult').offset().top);
+            }
+        });
+    }
+
+
+    function RemoveRoutin(id) {
+
+        var fromDate = $("#FromDate").val();
+
+        swal({
+            title: "رکورد حذف شود؟",
+            text: " درصورت حذف شما نمیتوانید این رکورد را بازیابی کنید!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "بله",
+            cancelButtonText: "خیر",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+
+                if (isConfirm) {
+                    $.ajax({
+                        url: '/AssignedTask/DeleteRoutin',
+                        data: { id: id },
+                        type: 'Post',
+
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.ResultType == 0) {
+                                swal("حذف شد!", data.Message, "success");
+
+                                $.ajax({
+                                    url: '/AssignedTask/getAssignedRoutinList?fromDate=' + fromDate,
+                                    type: 'Post',
+                                    cache: false,
+                                    success: function (result) {
+                                        // نمایش اطلاعات دریافت شده
+                                        $('#section-routine').html(result);
+
+                                        //$(window).scrollTop($('.searchResult').offset().top);
+                                    }
+                                });
+                            }
+                            else if (data.ResultType == 1) {
+
+                                swal("خطا", "امکان حذف رکورد وجود ندارد!", "error");
+                            }
+                            else if (data.ResultType == 2) {
+
+                                swal("فاقد مجوز دسترسی", data.Message, "error");
+                            }
+
+
+                        }
+
+
+                    });
+
+                } else {
+                    swal("کنسل", "حذف کنسل شد :)", "error");
+                }
+            });
+
+    };
+
+    function RemoveWork(id) {
+
+        var fromDate = $("#FromDate").val();
+
+        swal({
+            title: "رکورد حذف شود؟",
+            text: " درصورت حذف شما نمیتوانید این رکورد را بازیابی کنید!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "بله",
+            cancelButtonText: "خیر",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+
+                if (isConfirm) {
+                    $.ajax({
+                        url: '/AssignedTask/DeleteWork',
+                        data: { id: id },
+                        type: 'Post',
+
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.ResultType == 0) {
+                                swal("حذف شد!", data.Message, "success");
+
+                                $.ajax({
+                                    url: '/AssignedTask/getAssignedWorkorderList?fromDate=' + fromDate,
+                                    type: 'Post',
+                                    cache: false,
+                                    success: function (result) {
+
+                                        // نمایش اطلاعات دریافت شده
+                                        $('#section-workOrder').html(result);
+
+                                        //$(window).scrollTop($('.searchResult').offset().top);
+                                    }
+                                });
+                            }
+                            else if (data.ResultType == 1) {
+
+                                swal("خطا", "امکان حذف رکورد وجود ندارد!", "error");
+                            }
+                            else if (data.ResultType == 2) {
+
+                                swal("فاقد مجوز دسترسی", data.Message, "error");
+                            }
+
+
+                        }
+
+
+                    });
+
+                } else {
+                    swal("کنسل", "حذف کنسل شد :)", "error");
+                }
+            });
+
+    };
+</script>
+
+
+
+
+
+
+

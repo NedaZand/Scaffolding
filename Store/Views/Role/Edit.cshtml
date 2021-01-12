@@ -1,0 +1,97 @@
+﻿@model Store.Models.User.ApplicationRoleModel
+@{
+    ViewBag.Title = "فرم ویرایش  نقش";
+
+}
+
+@section Style {
+    <link href="~/Content/Theme/assets/plugins/tablesaw-master/dist/tablesaw.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/icheck/skins/all.css" rel="stylesheet">
+}
+
+@section Script {
+    <script src="~/Content/Theme/assets/plugins/tablesaw-master/dist/tablesaw.js"></script>
+    <script src="~/Content/Theme/assets/js/tablesaw-init.js"></script>
+    <!-- icheck -->
+    <script src="~/Content/Theme/assets/plugins/icheck/icheck.min.js"></script>
+    <script src="~/Content/Theme/assets/js/icheck.init.js"></script>
+}
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">ویرایش نقش </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+      
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/Role/Index">نمایش نقش</a></li>
+            <li class="active">ویرایش نقش </li>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+
+            @using (Ajax.BeginForm("Edit", "Role", null, new AjaxOptions { Url = "/Role/Edit", HttpMethod = "Post", OnSuccess = "editSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+                @Html.HiddenFor(m => m.RoleId)
+
+                @Html.AntiForgeryToken()
+
+                @Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ویرایش</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="/Role/Index"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    function addSuccess(data) {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        if (data.ResultType == 0) {
+
+            document.getElementById("form").reset();
+
+            //jQuery("span[id*='remove']").trigger("click");
+            //jQuery(".qq-upload-list").empty();
+            //jQuery(".qq-upload-size").empty();
+            $(".alert-success").hide();
+            $('.alert-success b').html();
+            $('.alert-success b').html(data.Message);
+            $('.alert-danger').hide();
+            $('.alert-warning').hide();
+            $(".alert-success").fadeToggle(350);
+
+
+        }
+        else if (data.ResultType == 1) {
+
+            //jQuery(".qq-upload-size").empty();
+            $('.alert-danger b').html();
+            $('.alert-danger b').html(data.Message);
+            $('.alert-success').hide();
+            $('.alert-warning').hide();
+            $(".alert-danger").fadeToggle(350);
+
+
+
+        }
+
+    }
+
+</script>

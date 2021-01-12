@@ -1,0 +1,15 @@
+----------- Exception Details on  2019/02/26 11:10:20 -----------------
+
+
+Log Written Date: 2019/02/26 11:10:20
+Error Line No : line 78
+Error Method Name : RemoveMethodInBuyService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/BuyMaterial/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

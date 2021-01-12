@@ -1,0 +1,32 @@
+----------- Exception Details on  1/1/2021 11:44:46 PM -----------------
+
+
+Log Written Date: 1/1/2021 11:44:46 PM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/2021 11:45:21 PM -----------------
+
+
+Log Written Date: 1/1/2021 11:45:21 PM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

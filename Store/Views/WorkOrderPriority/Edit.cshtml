@@ -1,0 +1,83 @@
+﻿@model Store.Models.Stores.WorkOrderPriorityModel
+@{
+           
+    ViewBag.Title = "مدیریت اولویت ها";
+
+}
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">فرم ویرایش اولویت </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+        <a href="#" target="_blank" class="btn btn-danger pull-left m-r-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">خرید قالب</a>
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/WorkOrderPriority/Index"> لیست اولویت ها </a></li>
+            <li class="active">ویرایش اولویت </li>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            @using (Ajax.BeginForm("Edit", "WorkOrderPriority", null, new AjaxOptions { Url = "/WorkOrderPriority/Edit", HttpMethod = "Post", OnSuccess = "addSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "floating-labels" }))
+            {
+
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model=>model.Id)
+
+                @Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success m-l-10"> <i class="fa fa-check"></i> ذخیره</button>
+                    <a class="btn btn-default" href="/WorkOrderPriority/Index">بازگشت</a>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    function addSuccess(data) {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        if (data.ResultType == 0) {
+
+           
+
+            //jQuery("span[id*='remove']").trigger("click");
+            //jQuery(".qq-upload-list").empty();
+            //jQuery(".qq-upload-size").empty();
+            $(".alert-success").hide();
+            $('.alert-success b').html();
+            $('.alert-success b').html(data.Message);
+            $('.alert-danger').hide();
+            $('.alert-warning').hide();
+            $(".alert-success").fadeToggle(350);
+
+
+        }
+        else if (data.ResultType == 1) {
+
+            //jQuery(".qq-upload-size").empty();
+            $('.alert-danger b').html();
+            $('.alert-danger b').html(data.Message);
+            $('.alert-success').hide();
+            $('.alert-warning').hide();
+            $(".alert-danger").fadeToggle(350);
+
+
+
+        }
+
+    }
+
+</script>

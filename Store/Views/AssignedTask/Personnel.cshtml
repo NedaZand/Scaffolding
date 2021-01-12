@@ -1,0 +1,121 @@
+﻿@model Store.Models.Stores.AssignedTaskUsersModel
+
+
+
+<div class="row">
+    <div class="col-md-12">
+            <div class="white-box">
+                <div class="table-responsive">
+                    <div id="example_wrapper" class="dataTables_wrapper">
+
+                        <table id="PersonnelGrid" class="table table-striped table-condensed table-bordered no-margin" style="width:100% !important;">
+                            <thead>
+                                <tr>
+                                    <th>نام و نام خانوادگی</th>
+                                    <th>کد پرسنلی</th>
+
+                                </tr>
+                            </thead>
+
+                        </table>
+                    </div>
+                </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <script>
+            var table;
+    $(document).ready(function () {
+        $(".select2").select2("destroy");
+
+        table = $("#PersonnelGrid").DataTable({
+            "language": {
+                "sEmptyTable": "هیچ داده ای در جدول وجود ندارد",
+                "sInfo": "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                "sInfoEmpty": "نمایش 0 تا 0 از 0 رکورد",
+                "sInfoFiltered": "(فیلتر شده از _MAX_ رکورد)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "نمایش _MENU_ رکورد",
+                "sLoadingRecords": "در حال بارگزاری...",
+                "sProcessing": "در حال پردازش...",
+                "sSearch": "جستجو:",
+                "sZeroRecords": "رکوردی با این مشخصات پیدا نشد",
+                "oPaginate": {
+                    "sFirst": "ابتدا",
+                    "sLast": "انتها",
+                    "sNext": "بعدی",
+                    "sPrevious": "قبلی"
+                },
+                "oAria": {
+                    "sSortAscending": ": فعال سازی نمایش به صورت صعودی",
+                    "sSortDescending": ": فعال سازی نمایش به صورت نزولی"
+                }
+            },
+            "processing": true,
+            "serverSide": true,
+            "info": true,
+            "searching": true,
+
+            "stateSave": false,
+            "lenghtMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+            "responsive": true,
+            //dom: '<"html5buttons"B>lTfgitp',
+            //buttons: [
+
+            //    { extend: 'excel', title: 'ExampleFile' },
+            //    {extend: 'pdf', title: 'ExampleFile'},
+
+            //    {extend: 'print',
+            //        customize: function (win){
+            //            $(win.document.body).addClass('white-bg');
+            //            $(win.document.body).css('font-size', '10px');
+
+            //            $(win.document.body).find('table')
+            //                    .addClass('compact')
+            //                    .css('font-size', 'inherit');
+            //        }
+            //    }
+            //],
+            "ajax": {
+                "url": "/AssignedTask/PersonnelList?assignedTaskId=@Model.AssignedTaskId",
+                "type": "get",
+
+            },
+            "columns": [
+            
+
+                { "data": "NameFamily", "orderable": false },
+
+                { "data": "PersonnelCode", "orderable": false }
+
+            ],
+            //"columnDefs": [
+
+            //    {
+            //        targets: 1,
+            //        render: function (data, type, row, meta) {
+            //            return '<div class="button-box"><div class="btn-group m-l-10"><button aria-expanded="false" data-toggle="dropdown" class="btn btn-danger dropdown-toggle waves-effect waves-light" type="button" > عملیات &nbsp; &nbsp; <span class="caret"></span></button><ul role="menu" class="dropdown-menu animated flipInX"><li><a href="javascript:void();" class="btn btn-youtube waves-effect btn-rounded waves-light" onclick="RemovePersonnel(' + data + ')"> <i class="zmdi zmdi-delete zmdi-hc-fw"></i> حذف</a></li></ul></div>'
+            //        }
+
+            //    },
+            //],
+
+            "order": []
+        });
+
+
+    });
+
+
+
+  
+        </script>
+
+
+
+

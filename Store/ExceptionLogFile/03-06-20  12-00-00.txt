@@ -1,0 +1,192 @@
+----------- Exception Details on  6/3/2020 1:16:08 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:08 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101349).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:16:08 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:08 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101341).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:16:09 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:09 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101336).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:16:10 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:10 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101317).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:16:10 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:10 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101266).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:16:10 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:10 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101255).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:16:11 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:11 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101247).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:16:12 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:16:12 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1951296508).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:18:22 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:18:22 AM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB2", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:18:44 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:18:44 AM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB2", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:19:53 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:19:53 AM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB2", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/3/2020 1:23:11 AM -----------------
+
+
+Log Written Date: 6/3/2020 1:23:11 AM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB2", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

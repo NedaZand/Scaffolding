@@ -1,0 +1,369 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldModel
+@{
+    string jsonObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.EquipmentList);
+    string jsonKeshabiObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.KeshabiEquipmentList);
+    string jsonPlateObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.PlateEquipmentList);
+    string jsonBaseObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.BaseEquipmentList);
+}
+
+@*داربست قفسی*@
+<hr>
+<link href="~/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css" media="print" rel="stylesheet">
+<link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/css/style.css">
+<link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/css/colors/default.css">
+<link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css">
+@*<script src="~/scripts/CommonScripts/MatGHafaciSys.js"></script>*@
+
+<div class="white-box">
+
+    @using (Html.BeginForm("CreateCageChart", "Scaffolding", FormMethod.Post, new { target = "_blank" }))
+    {
+        <div class="row col-md-12">
+            <div class="col-md-4">
+
+                <label class="col-sm-12 col-form-label">ارتفاع</label>
+                <input type="text" class="form-control" id="height" name="height" value="0" min="0" />
+
+            </div>
+            <div class="col-md-4">
+
+                <label class="col-sm-6 col-form-label">طول</label>
+                <input type="text" class="form-control" id="length" name="length" value="0" min="1.5" max="3" />
+
+            </div>
+            <div class="col-md-4">
+
+                <label class="col-sm-12 col-form-label"> عرض</label>
+                <input type="text" class="form-control" id="width" name="width" value="0" min="0.6" max="3" />
+
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="">
+                    <label class="col-sm-12 col-form-label ">انتخاب نوع متریال</label>
+                    <select class="form-control" id="matTypeSelector">
+                        <option value="1">سنتی</option>
+                        <option value="2">سیستمی</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+        <br />
+
+        <div class="btn-group m-b-20" style="width:100%;">
+            <a class="btn btn-success btn-outline waves-effect waves-light" role="button" style="width:100%;" onclick="return clickedTheButton()">محاسبه متریال</a>
+            <button class="btn btn-info btn-outline waves-effect waves-light" type="submit" style="width:100%;">رسم نمودار</button>
+            <button class="btn btn-info btn-outline waves-effect waves-light" type="button" style="width:100%;" onclick="return calculationManpower()">تخمین نیروی انسانی </button>
+            <a class="btn btn-warning btn-outline waves-effect waves-light" role="button" style="width:100%;" target="_blank" href="/SafetyChecklist/Create?scaffoldingId=@Model.Id">تگ ایمنی</a>
+        </div>
+
+        <div class="card-block" id="material">
+            <div id="materialPrint">
+
+                <div class="card card-outline-primary text-dark">
+                    <div class="card-block">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                اطلاعات دستورکار
+                                <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                                        <thead>
+                                            <tr>
+                                                <th width="30%">شماره درخواست</th>
+                                                <th width="30%">تگ</th>
+                                                <th width="30%">تاریخ</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td tabindex="1">@Model.WorkOrderModel.Title</td>
+                                                <td tabindex="1">@Model.WorkOrderModel.Tag</td>
+                                                <td tabindex="1">@Model.WorkOrderModel.ShamsiDate</td>
+                                            </tr>
+                                            <tr>
+                                                <th>شرکت</th>
+                                                <th>واحد</th>
+                                                <th>سکشن</th>
+                                            </tr>
+                                            <tr>
+                                                <td tabindex="1">@Model.WorkOrderModel.CompanyName</td>
+                                                <td tabindex="1">@Model.WorkOrderModel.UnitName</td>
+                                                <td tabindex="1">@Model.WorkOrderModel.SectionName</td>
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <ul class="list-group" id="myres"></ul>
+            </div>
+
+            <button class="btn btn-primary btn-rounded waves-effect waves-light" onclick="printPage('materialPrint');" type="button"><span class="btn-label"><i class="fa fa-print"></i></span>چاپ واحد انبار</button>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="card-block" id="manpower">
+            <div id="manpowerPrint">
+
+                <div class="card card-outline-primary text-dark">
+                    <div class="card-block">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                اطلاعات دستورکار
+                                <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <div class="panel-wrapper collapse in" aria-expanded="true">
+                                        <div class="panel-body">
+
+                                            <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="30%">شماره درخواست</th>
+                                                        <th width="30%">تگ</th>
+                                                        <th width="30%">تاریخ</th>
+
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td tabindex="1">@Model.WorkOrderTitle</td>
+                                                        <td tabindex="1">@Model.Tag</td>
+                                                        <td tabindex="1">@Model.ShamsiCreateDate</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>شرکت</th>
+                                                        <th>واحد</th>
+                                                        <th>سکشن</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td tabindex="1">
+                                                            @Model.WorkOrderModel.CompanyName
+                                                        </td>
+                                                        <td tabindex="1">
+                                                            @Model.WorkOrderModel.UnitName
+                                                        </td>
+                                                        <td tabindex="1">
+                                                            @Model.WorkOrderModel.SectionName
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th width="30%">شماره داربست</th>
+                                                        <th width="30%">تگ</th>
+                                                        <th width="30%">تاریخ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td tabindex="1">@Model.Title</td>
+                                                        <td tabindex="1">@Model.Tag</td>
+                                                        <td tabindex="1">@Model.ShamsiDate</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th width="30%">نوع داربست</th>
+                                                        <th width="30%">نوع بنا</th>
+                                                        <th width="30%">نوع زمین</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td tabindex="1">@Model.ScaffoldTypeTitle</td>
+                                                        <td tabindex="1">@Model.EarthTitle</td>
+                                                        <td tabindex="1">@Model.BuildingTitle</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th width="30%">طول </th>
+                                                        <th width="30%">عرض </th>
+                                                        <th width="30%"> ارتفاع</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td tabindex="1">@Model.Length</td>
+                                                        <td tabindex="1">@Model.Width</td>
+                                                        <td tabindex="1">@Model.Height</td>
+                                                    </tr>
+
+
+                                                </tbody>
+
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <ul class="list-group" id="manpowerResult"></ul>
+            </div>
+
+            <button class="btn btn-primary btn-rounded waves-effect waves-light" onclick="printPage('manpowerPrint');" type="button"><span class="btn-label"><i class="fa fa-print"></i></span>چاپ نیروی انسانی </button>
+
+            <div class="clearfix"></div>
+        </div>
+
+        @*</div>*@
+
+    }
+</div>
+
+<script>
+    var arrayOfArrays;
+    var jsonPlate;
+    var jsonBase;
+    var jsonKeshabi;
+    $(document).ready(function () {
+
+        $("#material").hide();
+        $("#manpower").hide();
+
+
+        // arrayOfArrays = @Html.Raw(jsonObject);
+        
+        arrayOfArrays = @Html.Raw(jsonObject);
+        jsonPlate = @Html.Raw(jsonPlateObject);
+        jsonBase = @Html.Raw(jsonBaseObject);
+        jsonKeshabi = @Html.Raw(jsonKeshabiObject);
+        
+        // اینا اطلاعاتته هرکدوم خواستی تو پارامتر جایگزاری کن حله؟ باشه فقفقط باید این شرط رو هم درست کنم صبر
+    });
+
+        function clickedTheButton() {
+            
+           
+            //var widths = document.getElementById('width').value;
+            //var sum = 0;
+            //for (var i = 1; i <= widths; i++) {
+            //    alert($("#R"+i+"").val());
+            //    sum += parseInt($("#R"+i+"").val());
+            //}
+            //sum += parseInt($("#tool").val());
+            //sum += parseInt($("#height").val());
+            //alert(Math.ceil(sum / 40));
+            $("#material").hide();
+            $("#myres").html('');
+            var no1 = document.getElementById('height').value;
+            var no2 = document.getElementById('length').value;
+            var no3 = document.getElementById('width').value;
+
+            //تعداد ارتفاع سطح دسترسی
+            //var ertefa = document.getElementById('heightCount').value;
+            var faseleDRCH = [];
+
+            var tedadFaseleCH = parseInt(no3);
+            //for (let i = 1; i <= tedadFaseleCH; i++) {
+
+            //    var mFaseleCH = document.getElementById("R" + i).value;
+            //    faseleDRCH[i] = parseInt(mFaseleCH);
+            
+            //}
+            //var jam = 0;
+            //for (let i = 1; i < faseleDRCH.length; i++) {
+            //    jam = faseleDRCH[i] + jam;
+            //}
+            var halatSD1 = [];
+            var widthMSD1 = [];
+            var heightMSD1 = [];
+            //for (var i = 0; i < ertefa; i++) {//4
+            //    heightMSD1[i] = document.getElementById("M" + (i + 1)).value;
+            //    widthMSD1[i] = document.getElementById("F" + (i + 1)).value;
+            //    halatSD1[i] = document.getElementById("B" + (i + 1)).value;
+            //    //widthCSD1[i] = widthMSD1[i] * 100;
+            //    //heightCSD1[i] = heightMSD1[i] * 100;
+            //    //tedadErtefaSD1[i] = parseInt(heightCSD1[i] / 180);
+            //    //tedadTolSD1[i] = parseInt(widthCSD1[i] / 240);
+
+            //}
+
+            var matType = $("#matTypeSelector option:selected").val();
+            
+            if (matType == 1) {
+                var x = Cage(no1, no2, no3, arrayOfArrays);
+            }
+
+            if (matType == 2) {
+                
+                var x = CageSys(no2, no1, no3,  jsonKeshabi, jsonBase, [1000, 1000], jsonPlate,1000);
+            }
+
+            for (var i = 0; i < x.length; i++) {
+
+                $("#myres").append('<li class="list-group-item node-treeview6" data-nodeid="0" style="color:undefined;background-color:undefined;"><span class="icon node-icon glyphicon glyphicon-wrench"></span>&nbsp;' + x[i][0] + '<span class="badge">' + x[i][1]+'</span></li>');
+
+            }
+
+            $("#material").slideDown("slow", function () {
+                // Animation complete.
+            });
+            //document.getElementById("myres").innerHTML = x;
+
+    }
+
+    function printPage(id)
+    {
+
+        var DocumentContainer = document.getElementById(id);
+        var WindowObject = window.open('', 'PrintWindow', 'width=100%,height=100%,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes');
+
+
+        WindowObject.document.writeln('<!DOCTYPE html>');
+        WindowObject.document.writeln('<html lang="fa"><head><title></title>');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css">');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css">');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/css/style.css">');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/css/colors/default.css">');
+        WindowObject.document.writeln('</head><body>')
+
+        WindowObject.document.writeln(DocumentContainer.innerHTML);
+
+        WindowObject.document.writeln('</body></html>');
+
+        WindowObject.document.close();
+        WindowObject.focus();
+        WindowObject.print();
+        WindowObject.close();
+
+        }
+
+    function calculationManpower() {
+        alert('s');
+        $("#material").hide();
+        $("#manpower").hide();
+        $("#manpowerResult").html('');
+
+        var sum = (parseFloat($("#width").val())) * (parseFloat($("#length").val())) * (parseFloat($("#height").val()));
+        alert(sum);
+        $("#manpowerResult").append('<li class="list-group-item node-treeview6" data-nodeid="0" style="color:undefined;background-color:undefined;"><span class="icon node-icon glyphicon glyphicon-user"></span>&nbsp; نیروی انسانی مورد نیاز<span class="badge">' + Math.ceil(sum / 40) + '</span></li>');
+
+        $("#manpower").slideDown("slow", function () {
+
+        });
+        alert(sum);
+    }
+
+</script>
+
+
+
+
+
+

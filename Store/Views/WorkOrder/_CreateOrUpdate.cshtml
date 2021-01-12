@@ -1,0 +1,244 @@
+﻿@model Store.Models.Stores.WorkOrderModel
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Title, new { @class = "col-sm-6 col-form-label " })
+        @Html.TextBoxFor(model => model.Title, new { required = "", @class = "form-control", placeholder = "شماره درخواست را وارد نمایید." })
+
+        @Html.ValidationMessageFor(model => model.Title)
+    </div>
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.Tag, new { @class = "col-sm-6 col-form-label " })
+            @Html.TextBoxFor(model => model.Tag, new { @class = "form-control", placeholder = "تگ را وارد نمایید." })
+
+        </div>
+
+    </div>
+   
+    <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+
+                @Html.LabelFor(model => model.ScaffoldingId, new { @class = "col-sm-4 col-form-label " })
+                @Html.DropDownListFor(model => model.ScaffoldingId, Model.Scaffoldings, new { @class = "form-control select2" })
+
+
+            </div>
+        </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.CompanyId, new { @class = "col-sm-4 col-form-label " })
+            @Html.DropDownListFor(model => model.CompanyId, Model.Companies, new { @class = "form-control select2", @onchange = "getCompanies(this,'unit')" })
+
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.UnitId, new { @class = "col-sm-4 col-form-label " })
+            @Html.DropDownListFor(model => model.UnitId, Model.Units, new { @class = "form-control select2", @onchange = "getCompanies(this,'section')" })
+
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.SectionId, new { @class = "col-sm-4 col-form-label " })
+            @Html.DropDownListFor(model => model.SectionId, Model.Sections, new { @class = "form-control select2"})
+
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    @*<div class="col-md-4">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.WorkOrderId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.WorkOrderId, Model.WorkOrders, new { @class = "form-control select2" })
+
+            </div>
+        </div>*@
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.Status, new { @class = "col-sm-6 col-form-label " })
+            @Html.DropDownListFor(model => model.Status, Model.Statuses, new { @class = "form-control select2" })
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+
+            @Html.LabelFor(model => model.PriorityId, new { @class = "col-sm-4 col-form-label " })
+            @Html.DropDownListFor(model => model.PriorityId, Model.Priorities, new { @class = "form-control select2" })
+
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+
+            @Html.LabelFor(model => model.TypeId, new { @class = "col-sm-4 col-form-label " })
+            @Html.DropDownListFor(model => model.TypeId, Model.Types, new { @class = "form-control select2" })
+
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.Date, new { @class = "col-sm-6 col-form-label " })
+            @Html.EditorFor(model => model.Date, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.ExpireDate, new { @class = "col-sm-6 col-form-label " })
+            @Html.EditorFor(model => model.ExpireDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+        </div>
+
+
+    </div>
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.StartDate, new { @class = "col-sm-6 col-form-label " })
+            @Html.EditorFor(model => model.StartDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.EndDate, new { @class = "col-sm-6 col-form-label " })
+            @Html.EditorFor(model => model.EndDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.Description, new { @class = "col-sm-6 col-form-label " })
+            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @placeholder = "توضیحات را وارد نمایید." })
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+       // $(".select2").select2();
+    });
+
+    function getCompanies(event, type) {
+
+        $("#UnitId").select2("destroy");
+        $("#SectionId").select2("destroy");
+
+
+        var companyId = $(event).val();
+        var getSection = $('#SectionId');
+       
+
+        jQuery.ajax({
+            url: "/WorkOrder/GetCompaniesByParentId",
+            datatype: "json",
+            method: "POST",
+            data: { parentId: companyId },
+            success: function (data) {
+                if (type == "unit") {
+
+                    var getUnit = $('#UnitId');
+
+                    $(getSection).html('');
+                    $(getUnit).html('');
+                    $.each(data, function (i, company) {
+
+                        $(getUnit).append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+
+                    $("#UnitId").select2();
+                    $("#SectionId").select2();
+
+                }
+                else {
+
+                    $(getSection).html('');
+                    $.each(data, function (i, company) {
+
+                        $(getSection).append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+
+                    $("#UnitId").select2();
+                    $("#SectionId").select2();
+                }
+
+                //.each(function () {
+
+                //    if ($(this).hasClass("selectRoomType")) {
+
+
+                //    }
+
+                //    if ($(this).hasClass("roomTypeNumber")) {
+                //        number = parseInt($(this).val());
+                //    }
+
+
+
+
+                //});
+
+
+
+
+            }
+
+
+
+        });
+
+
+    }
+
+
+</script>

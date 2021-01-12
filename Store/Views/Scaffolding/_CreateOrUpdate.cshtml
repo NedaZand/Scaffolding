@@ -1,0 +1,213 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldModel
+
+@*<div class="clearfix"></div>
+<div class="row" style="margin-right:25%;">
+    <button class="btn btn-success btn-rounded waves-effect waves-light" type="button" onclick="AddFunction('/ScaffoldType/Create')"><span class="btn-label"><i class="fa fa-plus"></i></span>افزودن نوع داربست</button>&nbsp;
+    <button class="btn btn-info btn-rounded waves-effect waves-light" type="button" onclick="AddFunction('/Building/Create')"><span class="btn-label"><i class="fa fa-plus"></i></span>افزودن نوع بنا</button>&nbsp;
+    <button class="btn btn-danger btn-rounded waves-effect waves-light" type="button" onclick="AddFunction('/Earth/Create')"><span class="btn-label"><i class="fa fa-plus"></i></span>افزودن نوع زمین</button>&nbsp;
+</div>
+
+<div class="clearfix"></div>*@
+<div class="row">
+    
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.CompanyId, new { @class = "col-sm-6 col-form-label " })
+            @Html.DropDownListFor(model => model.CompanyId, Model.Companies, new { @class = "form-control select2", @onchange = "getCompanies(this,'unit')" })
+
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.UnitId, new { @class = "col-sm-6 col-form-label "})
+            @Html.DropDownListFor(model => model.UnitId, Model.UnitList, new { @class = "form-control select2 UnitId", @onchange = "getCompanies(this,'section')" })
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.SectionId, new { @class = "col-sm-6 col-form-label " })
+            @Html.DropDownListFor(model => model.SectionId, Model.SectionList, new { @class = "form-control select2 SectionId", @onchange = "getWorkorders(this)" })
+
+        </div>
+
+    </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.WorkOrderId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.WorkOrderId, Model.WorkOrders, new { @class = "form-control select2" })
+
+                @Html.ValidationMessageFor(model => model.WorkOrderId)
+            </div>
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Title, new { @class = "col-sm-12 col-form-label " })
+            @Html.TextBoxFor(model => model.Title, new { required = "", @class = "form-control", placeholder = "شماره داربست را وارد نمایید." })
+
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.Tag, new { @class = "col-sm-12 col-form-label " })
+                @Html.TextBoxFor(model => model.Tag, new { @class = "form-control", placeholder = "تگ را وارد نمایید." })
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+
+                @Html.LabelFor(model => model.ScaffoldTypeId, new { @class = "col-sm-12 col-form-label " })
+                <div class="input-group">
+                    @Html.DropDownListFor(model => model.ScaffoldTypeId, Model.ScaffoldTypes, new { @class = "form-control select2" })
+
+                    @Html.ValidationMessageFor(model => model.ScaffoldTypeId)
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" onclick="AddFunction('/ScaffoldType/Create')" type="button"><i class="fa fa-plus"></i></button>
+                    </span>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.BuildingId, new { @class = "col-sm-12 col-form-label " })
+
+                <div class="input-group">
+                    @Html.DropDownListFor(model => model.BuildingId, Model.Buildings, new { @class = "form-control select2" })
+
+                    @Html.ValidationMessageFor(model => model.BuildingId)
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" onclick="AddFunction('/Building/Create')" type="button"><i class="fa fa-plus"></i></button>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+
+                @Html.LabelFor(model => model.EarthId, new { @class = "col-sm-12 col-form-label " })
+
+                <div class="input-group">
+                    @Html.DropDownListFor(model => model.EarthId, Model.Earths, new { @class = "form-control select2" })
+
+                    @Html.ValidationMessageFor(model => model.EarthId)
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" onclick="AddFunction('/Earth/Create')" type="button"><i class="fa fa-plus"></i></button>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.Date, new { @class = "col-sm-12 col-form-label " })
+                @Html.EditorFor(model => model.Date, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.ExpireDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.ExpireDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.SafetyTagExpire, new { @class = "col-sm-12 col-form-label " })
+                @Html.EditorFor(model => model.SafetyTagExpire, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.Width, new { @class = "col-sm-12 col-form-label " })
+                @Html.TextBoxFor(model => model.Width, new { @class = "form-control", @type = "number", @min = "0" })
+                @Html.ValidationMessageFor(model => model.Width)
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.Height, new { @class = "col-sm-12 col-form-label " })
+                @Html.TextBoxFor(model => model.Height, new { @class = "form-control", @type = "number", @min = "0" })
+                @Html.ValidationMessageFor(model => model.Height)
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.Length, new { @class = "col-sm-6 col-form-label " })
+                @Html.TextBoxFor(model => model.Length, new { @class = "form-control", @type = "number", @min = "0" })
+                @Html.ValidationMessageFor(model => model.Length)
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.Image, new { @class = "col-sm-12 col-form-label " })
+                @Html.EditorFor(model => model.Image, new { @class = "form-control" })
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $(".select2").select2();
+        });
+
+
+
+    </script>
+
+
+
+

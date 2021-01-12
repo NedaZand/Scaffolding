@@ -1,0 +1,773 @@
+----------- Exception Details on  1/1/1980 1:08:42 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:42 AM
+Error Line No : ine 554
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:06 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:06 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:06 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:06 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:06 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:06 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:06 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:06 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:06 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:06 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:07 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:07 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:07 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:07 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:07 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:07 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:08 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:08 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:08 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:08 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:08 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:08 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:09 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:09 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:09 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:09 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:10 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:10 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:10 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:10 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:11 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:11 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:11 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:11 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:12 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:12 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:13 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:13 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:14 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:14 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:14 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:14 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:15 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:15 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:15 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:15 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:16 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:16 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:17 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:17 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:17 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:17 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:18 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:18 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:19 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:19 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:19 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:19 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:20 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:20 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:20 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:20 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:21 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:21 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:22 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:22 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:22 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:22 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:23 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:23 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:24 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:24 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:24 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:24 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 2:14:25 AM -----------------
+
+
+Log Written Date: 1/1/1980 2:14:25 AM
+Error Line No : ine 101
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:00:57 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:00:57 AM
+Error Line No : line 72
+Error Method Name : Update Method In PersonnelService
+Error Message: DbUpdateConcurrencyException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateConcurrencyException
+Error Location : Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:04:56 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:04:56 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: DbUpdateConcurrencyException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateConcurrencyException
+Error Location : Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:05:14 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:05:14 AM
+Error Line No :  model)
+Error Method Name : EditMethodInPersonnelController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:06:17 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:06:17 AM
+Error Line No :  model)
+Error Method Name : EditMethodInPersonnelController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:43 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:43 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101349).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:44 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:44 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101341).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:44 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:44 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101336).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:45 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:45 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101317).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:45 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:45 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101266).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:45 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:45 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101255).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:45 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:45 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101247).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/1/1980 1:08:46 AM -----------------
+
+
+Log Written Date: 1/1/1980 1:08:46 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1951296508).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

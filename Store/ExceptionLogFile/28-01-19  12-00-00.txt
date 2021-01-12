@@ -1,0 +1,15 @@
+----------- Exception Details on  1/28/2019 5:43:35 PM -----------------
+
+
+Log Written Date: 1/28/2019 5:43:35 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInAttendanceController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Attendance/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

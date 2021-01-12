@@ -1,0 +1,15 @@
+----------- Exception Details on  2019/06/21 13:36:29 -----------------
+
+
+Log Written Date: 2019/06/21 13:36:29
+Error Line No : ne 1464
+Error Method Name : StiReportinActionInAssignedTaskController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/StiReport
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

@@ -1,0 +1,293 @@
+﻿@model Store.Models.Stores.StoreRoom.InputMaterialModel
+
+@if (Model.Id == 0)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.CompanyId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.CompanyId, Model.Companies, new { @class = "form-control select2", @onchange = "getCompanies(this,'unit')" })
+
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.UnitId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.UnitId, Model.UnitList, new { @class = "form-control select2 UnitId", @onchange = "getCompanies(this,'section')" })
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.SectionId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.SectionId, Model.SectionList, new { @class = "form-control select2 SectionId", @onchange = "getWorkorders(this)" })
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.WorkOrderId, new { @class = "col-sm-12 col-form-label " })
+                @Html.DropDownListFor(model => model.WorkOrderId, Model.WorkOrderList, new { @class = "form-control select2" })
+                @Html.ValidationMessageFor(model => model.WorkOrderId)
+
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.ScaffoldingId, new { @class = "col-sm-12 col-form-label " })
+                @Html.DropDownListFor(model => model.ScaffoldingId, Model.ScaffoldList, new { @class = "form-control select2" })
+                @Html.ValidationMessageFor(model => model.ScaffoldingId)
+
+            </div>
+
+        </div>
+    </div>
+}
+
+<div class="col-md-12">
+    <div class="form-group m-b-40">
+
+        @Html.LabelFor(model => model.Date, new { @class = "col-sm-12 col-form-label " })
+        @Html.EditorFor(model => model.Date, new { @class = "form-control" })
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group  m-b-40">
+            @Html.LabelFor(model => model.EquipmentId, new { @class = "col-sm-12 col-form-label " })
+            @Html.DropDownListFor(model => model.EquipmentId, Model.EquipmentList, new { @class = "select2", @multiple = "multiple" })
+            @Html.ValidationMessageFor(model => model.EquipmentId)
+            @Html.HiddenFor(model => model.OutputMaterialId)
+        </div>
+    </div>
+
+</div>
+
+<div class="row" id="count">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2();
+    });
+
+
+    function getCompanies(event, type) {
+
+
+        var companyId = $(event).val();
+
+        $("#UnitId").select2("destroy");
+        $("#SectionId").select2("destroy");
+
+        jQuery.ajax({
+            url: "/InputMaterial/GetCompaniesByParentId",
+            datatype: "json",
+            method: "POST",
+            data: { parentId: companyId },
+            success: function (data) {
+                if (type == "unit") {
+
+
+                    $('#UnitId').html('');
+                    $('#UnitId').change();
+
+                    $('#SectionId').html('');
+                    $('#SectionId').change();
+                    $.each(data, function (i, company) {
+
+                        $('#UnitId').append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+                    $("#UnitId").select2();
+                }
+                else {
+
+
+                    $('#SectionId').html('');
+                    $.each(data, function (i, company) {
+
+                        $('#SectionId').append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+
+                    $("#SectionId").select2();
+                }
+
+                //.each(function () {
+
+                //    if ($(this).hasClass("selectRoomType")) {
+
+
+                //    }
+
+                //    if ($(this).hasClass("roomTypeNumber")) {
+                //        number = parseInt($(this).val());
+                //    }
+
+
+
+
+                //});
+
+
+
+
+            }
+
+
+
+        });
+        getWorkorders(event);
+
+
+
+    }
+    function getWorkorders(event) {
+
+        var companyId = $(event).val();
+        $("#WorkOrderId").html('');
+        $("#WorkOrderId").select2("destroy");
+
+        jQuery.ajax({
+            url: "/InputMaterial/GetWorkOrderByCompanyID",
+            datatype: "json",
+            method: "POST",
+            data: { companyID: companyId },
+            success: function (data) {
+
+
+
+                $.each(data, function (i, company) {
+
+                    $("#WorkOrderId").append('<option value="'
+
+                        + company.Value + '">'
+
+                        + company.Text + '</option>');
+
+                });
+                //.each(function () {
+
+                //    if ($(this).hasClass("selectRoomType")) {
+
+
+                //    }
+
+                //    if ($(this).hasClass("roomTypeNumber")) {
+                //        number = parseInt($(this).val());
+                //    }
+
+
+
+
+                //});
+
+
+
+
+            }
+
+
+
+        });
+
+
+        $("#WorkOrderId").select2();
+
+    }
+
+    $("#ScaffoldingId").change(function () {
+
+        var ScaffoldingId = $(this).val();
+
+        $("#EquipmentId").html('');
+
+        jQuery.ajax({
+            url: "/InputMaterial/GetEquipmentByWorkOrderID",
+            datatype: "json",
+            method: "POST",
+            data: { scaffoldingId: ScaffoldingId },
+            success: function (data) {
+                $("#EquipmentId").html('');
+                $("#OutputMaterialId").val(data.OutputMaterialId);
+                $.each(data.EquipmentList, function (i, company) {
+
+                    $("#EquipmentId").append('<option value="' + company.Value + '">' + company.Text + '</option>');
+                });
+
+            }
+
+
+
+        });
+
+    });
+
+    $("#WorkOrderId").change(function () {
+
+        var workOrderId = $(this).val();
+
+        $("#ScaffoldingId").html('');
+
+        jQuery.ajax({
+            url: "/InputMaterial/GetScaffoldByWorkorderId",
+            datatype: "json",
+            method: "GET",
+            data: { workorderId: workOrderId },
+            success: function (data) {
+
+                $("#ScaffoldingId").html('');
+
+                $.each(data, function (i, company) {
+
+                    $("#ScaffoldingId").append('<option value="'
+
+                        + company.Value + '">'
+
+                        + company.Text + '</option>');
+
+                });
+
+            }
+
+
+
+        });
+
+    });
+    $('#EquipmentId').on('change', function () {
+        $("#count").html(null);
+        var result = '';
+        if ($(this).val() != null) {
+            $.each($(this).val(), function (data, value) {
+                result += '<div class="col-md-4"><div class="form-group m-b-40"><label class="control-label"> تعداد وارد شده ' + $("#EquipmentId option[value='" + value + "']").text() + '</label><input type="number"  id="ModelCount' + value + '" min="0" name="Count" class="form-control" placeholder=" تعداد وارد شده ' + $("#EquipmentId option[value='" + value + "']").text() + '"><label class="control-label"> تعداد معیوب ' + $("#EquipmentId option[value='" + value + "']").text() + '</label><input type="number"  id="ModelDefectiveNumber' + value + '" min="0" name="DefectiveNumber" class="form-control" placeholder=" تعداد معیوب ' + $("#EquipmentId option[value='" + value + "']").text() + '"></div></div>';
+                $("#count").html(result);
+            })
+        }
+    });
+</script>

@@ -1,0 +1,45 @@
+----------- Exception Details on  2019/01/26 20:20:33 -----------------
+
+
+Log Written Date: 2019/01/26 20:20:33
+Error Line No : ine 420
+Error Method Name : CreateAssignedWorkOrderActionInAssignedTaskController
+Error Message: FormatException
+Exception Type: System.FormatException
+Error Location : Input string was not in a correct format.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/01/26 20:20:39 -----------------
+
+
+Log Written Date: 2019/01/26 20:20:39
+Error Line No : ine 420
+Error Method Name : CreateAssignedWorkOrderActionInAssignedTaskController
+Error Message: FormatException
+Exception Type: System.FormatException
+Error Location : Input string was not in a correct format.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/01/26 20:20:41 -----------------
+
+
+Log Written Date: 2019/01/26 20:20:41
+Error Line No : ine 420
+Error Method Name : CreateAssignedWorkOrderActionInAssignedTaskController
+Error Message: FormatException
+Exception Type: System.FormatException
+Error Location : Input string was not in a correct format.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

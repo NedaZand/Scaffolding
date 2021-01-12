@@ -1,0 +1,562 @@
+﻿@model Store.Models.Stores.StoreRoom.ChartModel
+    @{ 
+        Layout = null;
+      
+    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        body {
+            font-family: Monospace;
+            background-color: #000000;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #info {
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            display: block;
+        }
+    </style>
+   
+    <link rel="stylesheet" type="text/css" href="/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css">
+ 
+    <link rel="stylesheet" type="text/css" href="/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css">
+ 
+    <link rel="stylesheet" type="text/css" href="/Content/Theme/assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="/Content/Theme/assets/css/colors/default.css">
+
+</head>
+<body>
+
+
+    @*<ul class="list-group" id="manpower"></ul>*@
+
+    <button class="btn btn-primary btn-rounded waves-effect waves-light btn-sm" onclick="Print();" type="button">چاپ نمودار </button>
+
+    @*دیوار اول*@
+
+    @Html.HiddenFor(Model => Model.HeightCount)
+    @Html.HiddenFor(Model => Model.WidthCount)
+    @Html.HiddenFor(Model => Model.Length)
+    @Html.HiddenFor(Model => Model.Height)
+
+
+    <div style="display:none;">
+        @for (int i = 1; i <= Model.HeightCount; i++)
+        {
+            <input class="form-control" id='M@(i)' value="@Model.AccessLevelHeight[i-1]" type="text" name="accessLevelHeight[]">
+
+            <input class="form-control" id='F@(i)' type="text" value="@Model.AccessLevelWidth[i-1]" name="accessLevelWidth[]">
+
+            <select class="form-control" id='B@(i)' name="accessLevelMode[]"><option value="@Model.AccessLevelMode[i-1]"> @Model.AccessLevelMode[i - 1] </option></select>
+
+
+        }
+        @for (int i = 1; i <= Model.WidthCount; i++)
+        {
+            if (Model.Widths[i - 1] == 0.6)
+            {
+                <select class="form-control" id='R@(i)' name="widths[]">
+                    <option value="8">8</option>
+
+                </select>
+            }
+
+            else if (Model.Widths2[i - 1] == 0.9)
+            {
+                <select class="form-control" id='R@(i)' name="widths[]">
+                    <option value="11">11</option>
+
+                </select>
+            }
+            else
+            {
+                <select class="form-control" id='R@(i)' name="widths[]">
+                    <option value="15">15</option>
+
+                </select>
+            }
+
+
+
+
+
+        }
+    </div>
+
+    @*دیوار دوم*@
+
+    @Html.HiddenFor(Model => Model.HeightCount2)
+    @Html.HiddenFor(Model => Model.WidthCount2)
+    @Html.HiddenFor(Model => Model.Length2)
+    @Html.HiddenFor(Model => Model.Height2)
+
+
+    <div style="display:none;">
+        @for (int i = 1; i <= Model.HeightCount2; i++)
+        {
+            <input class="form-control" id='M2@(i)' value="@Model.AccessLevelHeight2[i-1]" type="text" name="accessLevelHeight2[]">
+
+            <input class="form-control" id='F2@(i)' type="text" value="@Model.AccessLevelWidth2[i-1]" name="accessLevelWidth2[]">
+
+            <select class="form-control" id='B2@(i)' name="accessLevelMode2[]"><option value="@Model.AccessLevelMode2[i-1]"> @Model.AccessLevelMode2[i - 1] </option></select>
+
+
+        }
+        @for (int i = 1; i <= Model.WidthCount2; i++)
+        {
+            if (Model.Widths2[i - 1] == 0.6)
+            {
+                <select class="form-control" id='R2@(i)' name="widths2[]">
+                    <option value="8">8</option>
+
+                </select>
+            }
+            else if (Model.Widths2[i - 1] == 0.9)
+            {
+                <select class="form-control" id='R2@(i)' name="widths2[]">
+                    <option value="11">11</option>
+
+                </select>
+            }
+           else
+            {
+                <select class="form-control" id='R2@(i)' name="widths2[]">
+                    <option value="15">15</option>
+
+                </select>
+            }
+
+
+
+
+        }
+    </div>
+
+    <script src="~/Content/Theme/assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="~/scripts/CommonScripts/Divar.js"></script>
+    <script src="~/scripts/CommonScripts/orbit.js"></script>
+    <script src="~/scripts/CommonScripts/WebGL.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            init();
+            //calculationManpower();
+        });
+
+        function Print() {
+
+
+            window.print();
+        }
+
+        if (WEBGL.isWebGLAvailable() === false) {
+
+            document.body.appendChild(WEBGL.getWebGLErrorMessage());
+
+        }
+
+        var camera, scene, renderer;
+
+       
+        function init() {
+            var Tol = 30;
+            var Ertefa = 20;
+
+            //گرفتن تعداد سطح دسترسی دیوار اول
+            var TedadKolErtefaSD = parseInt(document.getElementById('HeightCount').value);
+          
+            var halatSD = [];
+            var widthMSD = [];
+            var heightMSD = [];
+            var widthCSD = [];
+            var heightCSD = [];
+            var tedadErtefaSD = [];
+            var tedadTolSD = [];
+            // //حلقه برای گرفتن مشخصات سطح دسترسی
+            for (var i = 0; i < TedadKolErtefaSD; i++) {
+                heightMSD[i] = parseInt(document.getElementById("M" + (i + 1)).value);
+                widthMSD[i] = parseInt(document.getElementById("F" + (i + 1)).value);
+                halatSD[i] = parseInt(document.getElementById("B" + (i + 1)).value);
+
+                widthCSD[i] = widthMSD[i] * 100;
+                heightCSD[i] = heightMSD[i] * 100;
+                tedadErtefaSD[i] = parseInt(heightCSD[i] / 180);
+                tedadTolSD[i] = parseInt(widthCSD[i] / 240);
+
+            }
+
+           
+            //var widthM = 20; // گرفتن طول داربست
+            //var heightM = 30; // گرفتن ارتفاع داربست
+
+            var heightM = parseInt(document.getElementById('Height').value);
+            var widthM = parseInt(document.getElementById('Length').value);
+
+
+            var widthC = widthM * 100;
+            var heightC = heightM * 100;
+            var tedadErtefa = parseInt(heightC / 180);
+            var tedadTol = parseInt(widthC / 240);
+            //گرفتن تعداد عرض داربست
+            var tedadArs1 = parseInt(document.getElementById('WidthCount').value);
+           // var tedadArs1 = parseInt(prompt("تعداد عرض را وارد کنید"));
+            var tedadArs = [];
+            var f = 0;
+            var kolFaseleHa = 0;
+            for (let i = 0; i < tedadArs1; i++) {
+               // f = parseInt(prompt("ام را وارد کنید" + i + "عرض"));
+
+                f= parseFloat(document.getElementById("R" + (i + 1)).value);
+                tedadArs[i] = f;
+                kolFaseleHa = kolFaseleHa + f;
+
+            }
+
+
+
+            //گرفتن تعداد سطح دسترسی دیوار دوم
+            var TedadKolErtefaSD2 = parseInt(document.getElementById('HeightCount2').value);
+           // var TedadKolErtefaSD2 = parseInt(prompt("تعداد سطح دسترسی را وارد نمایید"));
+            var halatSD2 = [];
+            var widthMSD2 = [];
+            var heightMSD2 = [];
+            var widthCSD2 = [];
+            var heightCSD2 = [];
+            var tedadErtefaSD2 = [];
+            var tedadTolSD2 = [];
+            // //حلقه برای گرفتن مشخصات سطح دسترسی دیوار دوم
+
+            for (var i = 0; i < TedadKolErtefaSD2; i++) {
+                heightMSD2[i] = parseInt(document.getElementById("M2" + (i + 1)).value);
+                widthMSD2[i] = parseInt(document.getElementById("F2" + (i + 1)).value);
+                halatSD2[i] = parseInt(document.getElementById("B2" + (i + 1)).value);
+
+                //heightMSD2[i] = prompt("ارتفاع سطح دسترسی2");
+                //widthMSD2[i] = prompt("عرض سطح دسترسی2");
+                //halatSD2[i] = prompt("حالت سطح دسترسی2 بین 1تا 4");
+
+                widthCSD2[i] = widthMSD2[i] * 100;
+                heightCSD2[i] = heightMSD2[i] * 100;
+                tedadErtefaSD2[i] = parseInt(heightCSD2[i] / 180);
+                tedadTolSD2[i] = parseInt(widthCSD2[i] / 240);
+
+            }
+
+
+
+            //var widthM2 = 10;// گرفتن طول داربست دیوار دوم
+            //var heightM2 = 20; //دیوار دوم گرفتن ارتفاع داربست
+
+            var heightM2 = parseInt(document.getElementById('Height2').value);
+            var widthM2 = parseInt(document.getElementById('Length2').value);
+
+            var widthC2 = widthM2 * 100;
+            var heightC2 = heightM2 * 100;
+            var tedadErtefa2 = parseInt(heightC2 / 180);
+            var tedadTol2 = parseInt(widthC2 / 240);
+            var tedadArs2 = [];
+            var f2 = 0;
+            var kolFaseleHa2 = 0
+            //گرفتن تعداد عرض داربست دیوار دوم
+
+            var tedadArs3 = parseInt(document.getElementById('WidthCount2').value);
+
+            //var tedadArs3 = parseInt(prompt("تعداد عرض را وارد کنید"));
+
+            for (let i = 0; i < tedadArs3; i++) {
+                f2 = parseFloat(document.getElementById("R2" + (i + 1)).value);
+                //f2 = parseInt(prompt("ام را وارد کنید" + i + "عرض"));
+                tedadArs2[i] = f2;
+                kolFaseleHa2 = kolFaseleHa2 + f2;
+
+            }
+            //tedadArs2.push(8);
+            //tedadArs2.push(15);
+            //tedadArs2.push(11);
+            //// tedadArs2.push(11);
+
+            //for (let i = 0; i < tedadArs2.length; i++) {
+            //    kolFaseleHa2 = kolFaseleHa2 + tedadArs2[i]
+
+            //}
+
+            //        for (let i = 0; i < 1; i++) {
+            //            kolFaseleHa2 = kolFaseleHa2 + tedadArs2[i]
+            //
+            //        }
+
+
+            scene = new THREE.Scene();
+            //				scene.background = new THREE.Color( 0x999999 );
+            //
+            //				var light = new THREE.DirectionalLight( 0xffffff );
+            //				light.position.set( 0.5, 1.0, 0.5 ).normalize();
+            //
+            //				scene.add( light );
+
+            camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 1000000);
+
+            camera.position.y = 300;
+            camera.position.z = 300;
+
+            scene.add(camera);
+
+
+
+            //
+            var grid = new THREE.GridHelper(0xffffff, tedadArs, tedadErtefa, tedadTol, Ertefa, Tol);
+            scene.add(grid);
+
+
+            // //dayere aval
+            var gridD2 = new THREE.GridHelperD2(0xffffff, tedadArs2, tedadErtefa2, Ertefa, Tol, tedadTol2);
+            scene.add(gridD2);
+            //
+            //        //amodi divar aval
+            var grid1 = new THREE.GridHelper1(0xffffff, tedadArs, tedadErtefa, tedadTol, Tol, Ertefa);
+            scene.add(grid1);
+            //
+            //dayere  Dovom
+            var grid1D2 = new THREE.GridHelper1D2(0xffffff, tedadArs2, tedadErtefa2, tedadTol2, Tol, Ertefa);
+            scene.add(grid1D2);
+            //
+            //        //fasele divar aval
+            var grid2 = new THREE.GridHelper2(0xffffff, tedadArs, tedadErtefa, tedadTol, Ertefa, Tol);
+            scene.add(grid2);
+            //
+            //etesal
+            var grid2D2 = new THREE.GridHelper2D2(0xffffff, tedadArs2, tedadErtefa2, tedadTol2, Ertefa, Tol);
+            scene.add(grid2D2);
+            //
+            //        //paye divar aval
+            var grid3 = new THREE.GridHelper3(0xffffff, tedadArs, tedadTol, Tol);
+            scene.add(grid3);
+            //
+            //        //paye divar aval1
+            var grid31 = new THREE.GridHelper31(0xff9900, tedadArs, tedadTol, Tol);
+            scene.add(grid31);
+            //
+            //etesal D1
+            var grid3D2 = new THREE.GridHelper3D2(0xffffff, tedadArs2, tedadTol2, Tol);
+            scene.add(grid3D2);
+            //
+            //etesal D2
+            var grid31D2 = new THREE.GridHelper31D2(0xff9900, tedadArs2, tedadTol2, Tol);
+            scene.add(grid31D2);
+            //
+            //        //ezafe bala divar aval
+            var grid4 = new THREE.GridHelper4(0xffffff, tedadArs, tedadTol, tedadErtefa, Ertefa, Tol);
+            scene.add(grid4);
+            //
+            //ezafe bala
+            var grid4D2 = new THREE.GridHelper4D2(0xffffff, tedadArs2, tedadTol2, tedadErtefa2, Ertefa, Tol);
+            scene.add(grid4D2);
+            //
+
+            var grid5 = new THREE.GridHelper5(0xffffff, tedadArs, tedadErtefa, tedadTol, Tol, Ertefa);
+            scene.add(grid5);
+
+            //        ////ezafe chap
+            var grid5D2 = new THREE.GridHelper5D2(0xffffff, tedadArs2, tedadErtefa2, tedadTol2, Tol, Ertefa);
+            scene.add(grid5D2);
+            //
+            //        //brase birony divar aval
+            var grid6 = new THREE.GridHelper6(0xffffff, tedadTol2, tedadTol, tedadErtefa, kolFaseleHa, Tol, Ertefa);
+            scene.add(grid6);
+            //
+            //zir paye
+            var grid6D2 = new THREE.GridHelper6D2(0xffffff, tedadTol2, tedadErtefa2, kolFaseleHa2, Ertefa, Tol);
+            scene.add(grid6D2);
+            //
+            //        //brase dakheli divar aval
+            var grid7 = new THREE.GridHelper7(0xffffff, tedadArs, tedadTol2, tedadTol, tedadErtefa, Ertefa, Tol);
+            scene.add(grid7);
+            //
+            //
+            //brase dakheli divar dovom
+            var grid7D2 = new THREE.GridHelper7D2(0xffffff, tedadArs2, tedadTol2, Tol, tedadErtefa2, Ertefa);
+            scene.add(grid7D2);
+            //
+            //
+            //        //SD divar aval takhte
+            var grid8 = new THREE.GridHelper8(0xff9900, TedadKolErtefaSD, tedadTolSD, Tol, halatSD, tedadTol, tedadArs, Ertefa, tedadErtefaSD);
+            scene.add(grid8);
+
+            //SD divar aval dovom
+            var grid8D2 = new THREE.GridHelper8D2(0xff9900, TedadKolErtefaSD2, halatSD2, tedadTolSD2, tedadArs2, tedadErtefaSD2, Ertefa, Tol, tedadTol2);
+            scene.add(grid8D2);
+            //
+            //        //SD divar aval gard tol
+            var grid9 = new THREE.GridHelper9(0xffffff, TedadKolErtefaSD, halatSD, tedadTolSD, Tol, tedadTol, tedadErtefaSD, Ertefa, kolFaseleHa);
+            scene.add(grid9);
+            //
+            //SD divar dovom gard tol
+            var grid9D2 = new THREE.GridHelper9D2(0xffffff, TedadKolErtefaSD2, halatSD2, tedadTolSD2, Tol, tedadTol2, Ertefa, tedadErtefaSD2, kolFaseleHa2);
+            scene.add(grid9D2);
+            //
+            // //SD divar aval gard arz
+            var grid10 = new THREE.GridHelper10(0xffffff, TedadKolErtefaSD, halatSD, tedadTolSD, tedadTol, Tol, Ertefa, tedadErtefaSD, kolFaseleHa);
+            scene.add(grid10);
+
+            //SD divar dovom gard arz
+            var grid10D2 = new THREE.GridHelper10D2(0xffffff, TedadKolErtefaSD2, halatSD2, tedadTolSD2, tedadTol2, tedadErtefaSD2, Tol, Ertefa, kolFaseleHa2);
+            scene.add(grid10D2);
+            //
+            //        //SD divar aval takhteJadid tol
+            var grid11 = new THREE.GridHelper11(0xff9900, TedadKolErtefaSD, halatSD, tedadTolSD, Tol, tedadTol, tedadErtefaSD, Ertefa, kolFaseleHa);
+            scene.add(grid11);
+            //
+            //SD divar dovom takhteJadid tol
+            var grid11D2 = new THREE.GridHelper11D2(0xff9900, TedadKolErtefaSD2, halatSD2, tedadTolSD2, Tol, tedadTol2, Ertefa, tedadErtefaSD2, kolFaseleHa);
+            scene.add(grid11D2);
+            //
+            //        //SD divar aval takhteJadid arz
+            var grid12 = new THREE.GridHelper12(0xff9900, TedadKolErtefaSD, halatSD, tedadTolSD, tedadTol, Tol, Ertefa, tedadErtefaSD, kolFaseleHa);
+            scene.add(grid12);
+
+            //        //SD divar aval pele
+            var grid13 = new THREE.GridHelper13(0xffffff, tedadErtefaSD, TedadKolErtefaSD, kolFaseleHa, Ertefa, Tol);
+            scene.add(grid13);
+
+            //   //SD divar aval pele
+            var grid13D2 = new THREE.GridHelper13D2(0xffffff, tedadErtefaSD2, TedadKolErtefaSD, kolFaseleHa2, kolFaseleHa, Ertefa, Tol);
+            scene.add(grid13D2);
+
+            //
+            //SD divar dovom takhteJadid arz
+            var grid12D2 = new THREE.GridHelper12D2(0xff9900, TedadKolErtefaSD2, halatSD2, tedadTolSD2, Tol, tedadTol2, Ertefa, tedadErtefaSD2, kolFaseleHa2);
+            scene.add(grid12D2);
+
+
+            //grond
+
+
+            var groundGeometry = new THREE.PlaneBufferGeometry(10000, 10000);
+            var groundMaterial = new THREE.MeshStandardMaterial({ roughness: 0.8, metalness: 0.4 });
+            var ground = new THREE.Mesh(groundGeometry, groundMaterial);
+            ground.rotation.x = Math.PI * - 0.5;
+            scene.add(ground);
+
+            var textureLoader = new THREE.TextureLoader();
+            //        textureLoader.load( 'textures/hardwood2_diffuse.jpg'
+            textureLoader.load('ax/aa.jpg'
+
+                , function (map) {
+
+                    map.wrapS = THREE.RepeatWrapping;
+                    map.wrapT = THREE.RepeatWrapping;
+                    map.anisotropy = 16;
+                    map.repeat.set(300, 300);
+                    groundMaterial.map = map;
+                    groundMaterial.needsUpdate = true;
+
+                });
+
+
+
+            var ambientLight = new THREE.AmbientLight(0xcccccc, 0.8);
+            scene.add(ambientLight);
+
+            var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(- 1, 1, 1);
+            scene.add(directionalLight);
+
+
+            //tasvire doresh
+            var cubeTextureLoader = new THREE.CubeTextureLoader();
+            cubeTextureLoader.setPath('textures/cube/skybox/');
+
+            var cubeTexture = cubeTextureLoader.load([
+                'px.jpg', 'nx.jpg',
+                'py.jpg', 'ny.jpg',
+                'pz.jpg', 'nz.jpg',
+            ]);
+
+            var cubeShader = THREE.ShaderLib['cube'];
+            cubeShader.uniforms['tCube'].value = cubeTexture;
+
+            var skyBoxMaterial = new THREE.ShaderMaterial({
+                fragmentShader: cubeShader.fragmentShader,
+                vertexShader: cubeShader.vertexShader,
+                uniforms: cubeShader.uniforms,
+                side: THREE.BackSide
+            });
+
+            var skyBox = new THREE.Mesh(new THREE.BoxBufferGeometry(200000000, 200000000, 200000000), skyBoxMaterial);
+            scene.add(skyBox);
+
+
+
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+
+
+            var controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.addEventListener('change', render);
+            controls.update();
+            document.addEventListener('keydown', onKeyDown, false);
+
+            window.addEventListener('resize', onWindowResize, false);
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            render();
+
+        }
+        function onKeyDown(event) {
+
+            event.stopPropagation();
+
+            switch (event.keyCode) {
+
+                case 38:
+                case 87:
+
+                case 40:
+                case 83:
+
+                case 37:
+                case 65:
+
+                case 39:
+                case 68:
+
+                //case 67: /*C*/     controls.crouch = true; break;
+                //case 32: /*space*/ controls.jump = true; break;
+                //case 17: /*ctrl*/  controls.attack = true; break;
+
+            }
+
+        }
+        function render() {
+
+            renderer.render(scene, camera);
+
+        }
+    </script>
+
+
+</body>
+</html>

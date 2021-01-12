@@ -1,0 +1,16 @@
+﻿@using Stimulsoft.Report.Mvc;
+@{Layout = null;}
+<html>
+<head>
+    <title>برگه چاپ</title>
+</head>
+<body>
+    @Html.Stimulsoft().StiMvcViewer(new StiMvcViewerOptions()
+{
+    Theme = StiTheme.Office2013,
+    ActionGetReportSnapshot = "StiReport",
+    ClientRequestTimeout = 9000,
+    ActionViewerEvent = "ViewerEvent",
+})
+</body>
+</html>

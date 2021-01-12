@@ -1,0 +1,69 @@
+﻿@model Store.Models.Stores.QuestionModel
+@{
+    
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <title>داربست های منقضی شده </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+                <h3 class="box-title">داربست های منقضی شده </h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                              
+                                <th>تصویر</th>
+                                <th>عنوان</th>
+                                <th>انقضا داربست</th>
+                                <th>تگ</th>
+                                <th>تاریخ درخواست</th>
+                                <th>تاریخ انقضا</th>
+                                <th>انقضا برچسب ایمنی</th>
+                                <th>طول</th>
+                                <th>عرض</th>
+                                <th>ارتفاع</th>
+                                <th>نوع داربست</th>
+                                <th>نوع ساختمان</th>
+                                <th>نوع زمین</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                @for (int i = 0; i < ((Model.QuestionList.Count())); i++)
+                                {
+                                    <td></td>
+                                }
+                                </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>
+

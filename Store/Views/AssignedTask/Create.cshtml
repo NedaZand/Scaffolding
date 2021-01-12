@@ -1,0 +1,498 @@
+﻿@model Store.Models.Stores.AssignedWorkorderViewModel
+@{
+    ViewBag.Title = "اختصاص دستور کار";
+}
+
+<style>
+    form {
+        text-align: right !important;
+    }
+
+    .ExtraSmallmargin {
+        margin-bottom: -20px;
+    }
+
+    .smallMargin {
+        margin-bottom: -30px;
+    }
+
+    .margin_left_right {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .Page_FontSize {
+        font-size: xx-small;
+    }
+
+    .form-group {
+        font-size: xx-small;
+    }
+
+    .form-control {
+        font-size: xx-small;
+    }
+
+    .select2-results {
+        font-size: xx-small;
+    }
+</style>
+
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">فرم اختصاص دستور کار </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/AssignedTask/Index">نمایش دستور کار اختصاص یافته </a></li>
+            <li class="active">اختصاص دستور کار  </li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="row" id="scrolltoinside">
+
+    <div class="col-md-12">
+        <div class="white-box">
+            <div class="alert alert-warning alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                توجه ! تنها پرسنلی  که امروز حضور دارند ( حضور و غیاب آنها  در سیستم ثبت شده است) و گروه کاری به آنها اختصاص داده شده در لیست گروه کاری نمایش داده می شوند.
+                همچنین تنها دستور کارهایی نمایش داده می شوند که داربست به انها اختصاص داده شده و وضعیت آنها درحال  اجرا یا  تخصیص داده نشده یا نامشخص  باشند
+            </div>
+            <div class="panel-group" id="exampleAccordionDefault" aria-multiselectable="true" role="tablist">
+                <div class="panel">
+                    <div class="panel-heading" id="exampleHeadingDefaultOne" role="tab">
+                        <h4 class="panel-title"> <a class="font-bold collapsed" data-toggle="collapse" href="#exampleCollapseDefaultOne" data-parent="#exampleAccordionDefault" aria-expanded="false" aria-controls="exampleCollapseDefaultOne"><i class="zmdi zmdi-search zmdi-hc-fw" style="font-size:20px!important;"></i> جستجو پیشرفته </a> </h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="exampleCollapseDefaultOne" aria-labelledby="exampleHeadingDefaultOne" role="tabpanel" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body">
+                            <form action="#" method="post" enctype="multipart/form-data" id="search">
+                                @Html.AntiForgeryToken()
+
+                                <div class="row col-md-12">
+
+                                    <div class="col-md-3">
+                                        <div class="form-group m-b-40">
+                                            @Html.LabelFor(model => model.ActivityDates, new { @class = "col-sm-4 col-form-label " })
+                                            @Html.EditorFor(model => model.ActivityDates, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" formtarget="_blank" formaction="ReportRoutin" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+                                    <button type="submit" formaction="Create" formco class="btn btn-success btn-rounded"> <i class="fa fa-search"></i> فیلتر</button>
+                                    @*<a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="Cancel()"><i class="fa fa-times"></i> بازگشت</a>*@
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @using (Ajax.BeginForm("CreateAssignedWorkOrder", "AssignedTask", null, new AjaxOptions { Url = "/AssignedTask/CreateAssignedWorkOrder", HttpMethod = "Post", OnSuccess = "addSuccessWorkorder" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+
+                <div class="row">
+                    <h3 class="text-dark font-weight-bold">اختصاص دستورکار</h3>
+                    <div class="text-danger">@Html.ValidationSummary()</div>
+                    @Html.Partial("_CreateOrUpdate", Model)
+                </div>
+
+
+
+            }
+            <hr />
+            @if (Model.AssignedWorkorderModelList.Count > 0)
+            {
+                <p><h3 class="text-dark font-weight-bold">نمایش دستورکارها</h3></p>
+
+            }
+            else
+            {
+                <div class="alert alert-warning alert-dismissable col-lg-12">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    آیتمی جهت نمایش دستورکار وجود ندارد.
+                </div>
+            }
+            <div class="row container-fluid">
+
+                @for (int i = 0; i < Model.AssignedWorkorderModelList.ToList().Count; i++)
+                {
+                    <div class="white-box row col-md-3 Page_FontSize" style="background-color:#edf1f5!important;">
+                        @using (Ajax.BeginForm("EditAssignedWorkOrder", "AssignedTask", null, new AjaxOptions { Url = "/AssignedTask/EditAssignedWorkOrder", HttpMethod = "Post", OnSuccess = "editSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+                        {
+
+
+                            <div class="row ExtraSmallmargin">
+                                <input type="hidden" name="WorkorderId" value="@Model.AssignedWorkorderModelList[i].WorkorderId" />
+                                <input type="hidden" name="Id" value="@Model.AssignedWorkorderModelList[i].Id" />
+                                <div class="">
+                                    <div class="form-group  ">
+
+                                        <select class="form-control select2 ">
+                                            <option value="@(Model.AssignedWorkorderModelList[i].CompanyId)">@(Model.AssignedWorkorderModelList[i].CompanyTitle)</option>
+
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-group">
+
+                                        <select class="form-control select2 ">
+                                            <option value="@(Model.AssignedWorkorderModelList[i].UnitId)">@(Model.AssignedWorkorderModelList[i].UnitTitle)</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="form-group">
+                                        <select class="form-control select2 ">
+                                            <option value="@(Model.AssignedWorkorderModelList[i].SectionId)">@(Model.AssignedWorkorderModelList[i].SectionTitle)</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row ExtraSmallmargin margin_left_right">
+                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+                                    <select class="form-control select2 ">
+                                        <option value="@(Model.AssignedWorkorderModelList[i].WorkorderId)">@(Model.AssignedWorkorderModelList[i].WorkTitle)</option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row smallMargin margin_left_right">
+                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+                                    @Html.DropDownListFor(model => model.AssignedWorkorderModelList[i].WorkgroupIds, Model.AssignedWorkorderModelList[i].Works, new { @class = "select2 m-b-10 select2-multiple", @multiple = "multiple", Name = "WorkgroupIds" })
+                                </div>
+
+                            </div>
+                            <div class="panel-group" style="margin-right:-5px;margin-left: -5px">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h6 class="panel-title">
+                                            <a data-toggle="collapse" style="font-size:xx-small" href="@("#collapse"+ i)">بیشتر ...</a>
+                                        </h6>
+                                    </div>
+                                    <div id="@("collapse" + i)" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="row smallMargin margin_left_right">
+                                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+                                                    <label class="col-sm-12 col-form-label">متراژ داربست</label>
+                                                    @Html.TextBoxFor(model => model.AssignedWorkorderModelList[i].RealArea, new { @class = "form-control", @disabled = "@disabled", @id = "RealArea" })
+
+                                                </div>
+                                            </div>
+                                            <div class="row smallMargin margin_left_right">
+                                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+
+                                                    @Html.LabelFor(model => model.AssignedWorkorderModelList[i].TotalArea, new { @class = "col-sm-6 col-form-label " })
+                                                    <input type="text" name="TotalArea" value="@Model.AssignedWorkorderModelList[i].TotalArea" class="form-control" />
+
+                                                </div>
+                                            </div>
+                                            <div class="row smallMargin margin_left_right">
+                                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+
+                                                    @Html.LabelFor(model => model.AssignedWorkorderModelList[i].EditStartDate, new { @class = "col-sm-6 col-form-label " })
+                                                    @Html.EditorFor(model => model.AssignedWorkorderModelList[i].EditStartDate, new { @class = "form-control" })
+
+
+                                                </div>
+                                            </div>
+                                            <div class="row smallMargin margin_left_right">
+                                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+
+                                                    @Html.LabelFor(model => model.AssignedWorkorderModelList[i].EidtEndDate, new { @class = "col-sm-6 col-form-label " })
+                                                    @Html.EditorFor(model => model.AssignedWorkorderModelList[i].EidtEndDate, new { @class = "form-control" })
+
+                                                </div>
+                                            </div>
+                                            <div class="row smallMargin margin_left_right">
+                                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+
+                                                    @Html.LabelFor(model => model.AssignedWorkorderModelList[i].Status, new { @class = "col-sm-6 col-form-label " })
+                                                    @Html.DropDownListFor(model => model.AssignedWorkorderModelList[i].Status, Model.Statuses, new { @class = "form-control select2", Name = "Status" })
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row smallMargin margin_left_right">
+                                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+
+                                                    @Html.LabelFor(model => model.AssignedWorkorderModelList[i].ShamsiDate, new { @class = "col-sm-6 col-form-label " })
+                                                    @Html.EditorFor(model => model.AssignedWorkorderModelList[i].Date, new { @class = "form-control" })
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-success btn-rounded" style="font-size:xx-small"> <i class="fa fa-check"></i> ویرایش</button>
+                                    <a class="btn btn-danger waves-effect waves-light btn-rounded" style="font-size:xx-small" href="javascript:void()" onclick="RemoveWork(@(Model.AssignedWorkorderModelList[i].Id))"><i class="fa fa-times"></i> حذف</a>
+
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+            @if (Model.AssignedWorkorderModelList.Count > 0)
+            {
+                <hr />
+            }
+            @if (Model.Routins.Count > 0)
+            {
+                <p><h3 class="text-dark font-weight-bold">اختصاص روتین</h3></p>
+                <br />
+            }
+            @if (Model.Routins.Count > 0)
+            {
+                @Html.Partial("_CreateOrUpdateRoutin", Model)
+            }
+            <hr />
+            <div class="row">
+                @for (int i = 0; i < Model.RoutineModel.ToList().Count; i++)
+                {
+
+                    <div class="white-box row col-md-3 Page_FontSize" style="background-color:#edf1f5!important;">
+
+                        @using (Ajax.BeginForm("EditRoutin", "AssignedTask", null, new AjaxOptions { Url = "/AssignedTask/EditRoutin", HttpMethod = "Post", OnSuccess = "editSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+                        {
+                            <input type="hidden" name="Id" value="@Model.RoutineModel[i].RoutineId" />
+
+                            <h6 class="price-lable text-white  btn-rounded bg-warning" style="text-align: center;">@Model.RoutineModel[i].RoutineTitle</h6>
+                            <br />
+                            <br />
+
+                            <div class="row ExtraSmallmargin margin_left_right">
+                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+                                    @Html.LabelFor(model => model.RoutineModel[i].ShamsiDate, new { @class = "col-sm-6 col-form-label " })
+                                    @Html.EditorFor(model => model.RoutineModel[i].EditDate, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="row ExtraSmallmargin margin_left_right">
+                                <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+                                    @Html.LabelFor(model => model.RoutineModel[i].UserIds, new { @class = "col-sm-6 col-form-label " })
+                                    @Html.DropDownListFor(model => model.RoutineModel[i].UserIds, Model.Personnels, new { @class = "select2 m-b-10 select2-multiple", @multiple = "multiple", Name = "UserIds" })
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-success btn-rounded" style="font-size:xx-small"> <i class="fa fa-check"></i> ویرایش</button>
+                                <a class="btn btn-danger waves-effect waves-light btn-rounded" style="font-size:xx-small" href="javascript:void()" onclick="RemoveRoutin(@(Model.RoutineModel[i].RoutineId))"><i class="fa fa-times"></i> حذف</a>
+
+                            </div>
+                        }
+                    </div>
+
+
+                }
+                @if (Model.RoutineModel.Count == 0)
+                {
+                    <div class="alert alert-warning alert-dismissable col-lg-12">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        آیتمی جهت نمایش روتین وجود ندارد.
+                    </div>
+                }
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@for (int i = 0; i < Model.AssignedWorkorderModelList.ToList().Count; i++)
+{
+
+
+    <script>
+        $(document).ready(function () {
+
+          var roleSelected = @Html.Raw(Json.Encode(Model.AssignedWorkorderModelList[i].UserSelected));
+          var statusSelected = @Html.Raw(Json.Encode(Model.AssignedWorkorderModelList[i].Status));
+
+            $("#AssignedWorkorderModelList_@(i)__WorkgroupIds").val(roleSelected).trigger("change");
+            $("#AssignedWorkorderModelList_@(i)__Status").val(statusSelected).trigger("change");
+
+
+     });
+    </script>
+}
+
+
+@for (int i = 0; i < Model.RoutineModel.ToList().Count; i++)
+{
+    <script>
+        $(document).ready(function () {
+
+          var roleSelected = @Html.Raw(Json.Encode(Model.RoutineModel[i].UserSelected));
+
+            $("#RoutineModel_@(i)__UserIds").val(roleSelected).trigger("change");
+
+            $('#RoutineModel_@(i)__EditDatefa').attr('disabled', true);
+     });
+    </script>
+}
+
+<script>
+    function PrepareItems() {
+        jQuery.ajax({
+            url: "/AssignedTask/PrepareItems",
+            datatype: "json",
+            method: "POST",
+            success: function (values) {
+                var result = values.data;
+                $.each(result.Companies, function (data, value) {
+                    $("#CompanyId").append($("<option></option>").val(value.Value).html(value.Text));
+                })
+                $.each(result.Workgroups, function (data, value) {
+                    $("#WorkgroupIds").append($("<option></option>").val(value.Value).html(value.Text));
+                })
+
+            },
+            error: function (error) {
+
+            }
+        });
+    }
+    function RemoveRoutin(id) {
+
+        var fromDate = $("#FromDate").val();
+
+        swal({
+            title: "رکورد حذف شود؟",
+            text: " درصورت حذف شما نمیتوانید این رکورد را بازیابی کنید!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "بله",
+            cancelButtonText: "خیر",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+
+                if (isConfirm) {
+                    $.ajax({
+                        url: '/AssignedTask/DeleteRoutin',
+                        data: { id: id },
+                        type: 'Post',
+
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.ResultType == 0) {
+                                swal("حذف شد!", data.Message, "success");
+                                location.reload();
+
+                                $.ajax({
+                                    url: '/AssignedTask/getAssignedRoutinList?fromDate=' + fromDate,
+                                    type: 'Post',
+                                    cache: false,
+                                    success: function (result) {
+                                        // نمایش اطلاعات دریافت شده
+                                        $('#section-routine').html(result);
+
+                                        //$(window).scrollTop($('.searchResult').offset().top);
+                                    }
+                                });
+                            }
+                            else if (data.ResultType == 1) {
+
+                                swal("خطا", "امکان حذف رکورد وجود ندارد!", "error");
+                            }
+                            else if (data.ResultType == 2) {
+
+                                swal("فاقد مجوز دسترسی", data.Message, "error");
+                            }
+
+
+                        }
+
+
+                    });
+
+                } else {
+                    swal("کنسل", "حذف کنسل شد :)", "error");
+                }
+            });
+
+    };
+
+    function RemoveWork(id) {
+
+        var fromDate = $("#FromDate").val();
+
+        swal({
+            title: "رکورد حذف شود؟",
+            text: " درصورت حذف شما نمیتوانید این رکورد را بازیابی کنید!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "بله",
+            cancelButtonText: "خیر",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+
+                if (isConfirm) {
+                    $.ajax({
+                        url: '/AssignedTask/DeleteWork',
+                        data: { id: id },
+                        type: 'Post',
+
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.ResultType == 0) {
+                                swal("حذف شد!", data.Message, "success");
+                                location.reload();
+
+                                $.ajax({
+                                    url: '/AssignedTask/getAssignedWorkorderList?fromDate=' + fromDate,
+                                    type: 'Post',
+                                    cache: false,
+                                    success: function (result) {
+
+                                        // نمایش اطلاعات دریافت شده
+                                        $('#section-workOrder').html(result);
+
+                                        //$(window).scrollTop($('.searchResult').offset().top);
+                                    }
+                                });
+                            }
+                            else if (data.ResultType == 1) {
+
+                                swal("خطا", "امکان حذف رکورد وجود ندارد!", "error");
+                            }
+                            else if (data.ResultType == 2) {
+
+                                swal("فاقد مجوز دسترسی", data.Message, "error");
+                            }
+
+
+                        }
+
+
+                    });
+
+                } else {
+                    swal("کنسل", "حذف کنسل شد :)", "error");
+                }
+            });
+
+    };
+</script>

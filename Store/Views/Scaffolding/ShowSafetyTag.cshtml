@@ -1,0 +1,56 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldModel
+
+
+<div class="col-md-12 col-lg-12">
+
+    <table class="table table-striped">
+
+        <tbody >
+            <tr>
+
+                <td >
+                    <h5>نام کارشناس</h5> <span class="mail-desc">@Model.ExpertName</span>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="">
+                    <h5>شماره پرمیت </h5> <span class="mail-desc">@Model.PermitNumber</span>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="">
+                    <h5>مجموع امتیازات </h5> <span class="mail-desc">@Model.TotalPoints</span>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td class="">
+                    <h5>تاریخ ثبت تگ ایمنی</h5> <span class="mail-desc">@Model.ShamsiRegistrationDate</span>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="">
+                    <h5>وضعیت داربست  </h5>
+
+                    <span class='mail-desc'>
+                        @if (Model.confirmed)
+                        {
+                            <span class='label label-rouded label-success'>تایید شده</span>
+
+                        }
+                        else
+                        {
+                            <span class='label label-rouded label-danger'>تایید نشده</span>
+                        }
+
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+
+    </div>

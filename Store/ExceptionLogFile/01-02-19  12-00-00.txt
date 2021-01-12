@@ -1,0 +1,30 @@
+----------- Exception Details on  2/1/2019 4:49:33 PM -----------------
+
+
+Log Written Date: 2/1/2019 4:49:33 PM
+Error Line No : Upload)
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbEntityValidationException
+Exception Type: System.Data.Entity.Validation.DbEntityValidationException
+Error Location : Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/1/2019 4:51:26 PM -----------------
+
+
+Log Written Date: 2/1/2019 4:51:26 PM
+Error Line No : Upload)
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

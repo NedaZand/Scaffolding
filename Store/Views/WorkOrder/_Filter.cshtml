@@ -1,0 +1,132 @@
+﻿@model Store.Models.Stores.WorkOrderModel
+@using (Html.BeginForm("Report", "WorkOrder", FormMethod.Post, new { @enctype = "multipart/form-data", id = "search", @class = "", @target = "_blank" }))
+{
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.TitleSearch, new { @class = "col-sm-6 col-form-label " })
+                @Html.TextBoxFor(model => model.TitleSearch, new { @class = "form-control", placeholder = "عنوان را وارد نمایید." })
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.TagSearch, new { @class = "col-sm-6 col-form-label " })
+                @Html.TextBoxFor(model => model.TagSearch, new { @class = "form-control", @placeholder = "تگ را وارد نمایید." })
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        @*<div class="col-md-3">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.CompanyId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.CompanyId, Model.Companies, new { @class = "form-control select2" })
+
+            </div>
+        </div>*@
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.TypeId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.TypeId, Model.Types, new { @class = "form-control select2" })
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.Status, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.Status, Model.Statuses, new { @class = "form-control select2" })
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.PriorityId, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.PriorityId, Model.Priorities, new { @class = "form-control select2" })
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.FromExpireDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.FromExpireDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.ToExpireDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.ToExpireDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.FromDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.FromDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.ToDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.ToDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+            </div>
+        </div>
+
+    </div>
+    @*<div class="row">
+        <div class="col-md-12">
+
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.Description, new { @class = "col-sm-6 col-form-label " })
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @placeholder = "توضیحات را وارد نمایید." })
+
+            </div>
+        </div>
+    </div>*@
+    <div class="form-actions">
+        <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+        <button type="button" class="btn btn-success btn-rounded" onclick="WorkorderSearch()"> <i class="fa fa-search"></i> فیلتر</button>
+        <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="Cancel()"><i class="fa fa-times"></i> بازگشت</a>
+
+    </div>
+
+}
+
+    <script>
+        $(document).ready(function () {
+
+            $(".select2").select2();
+        
+        });
+
+
+
+    </script>

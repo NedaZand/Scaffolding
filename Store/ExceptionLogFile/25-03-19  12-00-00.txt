@@ -1,0 +1,91 @@
+----------- Exception Details on  3/25/2019 3:15:28 AM -----------------
+
+
+Log Written Date: 3/25/2019 3:15:28 AM
+Error Line No : line 84
+Error Method Name : CreateMethodInPositionTypeController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.PositionTypes' with unique index 'IX_Title'. The duplicate key value is (مدیریت).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/PositionType/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/25/2019 4:36:44 AM -----------------
+
+
+Log Written Date: 3/25/2019 4:36:44 AM
+Error Line No :  model)
+Error Method Name : CreateMethodInPersonnelController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/25/2019 4:50:14 AM -----------------
+
+
+Log Written Date: 3/25/2019 4:50:14 AM
+Error Line No :  model)
+Error Method Name : CreateMethodInPersonnelController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/25/2019 4:51:40 AM -----------------
+
+
+Log Written Date: 3/25/2019 4:51:40 AM
+Error Line No :  model)
+Error Method Name : CreateMethodInPersonnelController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/25/2019 11:13:04 AM -----------------
+
+
+Log Written Date: 3/25/2019 11:13:04 AM
+Error Line No : line 68
+Error Method Name : Update Method In PersonnelService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/25/2019 11:31:41 AM -----------------
+
+
+Log Written Date: 3/25/2019 11:31:41 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : The object cannot be deleted because it was not found in the ObjectStateManager.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

@@ -1,0 +1,58 @@
+﻿@model Store.Models.User.ApplicationUserModel
+@{
+    ViewBag.Title = "مدیریت کاربران";
+
+}
+
+
+
+
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-12">
+            <h4 class="page-title"> ویرایش  کاربر جدید </h4>
+        </div>
+        <div class="col-lg-9 col-md-8 col-12">
+           
+            <ol class="breadcrumb">
+                <li><a href="/Home/Index">داشبورد</a></li>
+                <li><a href="/User/Index"> لیست کاربران </a></li>
+                <li class="active">ویرایش کاربر جدید</li>
+            </ol>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            @using (Ajax.BeginForm("Edit", "User", null, new AjaxOptions { Url = "/User/Edit", HttpMethod = "Post", OnSuccess = "editSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.UserId)
+                @Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ویرایش</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="/User/Index"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+@*<script>
+    $(document).ready(function () {
+      
+       
+
+        var roleSelected = @Html.Raw(Json.Encode(Model.RoleSelected));
+
+        $("#RoleId").val(roleSelected).trigger("change");
+
+    });
+
+
+</script>*@

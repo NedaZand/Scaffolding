@@ -1,0 +1,111 @@
+﻿@model Store.Models.Stores.WorkorderMaterialReportModel
+@{
+    ViewBag.Title = " گزارش گیری از تجهیزات دستور کار ";
+}
+
+
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">فرم گزارش  تجهیزات دستور کار  </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li class="active"> گزارش  متریال دستور کار  </li>
+        </ol>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+
+            @using (Html.BeginForm("Report", "WorkorderMaterialReport", FormMethod.Post, new { @enctype = "multipart/form-data", id = "form", @class = "", @target = "_blank" }))
+            {
+
+                @Html.AntiForgeryToken()
+
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group  m-b-40">
+
+                        <label class="col-sm-12 col-form-label"> دستور کار</label>
+
+                        @Html.DropDownListFor(model => model.WorkorderId, Model.Workorders, new { @class = "form-control select2" })
+
+
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group  m-b-40">
+
+                        <label class="col-sm-12 col-form-label">تجهیزات</label>
+
+                        @Html.DropDownListFor(model => model.EquipmentId, Model.Equipments, new { @class = "form-control select2" })
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+        $(document).ready(function () {
+
+            $(".select2").select2();
+        });
+
+    $("#WorkorderId").change(function () {
+
+        var workOrderId = $(this).val();
+
+        $("#EquipmentId").html('');
+
+        jQuery.ajax({
+            url: "/WorkorderMaterialReport/GetEquipmentByWorkOrderID",
+            datatype: "json",
+            method: "POST",
+            data: { workorderId: workOrderId },
+            success: function (data) {
+
+                $("#EquipmentId").html('');
+
+                $.each(data, function (i, company) {
+
+                    $("#EquipmentId").append('<option value="'
+
+                        + company.Value + '">'
+
+                        + company.Text + '</option>');
+
+                });
+
+            }
+
+
+
+        });
+
+    });
+
+</script>

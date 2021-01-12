@@ -1,0 +1,181 @@
+﻿@using Microsoft.AspNet.Identity;
+@using Store.Core.Domain.StoreTables.User;
+@using Store.Service;
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>پنل مدیریت داربست - @ViewBag.Title</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="~/Content/Theme/assets/plugins/animate/animate.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="~/Content/Theme/assets/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- page CSS -->
+    <link href="~/Content/Theme/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Theme/assets/plugins/custom-select/custom-select.css" rel="stylesheet" type="text/css">
+   
+    <link href="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/multiselect/css/multi-select.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="~/Content/Theme/assets/css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="~/Content/Theme/assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <!-- Icons -->
+    <link href="~/Content/Theme/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+
+    <!--dataTable-->
+    <link href="~/Content/Theme/assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <!--alerts CSS -->
+    <link href="~/Content/Theme/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+
+    <!-- JalaliDatePicker-->
+    <link href="~/content/bootstrap-jalali-datepicker-master/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/Theme/assets/plugins/tablesaw-master/dist/tablesaw.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/icheck/skins/all.css" rel="stylesheet">
+
+    @*<link href="~/Content/Theme/assets/plugins/icheck/skins/all.css" rel="stylesheet">
+        <link href="~/Content/Theme/assets/plugins/custom-select/custom-select.css" rel="stylesheet" type="text/css">*@
+
+    @RenderSection("Style", false)
+    <!-- jQuery -->
+    <script src="~/Content/Theme/assets/plugins/jquery/dist/jquery.min.js"></script>
+</head>
+<body class="fix-header fix-sidebar">
+    <!-- Preloader -->
+    <div class="preloader">
+        <svg class="circular" viewbox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+        </svg>
+    </div>
+    <div id="wrapper">
+     
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                
+                @RenderBody()
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+        @*<footer class="footer text-center">ارائه شده در وب‌سایت <a href="https://www.rtl-theme.com" target="_blank">راست‌چین</a></footer>*@
+    </div>
+    <!-- /#wrapper -->
+
+
+    <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <!--Wave Effects -->
+    <script src="~/Content/Theme/assets/plugins/waves/waves.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/Theme/assets/js/custom.js"></script>
+    <script src="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/custom-select/custom-select.min.js" type="text/javascript"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Content/Theme/assets/plugins/multiselect/js/jquery.multi-select.js"></script>
+
+    <script src="~/Content/Theme/assets/plugins/tablesaw-master/dist/tablesaw.js"></script>
+    <script src="~/Content/Theme/assets/js/tablesaw-init.js"></script>
+    <!-- icheck -->
+    <script src="~/Content/Theme/assets/plugins/icheck/icheck.min.js"></script>
+    <script src="~/Content/Theme/assets/js/icheck.init.js"></script>
+    @*<script>
+        jQuery(document).ready(function () {
+            // Switchery
+            var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+            $('.js-switch').each(function () {
+                new Switchery($(this)[0], $(this).data());
+
+            });*@
+
+    <!--Style Switcher -->
+    <script src="~/Content/Theme/assets/js/style-switcher.js"></script>
+    <!--dataTable -->
+    <script src="~/Content/Theme/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+    <!-- Switchery -->
+    <script src="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.js"></script>
+
+    <!-- Sweet-Alert  -->
+    <script src="~/Content/Theme/assets/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="~/Content/Theme/assets/js/jquery.sweet-alert.custom.js"></script>
+
+    <!-- JalaliDatePicker-->
+
+    <script src="~/content/bootstrap-jalali-datepicker-master/bootstrap-datepicker.fa.min.js"></script>
+
+    <script src="~/content/bootstrap-jalali-datepicker-master/bootstrap-datepicker.min.js"></script>
+
+    <!-- bootbox-->
+    <script src="~/scripts/bootbox.min.js"></script>
+    <!-- CommonJS-->
+    <script src="~/scripts/CommonScripts/Common.js"></script>
+    <!-- icheck -->
+    @*<script src="~/Content/Theme/assets/plugins/icheck/icheck.min.js"></script>
+        <script src="~/Content/Theme/assets/js/icheck.init.js"></script>
+        <script src="~/Content/Theme/assets/plugins/custom-select/custom-select.min.js" type="text/javascript"></script>*@
+    <script src="~/Content/Theme/assets/plugins/cbpFWTabs/cbpFWTabs.min.js"></script>
+
+    <!--slimscroll JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+
+    @RenderSection("Script", false)
+    <script>
+        (function () {
+
+            [].slice.call(document.querySelectorAll('.sttabs')).forEach(function (el) {
+                new CBPFWTabs(el);
+            });
+
+        })();
+        $(".myadmin-alert .closed").click(function (event) {
+            $(this).parents(".myadmin-alert").fadeToggle(350);
+
+            return false;
+        });
+
+
+        $(document).ajaxStart(function () {
+            $("button[type='submit']").prop("disabled", true);
+        });
+        $(document).ajaxStop(function () {
+            $("button[type='submit']").prop("disabled", false);
+        });
+
+    </script>
+</body>
+</html>

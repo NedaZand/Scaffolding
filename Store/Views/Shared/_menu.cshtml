@@ -1,0 +1,259 @@
+﻿<div class="sidebar-nav navbar-collapse slimscrollsidebar">
+    <ul class="nav" id="side-menu">
+
+        <li class="user-pro">
+            <a href="#" class="waves-effect">
+                <img src="~/Content/Theme/assets/images/User.jpg" alt="user-img" class="img-circle"> <span class="hide-menu">  @User.Identity.Name<span class="fa arrow"></span></span>
+            </a>
+            <ul class="nav nav-second-level">
+                @*<li><a href="javascript:void(0)"><i class="ti-user"></i> پروفایل من</a></li>
+                    <li><a href="javascript:void(0)"><i class="ti-wallet"></i> معاملات من</a></li>
+                    <li><a href="javascript:void(0)"><i class="ti-email"></i> لیست پیام ها</a></li>
+                    <li><a href="javascript:void(0)"><i class="ti-settings"></i> تنظیمات حساب</a></li>*@
+                <li><a href="/Account/LogOff"><i class="fa fa-power-off"></i> خروج</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="/Home/Index" class="waves-effect"><i class="zmdi zmdi-view-dashboard zmdi-hc-fw fa-fw"></i> <span class="hide-menu"> داشبورد </span></a>
+
+        </li>
+
+
+        @*<li>
+                <a href="/BrowseDaily/WorkorderList" class="waves-effect"><i class="zmdi zmdi-view-list  zmdi-hc-fw fa-fw"></i> <span class="hide-menu">  دستور کارهای اختصاص یافته امروز </span></a>
+
+            </li>
+            <li>
+                <a href="/BrowseDaily/RoutinList" class="waves-effect"><i class="zmdi zmdi-view-list  zmdi-hc-fw fa-fw"></i> <span class="hide-menu">  مرور کارهای روتین امروز </span></a>
+
+            </li>*@
+        <li>
+            <a href="javasript:void()" class="waves-effect"><i class="zmdi zmdi-comment-alt-text zmdi-hc-fw fa-fw"></i> <span class="hide-menu">مدیریت وظایف <span class="fa arrow"></span></span></a>
+            <ul class="nav nav-second-level">
+
+                <li> <a href="/AssignedTask/List">لیست وظایف</a></li>
+                @*<li> <a href="/AssignedTask/CreateRoutin">اختصاص دستور کار</a></li>*@
+                <li> <a href="/AssignedTask/Create">اختصاص روتین</a></li>
+                <li>
+                    <a href="javasript:void()" class="waves-effect"><i class="zmdi zmdi-comment-alt-text zmdi-hc-fw fa-fw"></i> <span class="hide-menu">مدیریت روتین <span class="fa arrow"></span></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Routin/Index">لیست روتین</a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/Routin/Create')">ثبت روتین  </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="inbox.html" class="waves-effect"><i class="zmdi zmdi-accounts zmdi-hc-fw fa-fw"></i> <span class="hide-menu">مدیریت کاربران <span class="fa arrow"></span></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect"> مدیریت نوع همکاری <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/EmployeeType/Index">لیست نوع همکاری </a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/EmployeeType/Create')">ثبت نوع همکاری</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect"> مدیریت پست سازمانی<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/PositionType/Index">لیست پست سازمانی  </a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/PositionType/Create')">ثبت پست سازمانی </a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect"> مدیریت کاربر سیستم <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/User/Index">لیست کاربر سیستم   </a></li>
+                        <li> <a href="/User/Create">ثبت کاربر سیستم  </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect"> مدیریت پرسنل  <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Personnel/Index">لیست پرسنل    </a></li>
+                        <li> <a href="/Personnel/SuspendedPersonnelList">لیست پرسنل تعلیق شده    </a></li>
+                        <li> <a href="/Personnel/Create">ثبت پرسنل   </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect"> مدیریت گروه کاری  <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/WorkingGroup/Index">لیست گروه کاری    </a></li>
+                        <li> <a href="/WorkingGroup/Create">ثبت گروه کاری   </a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">حضور و غیاب پرسنل<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Attendance/Index">لیست حضور و غیاب </a></li>
+                        <li> <a href="/Attendance/Create">ثبت حضور و غیاب پرسنل</a></li>
+                        <li> <a href="/Attendance/ExcelUpload">ثبت حضور از طریق فایل اکسل</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت نقش<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Role/Index">لیست نقش  </a></li>
+                        <li> <a href="/Role/Create">ثبت نقش</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="waves-effect"><i class="zmdi zmdi-copy zmdi-hc-fw fa-fw"></i> <span class="hide-menu"> مدیریت دستور کار<span class="fa arrow"></span></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/WorkOrder/Index">لیست دستور کار </a></li>
+                <li><a href="/WorkOrder/create">ثبت دستور کار </a></li>
+                <li><a href="/WorkOrder/ExcelUpload">ثبت دستور کار از طریق فایل اکسل </a></li>
+                @*<li><a href="/WorkOrderPriority/Index">ثبت اولویت سفارش </a></li>
+                    <li><a href="/WorkOrderType/Index">ثبت نوع سفارش </a></li>*@
+            </ul>
+        </li>
+        <li>
+            <a href="javasript:void()" class="waves-effect"><i class="zmdi zmdi-comment-alt-text zmdi-hc-fw fa-fw"></i> <span class="hide-menu">مدیریت شرکت ها<span class="fa arrow"></span></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/Company/Index">لیست شرکت </a></li>
+                <li><a href="/Company/Create">ثبت شرکت </a></li>
+            </ul>
+        </li>
+
+
+
+        <li>
+            <a href="javasript:void()" class="waves-effect"><i class="zmdi zmdi-comment-alt-text zmdi-hc-fw fa-fw"></i> <span class="hide-menu">مدیریت داربست <span class="fa arrow"></span></span></a>
+            <ul class="nav nav-second-level">
+
+
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">داربست<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Scaffolding/Index">لیست تمام داربست ها</a></li>
+                        <li> <a href="/Scaffolding/NoSafetyTag">لیست داربست های فاقد تگ ایمنی</a></li>
+                        <li> <a href="/Scaffolding/Create">ثبت داربست</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">چک لیست ایمنی<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/SafetyChecklist/Create">ثبت چک لیست ایمنی</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">نوع بنا<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Building/Index">لیست بنا</a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/Building/Create')">ثبت بنا</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">نوع زمین<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Earth/Index">لیست نوع زمین</a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/Earth/Create')">ثبت  نوع زمین</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">نوع داربست<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/ScaffoldType/Index">لیست نوع داربست</a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/ScaffoldType/Create')">ثبت نوع داربست</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+        <li>
+            <a href="javasript:void()" class="waves-effect"><i class="zmdi zmdi-comment-alt-text zmdi-hc-fw fa-fw"></i> <span class="hide-menu">مدیریت انبار <span class="fa arrow"></span></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مشاهده موجودی تجهیزات <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Stock/Index">لیست موجودی تجهیزات</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت تجهیزات <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Equipment/Index">لیست تجهیزات</a></li>
+                        <li> <a href="/Equipment/Index">ثبت تجهیزات  </a></li>
+                        <li> <a href="/EquipmentProperties/Index">اختصاص ویژگی  </a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت واحد<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Unit/Index">لیست واحد</a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/Unit/Create')">ثبت واحد</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت فروشندگان <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/CompanyStoreRoom/Index">لیست فروشندگان</a></li>
+                        <li> <a href="/CompanyStoreRoom/Create">ثبت فروشندگان  </a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت ویژگی ها <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/Property/Index">لیست مشخصه</a></li>
+                        <li> <a href="javascript:void()" onclick="AddFunction('/Property/Create')">ثبت مشخصه  </a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت خرید ها <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/BuyMaterial/Index">لیست خریدها</a></li>
+                        <li> <a href="/BuyMaterial/Create">ثبت خرید  </a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت خروجی انبار <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/OutputMaterial/Index">لیست خروجی</a></li>
+                        <li> <a href="/OutputMaterial/Create">ثبت خروجی  </a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="waves-effect">مدیریت ورودی  انبار <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li> <a href="/InputMaterial/Index">لیست ورودی</a></li>
+                        <li> <a href="/InputMaterial/Create">ثبت ورودی  </a></li>
+
+                    </ul>
+                </li>
+
+
+            </ul>
+        </li>
+        <li>
+            <a href="javasript:void()" class="waves-effect"><i class="zmdi zmdi-print zmdi-hc-fw fa-fw"></i> <span class="hide-menu">مدیریت گزارش <span class="fa arrow"></span></span></a>
+            <ul class="nav nav-second-level">
+
+
+                <li><a href="/PersonnelReport/Report">گزارش نیروی انسانی  </a></li>
+                <li><a href="/WorkOrderReport/Report">گزارش داربست  </a></li>
+                <li><a href="/ReportStock/StockMaterialReport">گزارش موجودی انبار  </a></li>
+                <li><a href="/BuyMaterialReport/BuyMaterialReport">گزارش متریال خریداری شده   </a></li>
+                <li><a href="/WorkorderMaterialReport/Report">گزارش متریال دستور کار   </a></li>
+
+            </ul>
+        </li>
+
+    </ul>
+</div>

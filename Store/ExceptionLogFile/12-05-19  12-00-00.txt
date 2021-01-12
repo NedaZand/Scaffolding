@@ -1,0 +1,75 @@
+----------- Exception Details on  2019/05/12 13:11:06 -----------------
+
+
+Log Written Date: 2019/05/12 13:11:06
+Error Line No : ine 148
+Error Method Name : UpdateMethodInBuyService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/BuyMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/05/12 13:11:10 -----------------
+
+
+Log Written Date: 2019/05/12 13:11:10
+Error Line No : ine 148
+Error Method Name : UpdateMethodInBuyService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/BuyMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/05/12 13:11:20 -----------------
+
+
+Log Written Date: 2019/05/12 13:11:20
+Error Line No : ine 148
+Error Method Name : UpdateMethodInBuyService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/BuyMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/05/12 13:11:33 -----------------
+
+
+Log Written Date: 2019/05/12 13:11:33
+Error Line No : ine 148
+Error Method Name : UpdateMethodInBuyService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/BuyMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/05/12 18:00:51 -----------------
+
+
+Log Written Date: 2019/05/12 18:00:51
+Error Line No : ine 148
+Error Method Name : UpdateMethodInBuyService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/BuyMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

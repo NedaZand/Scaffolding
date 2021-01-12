@@ -1,0 +1,197 @@
+﻿@model Store.Models.Stores.AssignedWorkorderDetailModel
+
+@{
+    ViewBag.Title = "مدیریت کارکرد روزانه";
+}
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">لیست کارکرد روزانه</h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            @*<li><a href="/User/Create">ثبت کاربر جدید</a></li>*@
+            <li><a href="javascript:void()" onclick="AddFunction('/WorkorderDetail/Create?id=@Model.AssignedWorkorderId')">افزودن کارکرد روزانه  </a></li>
+            <li class="active">لیست کارکرد روزانه</li>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row" id="scrolltoIn">
+    <div class="col-md-12">
+            <div class="white-box">
+                <div class="table-responsive">
+                    <div id="example_wrapper" class="dataTables_wrapper">
+
+                        <table id="DetailGrid" class="table table-striped table-condensed table-bordered no-margin" style="width:100% !important;">
+                            <thead>
+                                <tr>
+                                    @*<th>ویرایش</th>*@
+                                    <th>عملیات</th>
+                                    <th>دستور کار </th>
+                                    <th>تاریخ فعالیت</th>
+                                    <th>متراژ کل</th>
+
+
+                                </tr>
+                            </thead>
+
+                        </table>
+                    </div>
+                </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <script>
+            var table;
+    $(document).ready(function () {
+
+         table = $("#DetailGrid").DataTable({
+            "language": {
+                "sEmptyTable": "هیچ داده ای در جدول وجود ندارد",
+                "sInfo": "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                "sInfoEmpty": "نمایش 0 تا 0 از 0 رکورد",
+                "sInfoFiltered": "(فیلتر شده از _MAX_ رکورد)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "نمایش _MENU_ رکورد",
+                "sLoadingRecords": "در حال بارگزاری...",
+                "sProcessing": "در حال پردازش...",
+                "sSearch": "جستجو:",
+                "sZeroRecords": "رکوردی با این مشخصات پیدا نشد",
+                "oPaginate": {
+                    "sFirst": "ابتدا",
+                    "sLast": "انتها",
+                    "sNext": "بعدی",
+                    "sPrevious": "قبلی"
+                },
+                "oAria": {
+                    "sSortAscending": ": فعال سازی نمایش به صورت صعودی",
+                    "sSortDescending": ": فعال سازی نمایش به صورت نزولی"
+                }
+            },
+            "processing": true,
+            "serverSide": true,
+            "info": true,
+            "searching": true,
+
+            "stateSave": false,
+            "lenghtMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+            "responsive": true,
+            //dom: '<"html5buttons"B>lTfgitp',
+            //buttons: [
+
+            //    { extend: 'excel', title: 'ExampleFile' },
+            //    {extend: 'pdf', title: 'ExampleFile'},
+
+            //    {extend: 'print',
+            //        customize: function (win){
+            //            $(win.document.body).addClass('white-bg');
+            //            $(win.document.body).css('font-size', '10px');
+
+            //            $(win.document.body).find('table')
+            //                    .addClass('compact')
+            //                    .css('font-size', 'inherit');
+            //        }
+            //    }
+            //],
+            "ajax": {
+                "url": "/WorkorderDetail/List?assignedTaskId=@Model.AssignedWorkorderId",
+                "type": "get",
+
+            },
+            "columns": [
+
+                //{
+                //    "className": 'details-control',
+                //    "orderable": false,
+                //    "data": null,
+                //    "defaultContent": ''
+                //},
+
+                { "data": "Id", "orderable": false },
+
+                { "data": "WorkorderTitle", "orderable": false },
+
+                { "data": "ShamsiDate", "orderable": false },
+
+                { "data": "TotalArea", "orderable": false },
+
+                
+            ],
+            "columnDefs": [
+
+                {
+                    targets: 0,
+                    render: function (data, type, row, meta) {
+                        return '<div class="button-box"><div class="btn-group m-l-10"><button aria-expanded="false" data-toggle="dropdown" class="btn btn-danger dropdown-toggle waves-effect waves-light" type="button" > عملیات &nbsp; &nbsp; <span class="caret"></span></button><ul role="menu" class="dropdown-menu animated flipInX"><li><a href="javascript:void()" class="btn btn-info waves-effect btn-rounded waves-light"  onclick="EditFunction(\'' + "/WorkorderDetail/Edit" + '\',' + data + ');"> <i class="zmdi zmdi-edit zmdi-hc-fw"></i> ویرایش  </a></li><li class="divider"></li><li><a href="javascript:void();" class="btn btn-dribbble waves-effect btn-rounded waves-light" onclick="EditFunction(\'' + "/WorkorderDetail/GetPersonnelList" + '\',' + data + ')"> <i class="zmdi zmdi-accounts zmdi-hc-fw"></i> لیست افراد</a></li></ul></div>'
+                    }
+
+                },
+            ],
+
+            "order": []
+        });
+
+        // Add event listener for opening and closing details
+        //$('#DetailGrid tbody').on('click', 'td.details-control', function () {
+        //    var tr = $(this).closest('tr');
+        //    var row = table.row(tr);
+
+        //    if (row.child.isShown()) {
+        //        // This row is already open - close it
+        //        row.child.hide();
+        //        tr.removeClass('shown');
+        //    }
+        //    else {
+        //        if (table.row('.shown').length) {
+        //            $('.details-control', table.row('.shown').node()).click();
+        //        }
+        //        // Open this row
+        //        row.child(detailFormat(row.data())).show();
+        //        tr.addClass('shown');
+        //    }
+        //});
+
+
+
+    });
+
+
+
+    function detailFormat(d) {
+        var result;
+        $.ajax({
+            async: false,
+            url: '/WorkorderDetail/Edit/' + d.Id,
+            type: 'get',
+            dataType: 'html',
+            success: function (data) {
+                result = data;
+
+
+            }
+        });
+
+        return result;
+
+    }
+
+
+  
+            function closeFirst() {
+              
+                //table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+
+                AddFunction('/WorkorderDetail/Create?id=@Model.AssignedWorkorderId')
+            }
+        </script>
+
+
+
+

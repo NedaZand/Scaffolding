@@ -1,0 +1,16 @@
+----------- Exception Details on  5/15/2020 8:40:27 PM -----------------
+
+
+Log Written Date: 5/15/2020 8:40:27 PM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Scaffoldings' with unique index 'IX_Title'. The duplicate key value is (DR/FA/INST/1397/379).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

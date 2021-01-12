@@ -1,0 +1,71 @@
+﻿@model Store.Models.Stores.AssignedRoutineModel
+
+@using (Html.BeginForm("ReportRoutin", "AssignedTask", FormMethod.Post, new { @enctype = "multipart/form-data", id = "search", @class = "", @target = "_blank" }))
+{
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.PersonnelCode, new { @class = "col-sm-6 col-form-label " })
+
+            @Html.DropDownListFor(model => model.PersonnelCode, Model.Personnels, new { @class = "select2 form-control" })
+
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.RoutineId, new { @class = "col-sm-6 col-form-label " })
+            @Html.DropDownListFor(model => model.RoutineId, Model.Routines, new { @class = "select2 form-control" })
+
+
+        </div>
+
+    </div>
+    <div class="col-md-3">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.FromDate, new { @class = "col-sm-6 col-form-label " })
+            @Html.EditorFor(model => model.FromDate, new { @class = "form-control" })
+
+
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.ToDate, new { @class = "col-sm-6 col-form-label " })
+            @Html.EditorFor(model => model.ToDate, new { @class = "form-control" })
+
+
+
+        </div>
+    </div>
+
+</div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+        <button type="button" class="btn btn-success btn-rounded" onclick="RoutinTaskSearch()"> <i class="fa fa-search"></i> فیلتر</button>
+        <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="Cancel()"><i class="fa fa-times"></i> بازگشت</a>
+
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+
+    });
+
+
+
+</script>
+
+
+
+
+

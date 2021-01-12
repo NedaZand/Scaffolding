@@ -1,0 +1,219 @@
+﻿@model Store.Models.Stores.QuestionModel
+@{
+    int row = 0;
+    Layout = null;
+    ViewBag.Title = "چاپ تگ ایمنی";
+}
+<html lang="en">
+<head>
+    <title>تگ ایمنی </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success" id="info">
+                <div class="panel-heading">
+                 مشخصات  داربست
+                    <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+                </div>
+                <div class="panel-wrapper collapse in" aria-expanded="true">
+                    <div class="panel-body">
+
+                        <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                            <thead>
+                                <tr>
+                                    <th width="30%">شماره درخواست</th>
+                                    <th width="30%">تگ</th>
+                                    <th width="30%">تاریخ ایجاد</th>
+                                 
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td tabindex="1">@Model.WorkOrderTitle</td>
+                                    <td tabindex="1">@Model.Tag</td>
+                                    <td tabindex="1">@Model.ShamsiCreateDate</td>
+                                </tr>
+                                <tr>
+                                    <th>شرکت</th>
+                                    <th>واحد</th>
+                                    <th>سکشن</th>
+                                </tr>
+                                <tr>
+                                    <td tabindex="1">@Model.CompanyTitle</td>
+                                    <td tabindex="1">@Model.UnitTitle</td>
+                                    <td tabindex="1">@Model.SectionTitle</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">شماره داربست</th>
+                                    <th width="30%">تگ</th>
+                                    <th width="30%">تاریخ درخواست</th>
+                                </tr>
+                                <tr>
+                                    <td tabindex="1">@Model.ScaffoldModel.Title</td>
+                                    <td tabindex="1">@Model.ScaffoldModel.Tag</td>
+                                    <td tabindex="1">@Model.ScaffoldModel.ShamsiDate</td>
+                                </tr>
+                                <tr>
+                                    <th width="30%">نوع داربست</th>
+                                    <th width="30%">نوع بنا</th>
+                                    <th width="30%">نوع زمین</th>
+                                </tr>
+                                <tr>
+                                    <td tabindex="1">@Model.ScaffoldModel.ScaffoldTypeTitle</td>
+                                    <td tabindex="1">@Model.ScaffoldModel.EarthTitle</td>
+                                    <td tabindex="1">@Model.ScaffoldModel.BuildingTitle</td>
+                                </tr>
+                               
+                                <tr>
+                                    <th width="30%">طول </th>
+                                    <th width="30%">عرض </th>
+                                    <th width="30%"> ارتفاع</th>
+                                </tr>
+                                <tr>
+                                    <td tabindex="1">@Model.ScaffoldModel.Length</td>
+                                    <td tabindex="1">@Model.ScaffoldModel.Width</td>
+                                    <td tabindex="1">@Model.ScaffoldModel.Height</td>
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+                  
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="white-box">
+                        <table class='tablesaw table-bordered table-hover table  color-table success-table'>
+                            <thead>
+                                <tr><th scope='col' data-tablesaw-sortable-col data-tablesaw-priority='persist'>  ردیف </th><th scope='col' data-tablesaw-sortable-col data-tablesaw-priority='3'> سوال </th><th scope='col' data-tablesaw-sortable-col data-tablesaw-priority='2'> مطلوب </th><th scope='col' data-tablesaw-sortable-col data-tablesaw-priority='3'> نامطلوب </th><th scope='col' data-tablesaw-sortable-col data-tablesaw-priority='1'> توضیحات تکمیلی </th></tr>
+                            </thead>
+                            <tbody>
+
+                                @for (int i = 0; i < ((Model.QuestionList.Count())); i++)
+                                {
+
+
+
+                                    row += 1;
+
+                                    <tr>
+                                        @*<td style="display:none;"><input type="hidden" value="@g[j].Id" name="id[]" /></td>*@
+
+
+                                        <td width="5%">@row</td>
+                                        <td width="50%">@Model.QuestionList[i].Text</td>
+                                        @*<td><input type="radio" name="answer@(g[j].Id)[]" value="1" /><input type="radio" name="answer@(g[j].Id)[]" value="0" /></td>*@
+                                        <td width="5%">
+
+                                            <input type="checkbox" @(Model.QuestionList[i].IsChecked == true ? "checked" : "") class="checked" name="AnswerList" onclick="onchangeCheckbox(this)" id="AnswerList" value="@Model.QuestionList[i].Id">
+                                        </td>
+                                        <td width="5%">
+                                            <input type="checkbox" @(Model.QuestionList[i].IsChecked == false ? "checked" : "") class="checked">
+                                        </td>
+                                        <td width="35%">@Model.QuestionList[i].Description</td>
+
+                                    </tr>
+
+
+
+
+
+
+
+
+                                }
+
+
+                            </tbody>
+                        </table>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-warning" id="info">
+        <div class="panel-heading">
+            اطلاعات تگ ایمنی
+            <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+        </div>
+        <div class="panel-wrapper collapse in" aria-expanded="true">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.ExpertName, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.ScaffoldModel.ExpertName, new { @class = "form-control" })
+
+
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.PermitNumber, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.ScaffoldModel.PermitNumber, new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.PersonnelId, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.RealArea, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.RealArea, new { @class = "form-control"})
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.RegistrationDate, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.ScaffoldModel.ShamsiRegistrationDate, new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

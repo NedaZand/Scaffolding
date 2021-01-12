@@ -1,0 +1,15 @@
+﻿@model Store.Models.Stores.EmployeeTypeModel
+
+
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<div class="form-group m-b-40">
+    @Html.LabelFor(model => model.Title, new { @class = "col-sm-2 col-form-label " })
+    @Html.TextBoxFor(model => model.Title, new { required = "عنوان همکاری الزامی است", @class = "form-control", placeholder = "عنوان را وارد نمایید." })
+
+    @Html.ValidationMessageFor(model => model.Title)
+</div>
+

@@ -1,0 +1,1792 @@
+----------- Exception Details on  4/18/2019 7:44:06 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:06 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000001).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:07 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:07 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000002).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:08 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:08 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000003).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:09 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:09 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000004).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:10 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:10 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000005).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:10 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:10 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000006).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:11 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:11 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000007).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:12 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:12 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000008).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:13 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:13 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000009).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:14 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:14 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000010).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:15 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:15 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000011).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:16 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:16 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000012).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:17 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:17 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000013).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:18 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:18 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000014).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:19 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:19 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000015).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:19 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:19 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000016).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:20 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:20 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000017).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:21 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:21 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000018).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:22 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:22 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000019).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:23 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:23 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000020).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:24 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:24 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000021).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:25 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:25 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000022).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:26 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:26 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000023).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:27 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:27 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000024).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:27 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:27 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000025).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:28 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:28 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000026).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:29 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:29 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000027).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:30 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:30 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000028).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:31 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:31 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000029).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:32 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:32 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000030).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:33 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:33 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000031).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:34 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:34 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000032).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:34 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:34 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000033).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:35 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:35 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000034).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:36 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:36 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000035).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:37 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:37 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000036).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:38 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:38 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000037).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:39 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:39 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000038).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:40 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:40 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000039).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:41 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:41 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000040).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:42 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:42 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000041).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:43 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:43 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000042).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:44 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:44 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000043).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:45 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:45 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000044).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:46 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:46 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000045).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:47 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:47 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000046).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:48 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:48 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000047).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:49 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:49 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000048).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:51 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:51 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000049).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:52 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:52 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000050).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:52 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:52 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000051).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:53 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:53 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000052).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:54 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:54 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000053).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:55 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:55 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000054).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:56 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:56 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000055).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:57 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:57 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000056).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:58 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:58 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000057).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:44:59 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:44:59 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000058).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:00 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:00 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000059).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:01 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:01 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000060).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:02 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:02 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000061).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:02 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:02 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000062).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:03 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:03 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000063).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:04 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:04 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000064).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:06 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:06 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000065).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:07 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:07 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000066).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:08 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:08 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000067).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:09 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:09 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000068).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:10 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:10 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000069).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:11 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:11 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000070).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:12 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:12 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000071).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:16 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:16 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000072).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:16 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:16 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000073).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:19 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:19 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000074).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:20 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:20 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000075).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:21 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:21 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000076).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:22 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:22 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000077).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:23 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:23 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000078).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:24 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:24 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000079).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:25 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:25 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000080).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:26 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:26 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000081).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:27 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:27 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000082).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:28 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:28 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000083).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:29 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:29 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000084).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:30 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:30 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000085).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:31 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:31 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000086).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:32 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:32 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000087).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:33 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:33 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000088).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:33 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:33 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000089).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:34 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:34 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000090).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:35 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:35 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000091).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:36 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:36 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000092).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:37 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:37 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000093).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:38 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:38 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000094).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:39 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:39 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000095).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:40 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:40 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000096).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:40 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:40 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000097).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:41 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:41 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000098).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:42 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:42 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000099).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:43 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:43 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000100).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:44 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:44 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000101).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:45 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:45 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000102).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:46 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:46 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000103).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:47 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:47 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000104).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:48 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:48 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000105).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:49 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:49 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000106).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:49 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:49 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000107).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:50 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:50 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000108).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:51 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:51 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000109).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:52 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:52 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000110).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:53 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:53 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000111).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/18/2019 7:45:54 AM -----------------
+
+
+Log Written Date: 4/18/2019 7:45:54 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (1000112).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

@@ -1,0 +1,90 @@
+----------- Exception Details on  2/16/2019 7:19:46 PM -----------------
+
+
+Log Written Date: 2/16/2019 7:19:46 PM
+Error Line No : line 36
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/16/2019 7:55:01 PM -----------------
+
+
+Log Written Date: 2/16/2019 7:55:01 PM
+Error Line No : line 36
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/16/2019 7:59:51 PM -----------------
+
+
+Log Written Date: 2/16/2019 7:59:51 PM
+Error Line No : line 36
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/16/2019 8:03:11 PM -----------------
+
+
+Log Written Date: 2/16/2019 8:03:11 PM
+Error Line No : line 66
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/16/2019 8:37:10 PM -----------------
+
+
+Log Written Date: 2/16/2019 8:37:10 PM
+Error Line No : line 36
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/16/2019 9:42:10 PM -----------------
+
+
+Log Written Date: 2/16/2019 9:42:10 PM
+Error Line No : line 36
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

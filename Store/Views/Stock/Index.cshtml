@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewBag.Title = "نمایش موجودی تجهیزات ";
+
+}
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">نمایش لیست موجودی تجهیزات   </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li class="active"> لیست موجودی تجهیزات</li>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            <div class="table-responsive">
+                <table class="table table-striped" id="StockGrid">
+                    <thead>
+                        <tr>
+                            <th>عنوان تجهیز</th>
+                            <th>موجودی آماده به کار</th>
+                            <th>موجودی معیوب شده </th>
+                            <th>موجودی مفقود شده</th>
+                            <th>موجودی اولیه  </th>
+                            <th>موجودی کل  </th>
+                            <th style="display:none;"></th>
+                        </tr>
+                    </thead>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        var table = $("#StockGrid").DataTable({
+            "language": {
+                "sEmptyTable": "هیچ داده ای در جدول وجود ندارد",
+                "sInfo": "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                "sInfoEmpty": "نمایش 0 تا 0 از 0 رکورد",
+                "sInfoFiltered": "(فیلتر شده از _MAX_ رکورد)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "نمایش _MENU_ رکورد",
+                "sLoadingRecords": "در حال بارگزاری...",
+                "sProcessing": "در حال پردازش...",
+                "sSearch": "جستجو:",
+                "sZeroRecords": "رکوردی با این مشخصات پیدا نشد",
+                "oPaginate": {
+                    "sFirst": "ابتدا",
+                    "sLast": "انتها",
+                    "sNext": "بعدی",
+                    "sPrevious": "قبلی"
+                },
+                "oAria": {
+                    "sSortAscending": ": فعال سازی نمایش به صورت صعودی",
+                    "sSortDescending": ": فعال سازی نمایش به صورت نزولی"
+                }
+            },
+            "processing": true,
+            "serverSide": true,
+            "info": true,
+            "searching": true,
+
+            "stateSave": false,
+            "lenghtMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+            "responsive": true,
+            //dom: '<"html5buttons"B>lTfgitp',
+            //buttons: [
+
+            //    { extend: 'excel', title: 'ExampleFile' },
+            //    {extend: 'pdf', title: 'ExampleFile'},
+
+            //    {extend: 'print',
+            //        customize: function (win){
+            //            $(win.document.body).addClass('white-bg');
+            //            $(win.document.body).css('font-size', '10px');
+
+            //            $(win.document.body).find('table')
+            //                    .addClass('compact')
+            //                    .css('font-size', 'inherit');
+            //        }
+            //    }
+            //],
+            "ajax": {
+                "url": "/Stock/List",
+                "type": "get",
+
+            },
+            "columns": [
+            
+                { "data": "EquipmentTitle", "orderable": false },
+
+                { "data": "StockReady", "orderable": false },
+
+                { "data": "DefectiveNumberStock", "orderable": false },
+
+                { "data": "MissingNumberStock", "orderable": false },
+
+                { "data": "MainStock", "orderable": false },
+
+                { "data": "TotalStock", "orderable": false },
+
+                { "data": "EquipmentId", "orderable": false, "visible": false },
+
+                
+
+            ],
+            "columnDefs": [
+
+                {
+                    targets: 0,
+                    render: function (data, type, row, meta) {
+                        return '<a href="javascript:void()" onclick="EditFunction(\'' + "/Equipment/Edit" + '\',' + row["EquipmentId"] + ')" class="btn-link"> ' + data + '</a>'
+                    }
+
+                },
+                {
+                    targets: 1,
+                    render: function (data, type, row, meta) {
+                        return '<div class="label label-table label-success">' + data + ' </div>'
+                    }
+
+                },
+                {
+                    targets: 2,
+                    render: function (data, type, row, meta) {
+                        return '<div class="label label-table label-warning">' + data + ' </div>'
+                    }
+
+                },
+                {
+                    targets: 3,
+                    render: function (data, type, row, meta) {
+                        return '<div class="label label-table label-danger">' + data + ' </div>'
+                    }
+
+                },
+                {
+                    targets: 4,
+                    render: function (data, type, row, meta) {
+                        return '<div class="label label-table label-success">' + data + ' </div>'
+                    }
+
+                },
+                {
+                    targets: 5,
+                    render: function (data, type, row, meta) {
+                        return '<div class="label label-table label-success">' + data + ' </div>'
+                    }
+
+                },
+            ],
+
+            "order": []
+        });
+
+
+
+
+    });
+
+
+
+
+</script>

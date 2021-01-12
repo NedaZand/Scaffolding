@@ -1,0 +1,663 @@
+----------- Exception Details on  4/1/2019 3:30:51 AM -----------------
+
+
+Log Written Date: 4/1/2019 3:30:51 AM
+Error Line No : ine 525
+Error Method Name : UploadMethodInAttendanceController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB", table "dbo.Personnels", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 3:33:10 AM -----------------
+
+
+Log Written Date: 4/1/2019 3:33:10 AM
+Error Line No : ine 525
+Error Method Name : UploadMethodInAttendanceController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB", table "dbo.Personnels", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 7:10:04 AM -----------------
+
+
+Log Written Date: 4/1/2019 7:10:04 AM
+Error Line No : ine 313
+Error Method Name : DeleteMethodInEmployeeTypeController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Personnels_dbo.EmployeeTypes_EmployeeTypeId". The conflict occurred in database "StoreDB2", table "dbo.Personnels", column 'EmployeeTypeId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/EmployeeType/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 7:11:17 AM -----------------
+
+
+Log Written Date: 4/1/2019 7:11:17 AM
+Error Line No : ine 313
+Error Method Name : DeleteMethodInEmployeeTypeController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Personnels_dbo.EmployeeTypes_EmployeeTypeId". The conflict occurred in database "StoreDB2", table "dbo.Personnels", column 'EmployeeTypeId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/EmployeeType/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 7:18:43 AM -----------------
+
+
+Log Written Date: 4/1/2019 7:18:43 AM
+Error Line No : ine 108
+Error Method Name : CreateMethodInPositionTypeController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.PositionTypes' with unique index 'IX_Title'. The duplicate key value is (مدیریت).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/PositionType/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 7:19:27 AM -----------------
+
+
+Log Written Date: 4/1/2019 7:19:27 AM
+Error Line No : ine 290
+Error Method Name : DeleteMethodInPositionTypeController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Personnels_dbo.PositionTypes_PositionTypeId". The conflict occurred in database "StoreDB2", table "dbo.Personnels", column 'PositionTypeId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/PositionType/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 7:19:27 AM -----------------
+
+
+Log Written Date: 4/1/2019 7:19:27 AM
+Error Line No : ine 290
+Error Method Name : DeleteMethodInPositionTypeController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Personnels_dbo.PositionTypes_PositionTypeId". The conflict occurred in database "StoreDB2", table "dbo.Personnels", column 'PositionTypeId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/PositionType/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 7:19:42 AM -----------------
+
+
+Log Written Date: 4/1/2019 7:19:42 AM
+Error Line No : ine 187
+Error Method Name : EditMethodInPositionTypeController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.PositionTypes' with unique index 'IX_Title'. The duplicate key value is (مدیریت).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/PositionType/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:16:00 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:16:00 AM
+Error Line No : ine 308
+Error Method Name : DeleteMethodInRoleController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.ApplicationRoleApplicationUsers_dbo.AspNetRoles_ApplicationRole_Id". The conflict occurred in database "StoreDB2", table "dbo.ApplicationRoleApplicationUsers", column 'ApplicationRole_Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Role/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:18:27 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:18:27 AM
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:18:51 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:18:51 AM
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:18:52 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:18:52 AM
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:19:04 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:19:04 AM
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:19:51 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:19:51 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.Attendances", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:27:58 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:27:58 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.Attendances", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 8:29:35 AM -----------------
+
+
+Log Written Date: 4/1/2019 8:29:35 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.Attendances", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:34:43 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:34:43 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:34:46 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:34:46 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:35:02 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:35:02 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:36:42 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:36:42 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:38:05 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:38:05 AM
+Error Line No : ine 465
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.Attendances", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:46:50 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:46:50 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : The operation failed: The relationship could not be changed because one or more of the foreign-key properties is non-nullable. When a change is made to a relationship, the related foreign-key property is set to a null value. If the foreign-key does not support null values, a new relationship must be defined, the foreign-key property must be assigned another non-null value, or the unrelated object must be deleted.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:51:00 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:51:00 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.Attendances", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:51:04 AM -----------------
+
+
+Log Written Date: 4/1/2019 11:51:04 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInPersonnelController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.Attendances_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB2", table "dbo.Attendances", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 12:01:10 PM -----------------
+
+
+Log Written Date: 4/1/2019 12:01:10 PM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInWorkorderController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/WorkOrder/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 12:04:59 PM -----------------
+
+
+Log Written Date: 4/1/2019 12:04:59 PM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInWorkorderController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/WorkOrder/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 12:05:56 PM -----------------
+
+
+Log Written Date: 4/1/2019 12:05:56 PM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInWorkorderController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/WorkOrder/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 12:48:29 PM -----------------
+
+
+Log Written Date: 4/1/2019 12:48:29 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInEquipmentPropertiesController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.EquipmentHasProperties_dbo.Units_UnitId". The conflict occurred in database "StoreDB2", table "dbo.Units", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/EquipmentProperties/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 12:51:07 PM -----------------
+
+
+Log Written Date: 4/1/2019 12:51:07 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInEquipmentPropertiesController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.EquipmentHasProperties_dbo.Units_UnitId". The conflict occurred in database "StoreDB2", table "dbo.Units", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/EquipmentProperties/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 1:00:18 PM -----------------
+
+
+Log Written Date: 4/1/2019 1:00:18 PM
+Error Line No : ine 194
+Error Method Name : CreateMethodInEquipmentPropertiesController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.EquipmentHasProperties_dbo.Units_UnitId". The conflict occurred in database "StoreDB2", table "dbo.Units", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/EquipmentProperties/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 1:00:54 PM -----------------
+
+
+Log Written Date: 4/1/2019 1:00:54 PM
+Error Line No : ine 194
+Error Method Name : CreateMethodInEquipmentPropertiesController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.EquipmentHasProperties_dbo.Units_UnitId". The conflict occurred in database "StoreDB2", table "dbo.Units", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/EquipmentProperties/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 1:15:00 PM -----------------
+
+
+Log Written Date: 4/1/2019 1:15:00 PM
+Error Line No : ine 241
+Error Method Name : DeleteMethodInPropertyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.EquipmentHasProperties_dbo.Properties_PropertyId". The conflict occurred in database "StoreDB2", table "dbo.EquipmentHasProperties", column 'PropertyId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Property/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:28:26 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:28:26 PM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB2", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:35:53 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:35:53 PM
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Scaffoldings_dbo.Buildings_BuildingId". The conflict occurred in database "StoreDB2", table "dbo.Buildings", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:48:12 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:48:12 PM
+Error Line No : ine 227
+Error Method Name : ListsMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/List?draw=1&columns[0][data]=Id&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=Title&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=ActionUserName&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=ShamsiCreateDate&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=EditUserName&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=ShamsiEditDate&columns[5][name]=&columns[5][searchable]=true&columns[5][orderable]=false&columns[5][search][value]=&columns[5][search][regex]=false&start=0&length=10&search[value]=&search[regex]=false&_=1554187691500
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:48:12 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:48:12 PM
+Error Line No : ine 227
+Error Method Name : ListsMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/List?draw=1&columns[0][data]=Id&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=Title&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=ActionUserName&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=ShamsiCreateDate&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=EditUserName&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=ShamsiEditDate&columns[5][name]=&columns[5][searchable]=true&columns[5][orderable]=false&columns[5][search][value]=&columns[5][search][regex]=false&start=0&length=10&search[value]=&search[regex]=false&_=1554187691500
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:48:12 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:48:12 PM
+Error Line No : ine 227
+Error Method Name : ListsMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/List?draw=1&columns[0][data]=Id&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=Title&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=ActionUserName&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=ShamsiCreateDate&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=EditUserName&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=ShamsiEditDate&columns[5][name]=&columns[5][searchable]=true&columns[5][orderable]=false&columns[5][search][value]=&columns[5][search][regex]=false&start=0&length=10&search[value]=&search[regex]=false&_=1554187691500
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:48:12 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:48:12 PM
+Error Line No : ine 227
+Error Method Name : ListsMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/List?draw=1&columns[0][data]=Id&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=Title&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=ActionUserName&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=ShamsiCreateDate&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=EditUserName&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=ShamsiEditDate&columns[5][name]=&columns[5][searchable]=true&columns[5][orderable]=false&columns[5][search][value]=&columns[5][search][regex]=false&start=0&length=10&search[value]=&search[regex]=false&_=1554187691500
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:48:12 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:48:12 PM
+Error Line No : ine 227
+Error Method Name : ListsMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/List?draw=1&columns[0][data]=Id&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=Title&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=ActionUserName&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=ShamsiCreateDate&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=EditUserName&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=ShamsiEditDate&columns[5][name]=&columns[5][searchable]=true&columns[5][orderable]=false&columns[5][search][value]=&columns[5][search][regex]=false&start=0&length=10&search[value]=&search[regex]=false&_=1554187691500
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:48:13 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:48:13 PM
+Error Line No : ine 227
+Error Method Name : ListsMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/List?draw=1&columns[0][data]=Id&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=Title&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=ActionUserName&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=ShamsiCreateDate&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=EditUserName&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=ShamsiEditDate&columns[5][name]=&columns[5][searchable]=true&columns[5][orderable]=false&columns[5][search][value]=&columns[5][search][regex]=false&start=0&length=10&search[value]=&search[regex]=false&_=1554187691500
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:48:57 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:48:57 PM
+Error Line No : ine 227
+Error Method Name : ListsMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/List?draw=1&columns[0][data]=Id&columns[0][name]=&columns[0][searchable]=true&columns[0][orderable]=false&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=Title&columns[1][name]=&columns[1][searchable]=true&columns[1][orderable]=false&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=ActionUserName&columns[2][name]=&columns[2][searchable]=true&columns[2][orderable]=false&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=ShamsiCreateDate&columns[3][name]=&columns[3][searchable]=true&columns[3][orderable]=false&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=EditUserName&columns[4][name]=&columns[4][searchable]=true&columns[4][orderable]=false&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=ShamsiEditDate&columns[5][name]=&columns[5][searchable]=true&columns[5][orderable]=false&columns[5][search][value]=&columns[5][search][regex]=false&start=0&length=10&search[value]=&search[regex]=false&_=1554187723485
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  4/1/2019 11:56:59 PM -----------------
+
+
+Log Written Date: 4/1/2019 11:56:59 PM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInScaffoldTypeController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/ScaffoldType/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

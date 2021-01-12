@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+
+
+    <link href="~/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body dir="rtl">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <span>داربست مهاری مستقل تک دیواره</span>
+            </div>
+            <div class="panel-body">
+                <div class="control-group form-control">
+                    <div class="inc">
+                        <div class="controls">
+                            <input type="text" class="form-control" name="textbox" placeholder="ارتفاع" />
+                            <input type="text" class="form-control" name="text" placeholder="طول" />
+                            <input type="text" class="form-control" id="width" name="text" min="1" placeholder="تعداد عرض" />
+                            <button style="margin-left: 50px" class="btn btn-info" type="submit" id="append" name="append">
+                                وارد کردن عرض
+                            </button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            $("#append").click(function (e) {
+                e.preventDefault();
+
+                var widths = document.getElementById('width').value;
+                var button = $('#append');
+                for (var i = 0; i < widths; i++) {
+                    $(".inc").append('<div class="controls">\
+                                <input class="form-control" id=' + i + ' type = "text" name = "text" placeholder = "عرض" >\
+                                    <a href="#" class="remove_this btn btn-danger">حذف</a>\
+                                    <br>\
+                                    <br>\
+                                </div>');
+                }
+                if (widths != '')
+                    $(button).attr('disabled', 'disabled');
+                return false;
+            });
+
+            jQuery(document).on('click', '.remove_this', function () {
+                jQuery(this).parent().remove();
+                var button = $('#append');
+                $(button).removeAttr('disabled');
+                return false;
+            });
+            $("input[type=submit]").click(function (e) {
+                e.preventDefault();
+                $(this).next("[name=textbox]")
+                    .val(
+                        $.map($(".inc :text"), function (el) {
+                            return el.value
+                        }).join(",\n")
+                    )
+            })
+        });
+    </script>
+</body>
+</html>

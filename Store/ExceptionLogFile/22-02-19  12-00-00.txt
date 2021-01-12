@@ -1,0 +1,231 @@
+----------- Exception Details on  2/22/2019 6:44:26 AM -----------------
+
+
+Log Written Date: 2/22/2019 6:44:26 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 6:44:38 AM -----------------
+
+
+Log Written Date: 2/22/2019 6:44:38 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 6:48:41 AM -----------------
+
+
+Log Written Date: 2/22/2019 6:48:41 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Attaching an entity of type 'Store.Core.Domain.StoreTables.User.Personnel' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 6:51:18 AM -----------------
+
+
+Log Written Date: 2/22/2019 6:51:18 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Attaching an entity of type 'Store.Core.Domain.StoreTables.User.Personnel' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 6:52:26 AM -----------------
+
+
+Log Written Date: 2/22/2019 6:52:26 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Attaching an entity of type 'Store.Core.Domain.StoreTables.User.Personnel' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 7:13:45 AM -----------------
+
+
+Log Written Date: 2/22/2019 7:13:45 AM
+Error Line No :  model)
+Error Method Name : EditMethodInPersonnelController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 7:15:15 AM -----------------
+
+
+Log Written Date: 2/22/2019 7:15:15 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Attaching an entity of type 'Store.Core.Domain.StoreTables.User.Personnel' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 7:16:45 AM -----------------
+
+
+Log Written Date: 2/22/2019 7:16:45 AM
+Error Line No : entity)
+Error Method Name : Update Method In PersonnelService
+Error Message: DbUpdateConcurrencyException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateConcurrencyException
+Error Location : Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 8:01:34 AM -----------------
+
+
+Log Written Date: 2/22/2019 8:01:34 AM
+Error Line No :  model)
+Error Method Name : EditMethodInPersonnelController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 5:30:46 PM -----------------
+
+
+Log Written Date: 2/22/2019 5:30:46 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Companies'. Cannot insert duplicate key in object 'dbo.Companies'. The duplicate key value is (2).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 5:32:18 PM -----------------
+
+
+Log Written Date: 2/22/2019 5:32:18 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Companies'. Cannot insert duplicate key in object 'dbo.Companies'. The duplicate key value is (3).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 5:33:36 PM -----------------
+
+
+Log Written Date: 2/22/2019 5:33:36 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Companies'. Cannot insert duplicate key in object 'dbo.Companies'. The duplicate key value is (4).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 5:34:09 PM -----------------
+
+
+Log Written Date: 2/22/2019 5:34:09 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Companies'. Cannot insert duplicate key in object 'dbo.Companies'. The duplicate key value is (5).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 5:45:49 PM -----------------
+
+
+Log Written Date: 2/22/2019 5:45:49 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Companies'. Cannot insert duplicate key in object 'dbo.Companies'. The duplicate key value is (12).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/22/2019 5:46:57 PM -----------------
+
+
+Log Written Date: 2/22/2019 5:46:57 PM
+Error Line No :  model)
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Companies'. Cannot insert duplicate key in object 'dbo.Companies'. The duplicate key value is (13).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

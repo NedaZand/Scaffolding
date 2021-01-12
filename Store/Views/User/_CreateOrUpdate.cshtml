@@ -1,0 +1,132 @@
+﻿@model Store.Models.User.ApplicationUserModel
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.PersonnelCode, new { @class = "col-sm-6 col-form-label " })
+            @Html.DropDownListFor(model => model.PersonnelCode,Model.PersonnelList, new { @class = "select2 form-control", placeholder = "کد پرسنلی را وارد نمایید." })
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.UserName, new { @class = "col-sm-4 col-form-label " })
+            @Html.TextBoxFor(model => model.UserName, new { required = "نام کاربری الزامی است", @class = "form-control", placeholder = "نام کاربری  را وارد نمایید." })
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.RoleId, new { @class = "col-sm-4 col-form-label " })
+
+            @Html.DropDownListFor(model => model.RoleId, Model.Roles, new { @class = "form-control select2" })
+
+
+        </div>
+    </div>
+
+</div>
+<div class="row">
+
+    @if (string.IsNullOrEmpty(Model.UserId))
+    {
+        <div class="col-md-4">
+
+
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.Password, new { @class = "col-sm-4 col-form-label " })
+                @Html.PasswordFor(model => model.Password, new { required = "پسورد الزامی است", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password)
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+
+
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.ConfirmPassword, new { @class = "col-sm-4 col-form-label " })
+                @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", placeholder = "تایید پسورد را وارد نمایید." })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword)
+            </div>
+
+
+
+
+        </div>
+    }
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.DateExpire, new { @class = "col-sm-4 col-form-label " })
+        @Html.EditorFor(model => model.DateExpire, new { required = "تاریخ الزامی است", @class = "form-control", @placeholder = "mm/dd/yyyy" })
+        @Html.ValidationMessageFor(model => model.DateExpire)
+
+
+    </div>
+    @if (!string.IsNullOrEmpty(Model.UserId))
+    {
+        <div class="col-md-4">
+
+
+
+
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.UserStatus)
+
+                @Html.CheckBoxFor(model => model.UserStatus, new { @class = "form-control js-switch" })
+
+
+
+            </div>
+
+
+        </div>
+    }
+
+</div>
+
+<div class="row">
+    @if (string.IsNullOrEmpty(Model.UserId))
+    {
+        <div class="col-md-4">
+
+
+
+
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.UserStatus)
+
+                @Html.CheckBoxFor(model => model.UserStatus, new { @class = "form-control js-switch" })
+
+
+
+            </div>
+
+
+        </div>
+    }
+
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $(".select2").select2();
+
+
+            var elem = document.querySelector('.js-switch');
+            var switchery = new Switchery(elem, { color: '#1AB394' });
+        });
+
+
+
+    </script>

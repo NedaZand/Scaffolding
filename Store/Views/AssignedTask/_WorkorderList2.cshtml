@@ -1,0 +1,303 @@
+﻿@model Store.Models.Stores.AssignedWorkorderViewModel
+@using PagedList.Mvc
+<style>
+    form {
+        text-align: right !important;
+    }
+</style>
+
+<section id="section-workOrder" class="content-current">
+
+    <div class="row">
+       
+        <table class="tablesaw table-bordered table-hover table  color-table success-table" data-tablesaw-mode="swipe">
+            @*<thead>
+                <tr>
+
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">عنوان فرم</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">رویت</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">ایجاد</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">ویرایش </th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">حذف</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="5">گزارش</th>
+
+                </tr>
+            </thead>*@
+            <tbody>
+                <tr>
+                    @for (int i = 0; i < Model.AssignedWorkorderModel.Count(); i++)
+                    {
+
+                       
+
+
+
+                        <td>@Model.AssignedWorkorderModel[i].CompanyTitle</td>
+
+
+
+                    }
+                </tr>
+                <tr>
+                    @foreach (var item in Model.AssignedWorkorderModel)
+                    {
+
+
+
+                        <td>@item.UnitTitle</td>
+
+                    
+
+                    }
+                </tr>
+                <tr>
+                    @foreach (var item in Model.AssignedWorkorderModel)
+                    {
+
+
+
+                        <td>@item.SectionTitle</td>
+
+
+
+
+
+
+
+                    }
+                </tr>
+                <tr>
+                    @foreach (var item in Model.AssignedWorkorderModel)
+                    {
+
+
+                        <td>@item.WorkTitle</td>
+
+
+
+
+
+
+
+                    }
+                </tr>
+                @foreach (var item in Model.AssignedWorkorderModel)
+                {
+
+                    <tr>
+
+                        @foreach (var item2 in item.WorkgroupIds)
+                        {
+                            <td>@item2</td>
+                        }
+
+
+                    </tr>
+
+
+
+                }
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+  
+</section>
+
+
+
+@*@for (int i = 0; i < Model.AssignedWorkorderModel.ToList().Count; i++)
+{
+
+
+    <script>
+        $(document).ready(function () {
+
+          var roleSelected = @Html.Raw(Json.Encode(Model.AssignedWorkorderModel[i].UserSelected));
+
+            $("#AssignedWorkorderModel_@(i)__WorkgroupIds").val(roleSelected).trigger("change");
+
+
+     });
+    </script>
+}*@
+
+
+@*<div class="row">
+        @if (Model.Id == 0)
+        {
+            <div class="col-md-6">
+
+
+                <div class="form-group  m-b-40">
+
+
+                    @Html.LabelFor(model => model.CompanyId, new { @class = "col-sm-6 col-form-label " })
+                    @Html.DropDownListFor(model => model.CompanyId, Model.Companies, new { @class = "form-control select2" })
+
+
+                </div>
+                </div>
+                 <div class="col-md-6">
+                <div class="form-group  m-b-40">
+
+                    @Html.LabelFor(model => model.w, new { @class = "col-sm-6 col-form-label " })
+                    @Html.DropDownListFor(model => model.WorkId, Model.Works, new { @class = "form-control select2" })
+
+
+
+                </div>
+
+    </div>
+
+
+        }
+        </div>*@
+@*<div class="row">
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.RealArea, new { @class = "col-sm-6 col-form-label " })
+                @Html.TextBoxFor(model => model.RealArea, new { @class = "form-control", @placeholder = "متراژ ثبت شده توسط کارشناس", @type = "number",@min="0" })
+                @Html.ValidationMessageFor(model => model.RealArea)
+
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.StartDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.StartDate, new { required = "تاریخ شروع الزامی است", @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.EndDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.EndDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+            </div>
+        </div>
+
+    </div>*@
+
+
+@*@if (Model.Id == 0)
+    {
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group  m-b-40">
+
+                    @Html.LabelFor(model => model.WorkgroupIds, new { @class = "col-sm-6 col-form-label " })
+
+                    @Html.DropDownListFor(model => model.WorkgroupIds, Model.Workgroups, new { @class = "select2 m-b-10 select2-multiple", @multiple = "multiple", @placeholder = "یک یا چند گروه کاری را انتخاب نمایید " })
+                    @Html.ValidationMessageFor(model => model.WorkgroupIds)
+
+
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (Model.Id == 0)
+    {
+        <script>
+            $(document).ready(function () {
+
+                $(".select2").select2();
+
+
+
+            });
+
+
+            $("#CompanyId").change(function () {
+
+                var companyId = $(this).val();
+
+                $("#WorkId").html('');
+
+                jQuery.ajax({
+                    url: "/AssignedTask/GetWorkOrderByCompanyID",
+                    datatype: "json",
+                    method: "POST",
+                    data: { companyID: companyId },
+                    success: function (data) {
+
+                        $("#WorkId").html('');
+
+                        $.each(data, function (i, company) {
+
+                            $("#WorkId").append('<option value="'
+
+                                + company.Value + '">'
+
+                                + company.Text + '</option>');
+
+                        });
+
+                    }
+
+
+
+                });
+
+            });
+
+        </script>
+    }*@
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2("destroy");
+
+
+        $(".select2").select2({
+            // width: 'resolve'
+        });
+
+
+
+    });
+
+
+
+</script>
+
+
+@*@Html.AjaxPager(Model, new PagerOptions
+    {
+
+        ShowDisabledPagerItems = true,
+        AlwaysShowFirstLastPageNumber = true,
+        HorizontalAlign = "center",
+        ShowFirstLast = true,
+        FirstPageText = "اولین",
+        LastPageText = "آخرین",
+        MorePageText = "...",
+        PrevPageText = "قبلی",
+        NextPageText = "بعدی",
+        CssClass = "NavigationBox",
+        AjaxUpdateTargetId = "dvTopics",
+        AjaxOnBegin = "AjaxStart",
+        AjaxOnComplete = "AjaxStop"
+    })*@
+
+
+
+
+
+

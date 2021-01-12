@@ -1,0 +1,106 @@
+﻿@model Store.Models.User.PersonnelReportModel
+    @{
+        ViewBag.Title = " گزارش گیری از نیروی انسانی ";
+    }
+
+
+
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-12">
+            <h4 class="page-title">فرم تهیه گزارش کارکرد  نیروی انسانی</h4>
+        </div>
+        <div class="col-lg-9 col-md-8 col-12">
+            <ol class="breadcrumb">
+                <li><a href="/Home/Index">داشبورد</a></li>
+                <li class="active">گزارش  کارکرد نیروی انسانی </li>
+            </ol>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+               
+                                   
+                                @using (Html.BeginForm("PersonnelFunction", "PersonnelReport", FormMethod.Post, new { @enctype = "multipart/form-data", id = "form", @class = "" ,@target="_blank"}))
+                                {
+
+                                    @Html.AntiForgeryToken()
+
+
+                                <div class="row">
+                                    <div class="col-md-4">
+
+                                        <div class="form-group  m-b-40">
+
+                                            @Html.LabelFor(model => model.PersonnelCode, new { @class = "col-sm-4 col-form-label " })
+
+                                            @Html.DropDownListFor(model => model.PersonnelCode, Model.Personnels, new { @class = "form-control select2" })
+
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-4">
+
+
+
+                                        <div class="form-group  m-b-40">
+                                            @Html.LabelFor(model => model.FromDate, new { @class = "col-sm-4 col-form-label " })
+
+                                            @Html.EditorFor(model => model.FromDate, new { @class = "form-control" })
+
+
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-4">
+
+
+
+                                        <div class="form-group  m-b-40">
+                                            @Html.LabelFor(model => model.ToDate, new { @class = "col-sm-4 col-form-label " })
+
+                                            @Html.EditorFor(model => model.ToDate, new { @class = "form-control" })
+
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+                                        @*<a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="ResetForm()"><i class="fa fa-times"></i> بازگشت</a>*@
+
+                                    </div>
+
+                                }
+
+                        </div>
+                        <!-- /content -->
+                    </div>
+                
+
+            
+
+
+            </div>
+        
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $(".select2").select2();
+        });
+
+
+
+    </script>

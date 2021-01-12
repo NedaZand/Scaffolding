@@ -1,0 +1,70 @@
+﻿@model Store.Models.Stores.AssignedWorkorderDetailModel
+<style>
+    form {
+        text-align: right !important;
+    }
+</style>
+<div class="row">
+
+
+    <div class="col-md-6">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.TotalArea, new { @class = "col-sm-6 col-form-label " })
+            @Html.TextBoxFor(model => model.TotalArea, new { @class = "form-control", placeholder = "جمع کل متراژ  را وارد نمایید.",@type="number",@min="0" })
+            @Html.ValidationMessageFor(model => model.TotalArea)
+
+
+
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.Date, new { @class = "col-sm-4 col-form-label " })
+            @Html.EditorFor(model => model.Date, new { required = "تاریخ شروع الزامی است", @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+        </div>
+    </div>
+</div>
+<div class="row">
+         <div class="col-md-12">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.WorkgroupIds, new { @class = "col-sm-12 col-form-label " })
+
+            @Html.DropDownListFor(model => model.WorkgroupIds, Model.Workgroups, new { @class = "select2 m-b-10 select2-multiple", @multiple = "multiple", @placeholder = "یک یا چند گروه کاری را انتخاب نمایید " })
+            @Html.ValidationMessageFor(model => model.WorkgroupIds)
+
+
+        </div>
+             </div>
+         @*<div class="col-md-6">
+             <div class="form-group  m-b-40">
+
+                 @Html.LabelFor(model => model.RealArea, new { @class = "col-sm-12 col-form-label " })
+
+                 @Html.TextBoxFor(model => model.RealArea, new { @class = "form-control", placeholder = " متراژ واقعی را وارد نمایید." })
+        
+
+
+             </div>
+         </div>*@
+
+    </div>
+    
+    <script>
+
+
+        $(document).ready(function () {
+            $(".select2").select2("destroy");
+            $(".select2").select2();
+
+        });
+
+
+    </script>

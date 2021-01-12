@@ -1,0 +1,120 @@
+﻿@model Store.Models.Stores.QuestionModel
+@{
+    ViewBag.Title = "مدیریت چک لیست ایمنی داربست ";
+
+    Layout = null;
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="white-box">
+
+                    <form method="post" id="SafetyForm">
+                        @Html.HiddenFor(model => model.ScaffoldingId)
+
+
+                        <div id="test">
+                            @Html.Partial("_CreateorUpdate", Model)
+                        </div>
+                    </form>
+
+
+
+
+
+
+
+
+
+                </div>
+                    </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+
+                    $(document).ready(function () {
+
+                        $("#info").hide();
+                        $(".select2").select2("destroy");
+                        $(".select2").select2();
+
+ //                       $('#SafetyForm').on('submit', function (evt) {
+
+ //                           evt.preventDefault();
+
+ //                           var $form = $("#SafetyForm");
+ //                           var json = $.toJSON(person);
+ //                           var jsonData = $form.serializeObjectIntoJson();
+ //                           var jsonString = JSON.stringify(jsonData);
+                            
+                                
+ //$.ajax({
+ //                                       type: 'POST',
+ //                                   url: '/Scaffolding/CreateSafety',
+ //                                   data: jsonString,
+ //                                   contentType: 'application/json; charset=utf-8',
+ //success: function (data) {
+ //                                   addSuccess(data);
+ //}
+ //                                   });
+
+                           
+                           
+ //                       });
+                    });
+                    //$.fn.serializeObjectIntoJson = function () {
+                    //    var o = {};
+                    //    var a = this.serializeArray();
+                    //    $.each(a, function () {
+                    //        if (o[this.name] !== undefined) {
+                    //            if (!o[this.name].push) {
+                    //                o[this.name] = [o[this.name]];
+                    //            }
+                    //            o[this.name].push(this.value || '');
+                    //        } else {
+                    //            o[this.name] = this.value || '';
+                    //        }
+                    //    });
+                    //    return o;
+                    //};
+
+                   
+                    (function () {
+                        $('#exampleBasic').wizard({
+                          
+                            onFinish: function () {
+
+                                //$("#btn-submit").trigger("click");
+                                $("#info").slideDown("slow", function () {
+                                    // Animation complete.
+                                });
+                               
+                            },
+
+                            buttonLabels: {
+                                next: 'بعدی',
+                                back: 'قبلی',
+                                finish: 'پایان'
+                            }
+                        });
+                     
+                        
+                    })();
+
+                    function submit() {
+                        $( ".wizard-finish" ).click(function() {
+                            $( "#btn-submit" ).trigger( "click" );
+                        });
+ 
+                       // $('#btn-submit').show();
+                    }
+                </script>
+
+

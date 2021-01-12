@@ -1,0 +1,70 @@
+﻿@model Store.Models.Account.LoginViewModel
+@*@using CaptchaMvc.HtmlHelpers;*@
+@{
+    /**/
+
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @enctype = "multipart/form-data", @class = "form-horizontal form-material", id = "form" }))
+{
+
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+    <input type="hidden" value="@(ViewBag.ReturnUrl)" name="returnUrl" />
+
+    <h3 class="box-title m-b-20">ورود</h3>
+    <div class="form-group">
+        <div class="col-12">
+            <input type="text" class="form-control" placeholder="نام کاربری" required="نام کاربری را وارد نمایید" name="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-12">
+            <input type="password" class="form-control" placeholder="رمز عبور" required="رمز عبور را وارد نمایید" name="Password">
+        </div>
+    </div>
+
+
+    @*<div class="form-group">
+            <div class="col-md-12">
+
+                <a href="javascript:void(0)" id="to-recover" class="text-dark pull-left"><i class="fa fa-lock m-l-5"></i> بازیابی رمز عبور</a>
+            </div>
+        </div>*@
+    <div class="form-group text-center m-t-20">
+        <div class="col-12">
+            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">ورود</button>
+        </div>
+    </div>
+
+    @*<div class="form-group m-b-0">
+            <div class="col-sm-12 text-center">
+                <p>حسابی ندارید؟ <a href="register.html" class="m-r-5"><b>عضو شوید</b></a></p>
+            </div>
+        </div>*@
+
+
+
+
+}
+
+
+
+
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+      
+        $(".validation-summary-errors").addClass("alert alert-danger error text-right");
+        $('.alert > ul').css({
+            "list-style": "none",
+            "direction": "rtl",
+            "padding-right": "5px"
+        });
+    });
+</script>

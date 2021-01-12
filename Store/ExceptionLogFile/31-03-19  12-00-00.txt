@@ -1,0 +1,303 @@
+----------- Exception Details on  3/31/2019 1:24:31 AM -----------------
+
+
+Log Written Date: 3/31/2019 1:24:31 AM
+Error Line No : line 42
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: DbEntityValidationException
+Exception Type: System.Data.Entity.Validation.DbEntityValidationException
+Error Location : Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 1:26:54 AM -----------------
+
+
+Log Written Date: 3/31/2019 1:26:54 AM
+Error Line No : line 42
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: DbEntityValidationException
+Exception Type: System.Data.Entity.Validation.DbEntityValidationException
+Error Location : Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 1:29:25 AM -----------------
+
+
+Log Written Date: 3/31/2019 1:29:25 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: DbEntityValidationException
+Exception Type: System.Data.Entity.Validation.DbEntityValidationException
+Error Location : Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 1:29:31 AM -----------------
+
+
+Log Written Date: 3/31/2019 1:29:31 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: DbEntityValidationException
+Exception Type: System.Data.Entity.Validation.DbEntityValidationException
+Error Location : Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:04:36 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:04:36 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: DbEntityValidationException
+Exception Type: System.Data.Entity.Validation.DbEntityValidationException
+Error Location : Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:07:53 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:07:53 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:34:29 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:34:29 AM
+Error Line No : line 41
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:37:01 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:37:01 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:38:32 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:38:32 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:39:03 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:39:03 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:40:08 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:40:08 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:44:55 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:44:55 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:53:12 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:53:12 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:53:49 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:53:49 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 2:54:13 AM -----------------
+
+
+Log Written Date: 3/31/2019 2:54:13 AM
+Error Line No : entity)
+Error Method Name : Inser Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 3:01:33 AM -----------------
+
+
+Log Written Date: 3/31/2019 3:01:33 AM
+Error Line No : entity)
+Error Method Name : Update Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/EditAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 3:03:27 AM -----------------
+
+
+Log Written Date: 3/31/2019 3:03:27 AM
+Error Line No : entity)
+Error Method Name : Update Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/EditAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 6:14:14 AM -----------------
+
+
+Log Written Date: 3/31/2019 6:14:14 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.Workgroups", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 6:18:08 AM -----------------
+
+
+Log Written Date: 3/31/2019 6:18:08 AM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.Workgroups", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/31/2019 6:25:42 AM -----------------
+
+
+Log Written Date: 3/31/2019 6:25:42 AM
+Error Line No : entity)
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (100000013).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

@@ -1,0 +1,66 @@
+﻿@model Store.Models.Stores.WorkOrderModel
+
+<div class="panel panel-warning" id="info">
+    <div class="panel-heading">
+        اطلاعات دستور کار 
+        <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+    </div>
+    <div class="panel-wrapper collapse in" aria-expanded="true">
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group m-b-40">
+
+                        @Html.LabelFor(model => model.Title, new { @class = "col-sm-12 col-form-label " })
+                        @Html.LabelFor(model => model.Title, new { @class = "form-control" })
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group m-b-40">
+
+                        @Html.LabelFor(model => model.Tag, new { @class = "col-sm-12 col-form-label " })
+                        @Html.TextBoxFor(model => model.Tag, new { @class = "form-control" })
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group m-b-40">
+
+                        @Html.LabelFor(model => model.ShamsiDate, new { @class = "col-sm-12 col-form-label " })
+                        @Html.TextBoxFor(model => model.ShamsiDate, new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group m-b-40">
+
+                        @Html.LabelFor(model => model.CompanyName, new { @class = "col-sm-12 col-form-label " })
+                        @Html.LabelFor(model => model.CompanyName, new { @class = "form-control" })
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group m-b-40">
+
+                        @Html.LabelFor(model => model.UnitName, new { @class = "col-sm-12 col-form-label " })
+                        @Html.TextBoxFor(model => model.UnitName, new { @class = "form-control" })
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group m-b-40">
+
+                        @Html.LabelFor(model => model.SectionName, new { @class = "col-sm-12 col-form-label " })
+                        @Html.TextBoxFor(model => model.SectionName, new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

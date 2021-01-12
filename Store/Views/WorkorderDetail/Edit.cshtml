@@ -1,0 +1,38 @@
+﻿@model Store.Models.Stores.AssignedWorkorderDetailModel
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            @using (Ajax.BeginForm("Edit", "WorkorderDetail", null, new AjaxOptions { Url = "/WorkorderDetail/Edit", HttpMethod = "Post", OnSuccess = "editSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+                @Html.HiddenFor(model => model.AssignedWorkorderId)
+                @Html.HiddenFor(model => model.Id)
+                @Html.AntiForgeryToken()
+
+                @Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="bootboxHideAll()"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+        $(document).ready(function () {
+
+
+
+            var userSelected = @Html.Raw(Json.Encode(Model.UserSelected));
+
+            $(".select2").val(userSelected).trigger("change");
+        });
+
+
+</script>

@@ -1,0 +1,38 @@
+﻿@model Store.Models.User.WorkgroupModel
+@{
+    ViewBag.Title = "مدیریت گروه کاری ";
+}
+
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<div class="row">
+    <div class="col-md-12">
+       
+            @using (Ajax.BeginForm("Create", "WorkingGroup", null, new AjaxOptions { Url = "/WorkingGroup/Create", HttpMethod = "Post", OnSuccess = "addSuccessWorkgroup" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+
+                @Html.AntiForgeryToken()
+
+          
+                        <div class="form-group m-b-40">
+                            @Html.LabelFor(model => model.Title, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.Title, new { required = "عنوان گروه الزامی است", @class = "form-control", placeholder = "عنوان گروه  را وارد نمایید." })
+                            @Html.ValidationMessageFor(model => model.Title)
+                        </div>
+                   
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="bootboxHideAll()"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+
+
+

@@ -1,0 +1,774 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldModel
+@{
+    /**/
+
+    /**/
+    string url = HttpContext.Current.Request.Url.Authority;
+
+
+    string jsonObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.EquipmentList);
+    string jsonKeshabiObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.KeshabiEquipmentList);
+    string jsonPlateObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.PlateEquipmentList);
+    string jsonBaseObject = Newtonsoft.Json.JsonConvert.SerializeObject(Model.BaseEquipmentList);
+}
+<link href="~/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css" media="print" rel="stylesheet">
+<link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/css/style.css">
+<link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/css/colors/default.css">
+<link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css">
+<script src="~/scripts/CommonScripts/material.js"></script>
+<script src="~/scripts/CommonScripts/MatSingleWallSys.js"></script>
+
+@*داربست مهاری مستقل زاویه دار*@
+
+@using (Html.BeginForm("CreateAngularWallChart", "Scaffolding", FormMethod.Post, new { target = "_blank" }))
+{
+
+    <ul class="nav customtab nav-tabs" role="tablist">
+        <li role="presentation" class="nav-item"><a href="#wall1" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs"> دیوار اول</span></a></li>
+        <li role="presentation" class="nav-item"><a href="#wall2" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">دیوار دوم</span></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="wall1">
+            <div class="row col-md-12">
+                <div class="col-md-3">
+                    <div class="">
+                        <label class="col-sm-12 col-form-label">ارتفاع</label>
+                        <input class="form-control " id="height" name="height" value="0" />
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+                        <label class="col-sm-6 col-form-label">طول</label>
+                        <input class="form-control " id="length" name="length" value="0" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+
+                        <label class="col-sm-12 col-form-label">تعداد عرض</label>
+                        <input class="form-control " id="widthCount" name="widthCount" value="0" />
+
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+
+                    <div class="">
+
+
+                        <label class="col-sm-12 col-form-label">تعداد ارتفاع سطح دسترسی</label>
+                        <input class="form-control " id="heightCount" name="heightCount" value="0" />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h3 class="box-title m-t-40">عرض</h3>
+            <hr>
+
+            <div class="widths col-md-12 row">
+
+            </div>
+            <h3 class="box-title m-t-40">ارتفاع سطح دسترسی</h3>
+            <hr>
+            <div class="heights col-md-12 row">
+
+            </div>
+            <hr>
+            <div class="clearfix"></div>
+        </div>
+        @*دیوار دوم*@
+        <div role="tabpanel" class="tab-pane fade" id="wall2">
+            <div class="row col-md-12">
+                <div class="col-md-3">
+                    <div class="">
+                        <label class="col-sm-12 col-form-label">ارتفاع</label>
+                        <input class="form-control " id="height2" name="height2" value="0" />
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+                        <label class="col-sm-6 col-form-label">طول</label>
+                        <input class="form-control " id="length2" name="length2" value="0" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+
+                        <label class="col-sm-12 col-form-label">تعداد عرض</label>
+                        <input class="form-control " id="widthCount2" name="widthCount2" value="0" />
+
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+
+                    <div class="">
+
+
+                        <label class="col-sm-12 col-form-label">تعداد ارتفاع سطح دسترسی</label>
+                        <input class="form-control " id="heightCount2" name="heightCount2" value="0" />
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="">
+                        <label class="col-sm-12 col-form-label ">انتخاب نوع متریال</label>
+                        <select class="form-control" id="matTypeSelector">
+                            <option value="1">سنتی</option>
+                            <option value="2">سیستمی</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h3 class="box-title m-t-40">عرض</h3>
+            <hr>
+
+            <div class="widths2 col-md-12 row">
+
+            </div>
+            <h3 class="box-title m-t-40">ارتفاع سطح دسترسی</h3>
+            <hr>
+            <div class="heights2 col-md-12 row">
+
+            </div>
+            <hr>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+    <br />
+    <div class="btn-group m-b-20" style="width:100%;">
+        <a class="btn btn-success btn-outline waves-effect waves-light" role="button" style="width:100%;" onclick="return clickedTheButton()">محاسبه متریال</a>
+        <button class="btn btn-info btn-outline waves-effect waves-light" type="submit" style="width:100%;">رسم نمودار</button>
+        <button class="btn btn-primary btn-outline waves-effect waves-light" type="button" style="width:100%;" onclick="return calculationManpower()">تخمین نیروی انسانی </button>
+        <a class="btn btn-warning btn-outline waves-effect waves-light" role="button" style="width:100%;" target="_blank" href="/SafetyChecklist/Create?scaffoldingId=@Model.Id">تگ ایمنی</a>
+    </div>
+
+
+    <div class="card-block" id="material">
+        <div id="materialPrint">
+
+            <div class="card card-outline-primary text-dark">
+                <div class="card-block">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            اطلاعات دستورکار
+                            <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+                        </div>
+                        <div class="panel-wrapper collapse in" aria-expanded="true">
+                            <div class="panel-body">
+
+                                <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                                    <thead>
+                                        <tr>
+                                            <th width="30%">شماره درخواست</th>
+                                            <th width="30%">تگ</th>
+                                            <th width="30%">تاریخ</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td tabindex="1">@Model.WorkOrderTitle</td>
+                                            <td tabindex="1">@Model.Tag</td>
+                                            <td tabindex="1">@Model.ShamsiCreateDate</td>
+                                        </tr>
+                                        <tr>
+                                            <th>شرکت</th>
+                                            <th>واحد</th>
+                                            <th>سکشن</th>
+                                        </tr>
+                                        <tr>
+                                            <td tabindex="1">
+                                                @Model.WorkOrderModel.CompanyName
+                                            </td>
+                                            <td tabindex="1">
+                                                @Model.WorkOrderModel.UnitName
+                                            </td>
+                                            <td tabindex="1">
+                                                @Model.WorkOrderModel.SectionName
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th width="30%">شماره داربست</th>
+                                            <th width="30%">تگ</th>
+                                            <th width="30%">تاریخ</th>
+                                        </tr>
+                                        <tr>
+                                            <td tabindex="1">@Model.Title</td>
+                                            <td tabindex="1">@Model.Tag</td>
+                                            <td tabindex="1">@Model.ShamsiDate</td>
+                                        </tr>
+                                        <tr>
+                                            <th width="30%">نوع داربست</th>
+                                            <th width="30%">نوع بنا</th>
+                                            <th width="30%">نوع زمین</th>
+                                        </tr>
+                                        <tr>
+                                            <td tabindex="1">@Model.ScaffoldTypeTitle</td>
+                                            <td tabindex="1">@Model.EarthTitle</td>
+                                            <td tabindex="1">@Model.BuildingTitle</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th width="30%">طول </th>
+                                            <th width="30%">عرض </th>
+                                            <th width="30%"> ارتفاع</th>
+                                        </tr>
+                                        <tr>
+                                            <td tabindex="1">@Model.Length</td>
+                                            <td tabindex="1">@Model.Width</td>
+                                            <td tabindex="1">@Model.Height</td>
+                                        </tr>
+
+
+                                    </tbody>
+
+                                </table>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <ul class="list-group" id="myres"></ul>
+        </div>
+
+        <button class="btn btn-primary btn-rounded waves-effect waves-light" onclick="printPage('materialPrint');" type="button"><span class="btn-label"><i class="fa fa-print"></i></span>چاپ واحد انبار</button>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="card-block" id="manpower">
+        <div id="manpowerPrint">
+
+            <div class="card card-outline-primary text-dark">
+                <div class="card-block">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            اطلاعات دستورکار
+                            <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+                        </div>
+                        <div class="panel-wrapper collapse in" aria-expanded="true">
+                            <div class="panel-body">
+                                <div class="panel-wrapper collapse in" aria-expanded="true">
+                                    <div class="panel-body">
+
+                                        <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                                            <thead>
+                                                <tr>
+                                                    <th width="30%">شماره درخواست</th>
+                                                    <th width="30%">تگ</th>
+                                                    <th width="30%">تاریخ</th>
+
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td tabindex="1">@Model.WorkOrderTitle</td>
+                                                    <td tabindex="1">@Model.Tag</td>
+                                                    <td tabindex="1">@Model.ShamsiCreateDate</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>شرکت</th>
+                                                    <th>واحد</th>
+                                                    <th>سکشن</th>
+                                                </tr>
+                                                <tr>
+                                                    <td tabindex="1">
+                                                        @*@Model.CompanyTitle*@
+                                                    </td>
+                                                    <td tabindex="1">
+                                                        @*@Model.UnitTitle*@
+                                                    </td>
+                                                    <td tabindex="1">
+                                                        @*@Model.SectionTitle*@
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th width="30%">شماره داربست</th>
+                                                    <th width="30%">تگ</th>
+                                                    <th width="30%">تاریخ</th>
+                                                </tr>
+                                                <tr>
+                                                    <td tabindex="1">@Model.Title</td>
+                                                    <td tabindex="1">@Model.Tag</td>
+                                                    <td tabindex="1">@Model.ShamsiDate</td>
+                                                </tr>
+                                                <tr>
+                                                    <th width="30%">نوع داربست</th>
+                                                    <th width="30%">نوع بنا</th>
+                                                    <th width="30%">نوع زمین</th>
+                                                </tr>
+                                                <tr>
+                                                    <td tabindex="1">@Model.ScaffoldTypeTitle</td>
+                                                    <td tabindex="1">@Model.EarthTitle</td>
+                                                    <td tabindex="1">@Model.BuildingTitle</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th width="30%">طول </th>
+                                                    <th width="30%">عرض </th>
+                                                    <th width="30%"> ارتفاع</th>
+                                                </tr>
+                                                <tr>
+                                                    <td tabindex="1">@Model.Length</td>
+                                                    <td tabindex="1">@Model.Width</td>
+                                                    <td tabindex="1">@Model.Height</td>
+                                                </tr>
+
+
+                                            </tbody>
+
+                                        </table>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <ul class="list-group" id="manpowerResult"></ul>
+        </div>
+
+        <button class="btn btn-primary btn-rounded waves-effect waves-light" onclick="printPage('manpowerPrint');" type="button"><span class="btn-label"><i class="fa fa-print"></i></span>چاپ نیروی انسانی </button>
+
+        <div class="clearfix"></div>
+    </div>
+
+
+}
+<script>
+    document.querySelector("#height").addEventListener("keypress", function (evt) {
+        if (evt.which != 46 && evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+    document.querySelector("#length").addEventListener("keypress", function (evt) {
+        if (evt.which != 46 && evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+    document.querySelector("#height2").addEventListener("keypress", function (evt) {
+        if (evt.which != 46 && evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+    document.querySelector("#length2").addEventListener("keypress", function (evt) {
+        if (evt.which != 46 && evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+    document.querySelector("#widthCount").addEventListener("keypress", function (evt) {
+        if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+    document.querySelector("#heightCount").addEventListener("keypress", function (evt) {
+        if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+    document.querySelector("#widthCount2").addEventListener("keypress", function (evt) {
+        if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+    document.querySelector("#heightCount2").addEventListener("keypress", function (evt) {
+        if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+        $("#material").hide();
+        $("#manpower").hide();
+
+        $("#widthCount").keyup(function () {
+
+            if (parseInt($(this).val()) > 10) {
+
+                $('.alert-danger b').html();
+                $('.alert-danger b').html("تعداد عرض نمی تواند بزرگتر از 10 باشد.");
+                $('.alert-success').hide();
+                $('.alert-warning').hide();
+                $(".alert-danger").fadeToggle(350);
+            }
+            else {
+                addInput($(this).val(), true);
+            }
+
+        });
+        $("#heightCount").keyup(function () {
+
+            if (parseInt($(this).val()) > Math.floor(parseInt($("#height").val()) / 1.8)) {
+
+
+                $('.alert-danger b').html();
+                $('.alert-danger b').html("تعداد سطح دسترسی به تعداد ارتفاع داربست می تواند باشد.");
+                $('.alert-success').hide();
+                $('.alert-warning').hide();
+                $('.alert-danger').hide();
+                $(".alert-danger").fadeToggle(350);
+                $(".heights").html('');
+                $(this).val(0);
+            }
+            else {
+                addInput($(this).val(), false);
+            }
+
+        });
+
+        $("#widthCount2").keyup(function () {
+
+            if (parseInt($(this).val()) > 10) {
+
+                $('.alert-danger b').html();
+                $('.alert-danger b').html("تعداد عرض نمی تواند بزرگتر از 10 باشد.");
+                $('.alert-success').hide();
+                $('.alert-warning').hide();
+                $(".alert-danger").fadeToggle(350);
+            }
+            else {
+                addInput2($(this).val(), true);
+            }
+
+        });
+        $("#heightCount2").keyup(function () {
+
+            if (parseInt($(this).val()) > Math.floor(parseInt($("#height2").val()) / 1.8)) {
+
+
+                $('.alert-danger b').html();
+                $('.alert-danger b').html("تعداد سطح دسترسی به تعداد ارتفاع داربست می تواند باشد.");
+                $('.alert-success').hide();
+                $('.alert-warning').hide();
+                $('.alert-danger').hide();
+                $(".alert-danger").fadeToggle(350);
+                $(".heights2").html('');
+                $(this).val(0);
+            }
+            else {
+                addInput2($(this).val(), false);
+            }
+
+        });
+    });
+    function addInput(count, isWidth) {
+
+
+        if (isWidth === true) {
+            $(".widths").html('');
+            for (var i = 1; i <= count; i++) {
+                $(".widths").append('<div class="col-md-4">\
+                                <label class="col-form-label"> عرض ' + i + '</label>\
+                       <select class="form-control" id=' + "R" + i + '  name="widths[]" ><option value="0.6">0.6</option><option value="0.9">0.9</option><option value="1.2">1.2</option>\
+               </div>\
+                     ');
+
+            }
+        }
+
+        else {
+            $(".heights").html('');
+            for (var k = 1; k <= count; k++) {
+
+                $(".heights").append('<div class="col-md-4">\
+                            <label class= "col-form-label" > ارتفاع سطح دسترسی '+ k + '</label>\
+                            <input class="form-control" id=' + "M" + k + ' type="text" name="accessLevelHeight[]">\
+        </div>\
+                            <div class="col-md-4">\
+                            <label class="col-form-label">عرض سطح دسترسی '+ k + '</label>\
+                                    <input class="form-control" id=' + "F" + k + ' type="text" name="accessLevelWidth[]" >\
+        </div>\
+                            <div class="col-md-4">\
+                             <label class="col-form-label">حالت سطح دسترسی '+ k + ' بین 1 تا 4</label>\
+                                                <select class="form-control" id=' + "B" + k + '  name="accessLevelMode[]"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>\
+        </div>\
+                            ');
+
+            }
+        }
+
+    }
+
+    function addInput2(count, isWidth) {
+
+        if (isWidth === true) {
+            $(".widths2").html('');
+            for (var i = 1; i <= count; i++) {
+                $(".widths2").append('<div class="col-md-4">\
+                                <label class="col-form-label"> عرض ' + i + '</label>\
+                      <select class="form-control" id=' + "R2" + i + '  name="widths2[]"><option value="0.6">0.6</option><option value="0.9">0.9</option><option value="1.2">1.2</option>\
+               </div>\
+                     ');
+
+            }
+        }
+
+        else {
+            $(".heights2").html('');
+            for (var k = 1; k <= count; k++) {
+
+                $(".heights2").append('<div class="col-md-4">\
+                            <label class= "col-form-label" > ارتفاع سطح دسترسی '+ k + '</label>\
+                            <input class="form-control" id=' + "M2" + k + ' type="text" name="accessLevelHeight2[]">\
+        </div>\
+                            <div class="col-md-4">\
+                            <label class="col-form-label">عرض سطح دسترسی '+ k + '</label>\
+                                    <input class="form-control" id=' + "F2" + k + ' type="text"  name="accessLevelWidth2[]" >\
+        </div>\
+                            <div class="col-md-4">\
+                             <label class="col-form-label">حالت سطح دسترسی '+ k + ' بین 1 تا 4</label>\
+                                                <select class="form-control" id=' + "B2" + k + ' name="accessLevelMode2[]"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>\
+        </div>\
+                            ');
+
+            }
+        }
+
+    }
+
+
+    var arrayOfArrays;
+    var jsonPlate;
+    var jsonBase;
+    var jsonKeshabi;
+        $(document).ready(function () {
+            arrayOfArrays = @Html.Raw(jsonObject);
+            jsonPlate = @Html.Raw(jsonPlateObject);
+            jsonBase = @Html.Raw(jsonBaseObject);
+            jsonKeshabi = @Html.Raw(jsonKeshabiObject);
+        });
+        function clickedTheButton() {
+
+            $("#material").hide();
+            $("#myres").html('');
+            $("#manpower").hide();
+
+            var no1 = document.getElementById('height').value;
+            var no2 = document.getElementById('length').value;
+            var no3 = document.getElementById('widthCount').value;
+
+            //تعداد ارتفاع
+            var ertefa = document.getElementById('heightCount').value;
+
+            var faseleDRCH = [];
+
+            var tedadFaseleCH = parseInt(no3);
+            for (let i = 1; i <= tedadFaseleCH; i++) {
+
+                var mFaseleCH = document.getElementById("R" + i).value;
+                faseleDRCH[i] = parseInt(mFaseleCH);
+
+            }
+            var jam = 0;
+            for (let i = 1; i < faseleDRCH.length; i++) {
+                jam = faseleDRCH[i] + jam;
+            }
+            var halatSD1 = [];
+            var widthMSD1 = [];
+            var heightMSD1 = [];
+
+            for (var i = 0; i < ertefa; i++) {//4
+                heightMSD1[i] = document.getElementById("M" + (i + 1)).value;
+                widthMSD1[i] = document.getElementById("F" + (i + 1)).value;
+                halatSD1[i] = document.getElementById("B" + (i + 1)).value;;
+
+                if (Number(heightMSD1[i]) > Number(no1) || Number(widthMSD1[i]) > Number(no2)) {
+                    //swal({
+                    //    title: "اخطار",
+                    //    text: "مقدار ارتفاع یا عرض سطح دسترسی وارد شده از ارتفاع یا طول داربست بیشتر است ",
+                    //    type: "warning",
+                    //    showCancelButton: false,
+                    //    confirmButtonColor: "#DD6B55",
+
+                    //    cancelButtonText: "بازگشت",
+                    //    closeOnConfirm: false
+                    //});
+                    $('.alert-danger b').html();
+                    $('.alert-danger b').html("مقدار ارتفاع یا عرض سطح دسترسی وارد شده از ارتفاع یا طول داربست بیشتر است");
+                    $('.alert-success').hide();
+                    $('.alert-warning').hide();
+                    $(".alert-danger").fadeToggle(350);
+                    return;
+                }
+
+            }
+
+            //  دیوار 2
+
+            var no4 = document.getElementById('height2').value;
+            var no5 = document.getElementById('length2').value;
+            var no6 = document.getElementById('widthCount2').value;
+
+            var halatSD2 = [];
+            var widthMSD2 = [];
+            var heightMSD2 = [];
+            var ertefa2 = document.getElementById('heightCount2').value;
+            var jam2 = 0;
+            var faseleDRCH2 = [];
+
+            var tedadFaseleCH2 = parseInt(no6);
+            for (let i = 1; i <= tedadFaseleCH2; i++) {
+
+                var mFaseleCH = document.getElementById("R2" + i).value;
+                faseleDRCH2[i] = parseInt(mFaseleCH);
+
+            }
+
+            for (let i = 1; i < faseleDRCH2.length; i++) {
+                jam2 = faseleDRCH2[i] + jam2;
+            }
+
+            for (var i = 0; i < ertefa2; i++) {//4
+                heightMSD2[i] = document.getElementById("M2" + (i + 1)).value;
+                widthMSD2[i] = document.getElementById("F2" + (i + 1)).value;
+                halatSD2[i] = document.getElementById("B2" + (i + 1)).value;
+
+                if (Number(heightMSD2[i]) > Number(no4) || Number(widthMSD2[i]) > Number(no5)) {
+                    //swal({
+                    //    title: "اخطار",
+                    //    text: "مقدار ارتفاع یا عرض سطح دسترسی وارد شده از ارتفاع یا طول داربست بیشتر است ",
+                    //    type: "warning",
+                    //    showCancelButton: false,
+                    //    confirmButtonColor: "#DD6B55",
+
+                    //    cancelButtonText: "بازگشت",
+                    //    closeOnConfirm: false
+                    //});
+                    $('.alert-danger b').html();
+                    $('.alert-danger b').html("مقدار ارتفاع یا عرض سطح دسترسی وارد شده از ارتفاع یا طول داربست بیشتر است");
+                    $('.alert-success').hide();
+                    $('.alert-warning').hide();
+                    $(".alert-danger").fadeToggle(350);
+                    return;
+                }
+
+            }
+
+            var matType = $("#matTypeSelector option:selected").val();
+            if (matType == 1) {
+                var x = getdar(no1, no2, no3, faseleDRCH, jam, heightMSD1, widthMSD1, halatSD1, ertefa, arrayOfArrays);
+                var y = getdar(no4, no5, no6, faseleDRCH2, jam2, heightMSD2, widthMSD2, halatSD2, ertefa2, arrayOfArrays);
+            }
+
+            if (matType == 2) {
+                var x = SingleWallSys(no2, no1, faseleDRCH, heightMSD1, widthMSD1, halatSD1, ertefa, jsonKeshabi, jsonBase, [10000, 10000], jsonPlate, 10000);
+                var y = SingleWallSys(no5, no4,  faseleDRCH2, heightMSD2, widthMSD2, halatSD2, ertefa2, jsonKeshabi, jsonBase, [10000, 10000], jsonPlate, 10000);
+                }
+                
+            for (var i = 0; i < x.length; i++) {
+
+                $("#myres").append('<li class="list-group-item node-treeview6" data-nodeid="0" style="color:undefined;background-color:undefined;"><span class="icon node-icon glyphicon glyphicon-wrench"></span>&nbsp;' + x[i][0] + '<span class="badge">' + (x[i][1] + y[i][1])+'</span></li>');
+
+            }
+
+            $("#material").slideDown("slow", function () {
+
+            });
+
+            //document.getElementById("myres").innerHTML = x;
+
+    }
+
+    function calculationManpower() {
+        $("#material").hide();
+        $("#manpower").hide();
+        $("#manpowerResult").html('');
+        
+        var sum = 0;
+        var sum1 = 0;
+        var sum2 = 0;
+        var widths1 = document.getElementById('widthCount').value;
+        
+        for (var i = 1; i <= widths1; i++) {
+            sum1 += parseFloat($("#R" + i + "").val());
+        }
+        sum1 = Math.ceil(sum1);
+        sum1 *= parseInt($("#length").val()) * parseInt($("#height").val());
+        
+        var widths2 = document.getElementById('widthCount2').value;
+
+        for (var i = 1; i <= widths2; i++) {
+            sum2 += parseFloat($("#R2" + i + "").val());
+        }
+        sum2 = Math.ceil(sum2);
+        sum2 *= parseInt($("#length2").val()) * parseInt($("#height2").val());
+        
+        sum = sum1 + sum2;
+
+        $("#manpowerResult").append('<li class="list-group-item node-treeview6" data-nodeid="0" style="color:undefined;background-color:undefined;"><span class="icon node-icon glyphicon glyphicon-user"></span>&nbsp; نیروی انسانی مورد نیاز<span class="badge">' + Math.ceil(sum / 40) + '</span></li>');
+
+        $("#manpower").slideDown("slow", function () {
+
+        });
+    }
+
+
+    function printPage(id) {
+
+        var DocumentContainer = document.getElementById(id);
+        var WindowObject = window.open('', 'PrintWindow', 'width=1000,height=1000,top=50,left=50,toolbars=no,scrollbars=yes,status=no,resizable=yes');
+
+
+        WindowObject.document.writeln('<!DOCTYPE html>');
+        WindowObject.document.writeln('<html lang="fa"><head><title></title>');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css">');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css">');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/css/style.css">');
+        WindowObject.document.writeln('<link rel="stylesheet" type="text/css" href="http://localhost:1839/Content/Theme/assets/css/colors/default.css">');
+        WindowObject.document.writeln('</head><body>')
+
+        WindowObject.document.writeln(DocumentContainer.innerHTML);
+
+        WindowObject.document.writeln('</body></html>');
+
+        WindowObject.document.close();
+        WindowObject.focus();
+        WindowObject.print();
+        WindowObject.close();
+        //var html="<html>";
+        //html+= document.getElementById(id).innerHTML;
+
+        //html+="</html>";
+
+        //var printWin = window.open('','','left=0,top=0,width=300,height=300,toolbar=0,scrollbars=0,status  =0');
+        //printWin.document.write(html);
+        //printWin.document.close();
+        //printWin.focus();
+        //printWin.print();
+        //printWin.close();
+    }
+
+</script>
+
+
+

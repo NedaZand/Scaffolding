@@ -1,0 +1,261 @@
+﻿@model Store.Models.Stores.QuestionModel
+@{
+    int row = 0;
+}
+
+<!-- icheck -->
+<script src="~/Content/Theme/assets/plugins/icheck/icheck.min.js"></script>
+<script src="~/Content/Theme/assets/js/icheck.init.js"></script>
+<div id="exampleBasic" class="wizard">
+
+    <ul class="wizard-steps" role="tablist" style="display:none !important;">
+        @for (int i = 0; i < ((Model.QuestionList.Count() / 5)); i++)
+        {
+            <li class="@(i==0?"active":"")" role="tab">
+                <h4><span><i class="ti-user"></i></span>مرحله @i</h4>
+            </li>
+
+        }
+    </ul>
+
+    <div class="wizard-content" style="border:none !important;">
+
+        @for (int i = 0; i < ((Model.QuestionList.Count() / 5)); i++)
+        {
+            int index = i * 5;
+            var g = Model.QuestionList.Skip(index).Take(5).ToList();
+
+            for (int j = 0; j < g.Count(); j++)
+            {
+               
+                row += 1;
+
+
+                if (j == 0)
+                {
+                    if (i == 0)
+                    {
+                        @Html.Raw("<div class='wizard-pane active' role='tabpanel'> <table class='tablesaw table-bordered table-hover table  color-table success-table'><thead><tr><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = 'persist'>  ردیف </th><th scope='col' data-tablesaw-sortable-col data-tablesaw-priority='3'> سوال </th><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = '2' > مطلوب </th><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = '3' > نامطلوب </th><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = '1' > توضیحات تکمیلی </th></tr ></thead><tbody>");
+
+
+                    }
+                    else
+                    {
+                        @Html.Raw("<div class='wizard-pane' role='tabpanel'> <table class='tablesaw table-bordered table-hover table  color-table success-table'><thead><tr><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = 'persist'>  ردیف </th><th scope='col' data-tablesaw-sortable-col data-tablesaw-priority='3'> سوال </th><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = '2' > مطلوب </th><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = '3' > نامطلوب </th><th scope ='col' data-tablesaw-sortable-col data-tablesaw-priority = '1' > توضیحات تکمیلی </th></tr ></thead><tbody>");
+
+                    }
+
+                }
+
+
+
+        <tr>
+            @*<td style="display:none;"><input type="hidden" value="@g[j].Id" name="id[]" /></td>*@
+
+            <td style="display:none;"><input type="hidden" value="@g[j].Id" name="IdList" /></td>
+            <td>@row</td>
+            <td>@g[j].Text</td>
+            @*<td><input type="radio" name="answer@(g[j].Id)[]" value="1" /><input type="radio" name="answer@(g[j].Id)[]" value="0" /></td>*@
+            <td>
+                <input type="hidden" name="AnswerIds" id="AnswerIds" value="@g[j].AnswerId">
+                <input type="checkbox" @(g[j].IsChecked && g[j].AnswerId!=0? "checked" : "") class=" checked" name="AnswerList" onclick="onchangeCheckbox(this)" id="AnswerList" value="@g[j].Id" >
+            </td>
+            <td>
+                <input type="checkbox"  onclick="onchangeCheckbox2(this)"  class="uncheck">
+            </td>
+            <td><textarea name="DescList" Id="DescList"></textarea></td>
+
+        </tr>
+
+
+
+
+
+
+                if (j == (g.Count() - 1))
+                {
+
+                    @Html.Raw(" </tbody></table></div>");
+
+                }
+            }
+
+        }
+
+
+    </div>
+    <input type="submit" id="btn-submit" style="display:none;" />
+
+    <div class="panel panel-warning" id="info">
+        <div class="panel-heading">
+            اطلاعات تگ ایمنی
+            <div class="pull-left"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a></div>
+        </div>
+        <div class="panel-wrapper collapse in" aria-expanded="true">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.ExpertName, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.ExpertName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ExpertName)
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.WorkOrderId, new { @class = "col-sm-12 col-form-label " })
+                            @Html.DropDownListFor(model => model.WorkOrderId, Model.WorkOrders, new { @class = "form-control select2" })
+                            @Html.ValidationMessageFor(model => model.WorkOrderId)
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.PermitNumber, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.PermitNumber, new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.PersonnelId, new { @class = "col-sm-12 col-form-label " })
+                            @Html.DropDownListFor(model => model.PersonnelId, Model.PersonnelList, new { @class = "form-control select2" })
+                            @Html.ValidationMessageFor(model => model.PersonnelId)
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.RealArea, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.RealArea, new { @class = "form-control",@type="number" })
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.RegistrationDate, new { @class = "col-sm-12 col-form-label " })
+                            @Html.EditorFor(model => model.RegistrationDate, new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                        <a class="btn btn-primary btn-rounded waves-effect waves-light" target="_blank" href="/SafetyChecklist/PrintSafetyChecklist?scaffoldingId=@Model.ScaffoldingId" style="display:none;" id="safetyPrint"><span class="btn-label"><i class="fa fa-print"></i></span>چاپ ایمنی </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#info").hide();
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+    });
+
+    //$("#ScaffoldingId").change(function () {
+
+    //    var scaffoldingId = $("#ScaffoldingId").val();
+
+    //    jQuery.ajax({
+
+    //        url: "/SafetyChecklist/GetSafetyChecklist",
+    //        datatype: "json",
+    //        method: "POST",
+    //        data: { scaffoldingId: scaffoldingId },
+
+    //        success: function (data) {
+
+    //            $("#test").html('');
+    //            $("#test").html(data);
+
+
+    //        }
+
+
+
+    //    });
+    //});
+
+
+    (function () {
+        $('#exampleBasic').wizard({
+
+            onFinish: function () {
+
+                //$("#btn-submit").trigger("click");
+                $("#info").slideDown("slow", function () {
+                    // Animation complete.
+                });
+
+            },
+
+            buttonLabels: {
+                next: 'بعدی',
+                back: 'قبلی',
+                finish: 'پایان'
+            }
+        });
+
+
+    })();
+
+    function submit() {
+        $(".wizard-finish").click(function () {
+            $("#btn-submit").trigger("click");
+        });
+
+        // $('#btn-submit').show();
+    }
+
+    function onchangeCheckbox(event) {
+
+     
+        $(event).parents('tr').find("input:checkbox")
+            .each(function () {
+                if ($(this).hasClass("uncheck")) {
+                    if ($(this).is(":checked")) {
+                        $(this).prop("checked", false);
+                      
+                    }
+
+                }
+            });
+
+       
+
+    }
+
+    function onchangeCheckbox2(event) {
+
+
+        $(event).parents('tr').find("input:checkbox")
+            .each(function () {
+                if ($(this).hasClass("checked")) {
+                    if ($(this).is(":checked")) {
+                        $(this).prop("checked", false);
+                      
+
+                    }
+
+                }
+            });
+
+
+
+    }
+</script>

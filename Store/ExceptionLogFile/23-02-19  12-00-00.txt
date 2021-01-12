@@ -1,0 +1,64 @@
+----------- Exception Details on  2019/02/23 01:03:29 -----------------
+
+
+Log Written Date: 2019/02/23 01:03:29
+Error Line No : ine 516
+Error Method Name : UploadMethodInAttendanceController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101247).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/02/23 01:11:22 -----------------
+
+
+Log Written Date: 2019/02/23 01:11:22
+Error Line No : ine 516
+Error Method Name : UploadMethodInAttendanceController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101247).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/02/23 09:14:01 -----------------
+
+
+Log Written Date: 2019/02/23 09:14:01
+Error Line No : ine 516
+Error Method Name : UploadMethodInAttendanceController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (6101247).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Attendance/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/02/23 14:22:24 -----------------
+
+
+Log Written Date: 2019/02/23 14:22:24
+Error Line No : ine 602
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.WorkOrders' with unique index 'IX_Title'. The duplicate key value is (FA/PGGWSP/1397/529).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

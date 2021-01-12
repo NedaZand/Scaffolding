@@ -1,0 +1,39 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldEquipmentModel
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.ScaffoldingId, new { @class = "col-sm-4 col-form-label " })
+            @Html.DropDownListFor(model => model.ScaffoldingId, Model.ScaffoldingList, new { @class = "form-control select2"})
+
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.EquipmentId, new { @class = "col-sm-6 col-form-label " })
+
+            @Html.DropDownListFor(model => model.EquipmentId, Model.EquipmentList, new { @class = "select2 m-b-10 select2-multiple", @multiple = "multiple", @placeholder = "یک یا چند ویژگی را انتخاب نمایید " })
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2();
+    });
+
+
+
+</script>

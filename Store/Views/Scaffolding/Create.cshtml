@@ -1,0 +1,280 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldModel
+@{
+    ViewBag.Title = "فرم ثبت نوع داربست";
+
+}
+<link href="~/Content/Theme/assets/plugins/register-steps/steps.css" rel="stylesheet" />
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">فرم ثبت داربست</h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/Scaffolding/Index">نمایش لیست داربست </a></li>
+            <li class="active">ثبت داربست جدید </li>
+        </ol>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+
+
+            <div class="sttabs tabs-style-bar">
+                <nav>
+                    <ul>
+                        <li class="tab-current"><a href="#section-bar-1"><span>ثبت داربست جدید </span></a></li>
+                        <li><a href="#section-bar-2"><span>برنامه ریزی</span></a></li>
+                    </ul>
+                </nav>
+                <div class="content-wrap">
+                    <section id="section-bar-1" class="content-current">
+
+
+
+
+
+                        @using (Ajax.BeginForm("Create", "Scaffolding", null, new AjaxOptions { Url = "/Scaffolding/Create", HttpMethod = "Post", OnSuccess = "addSuccessScaffolding" }, new { @enctype = "multipart/form-data", id = "form", @class = "", target = "_blank" }))
+                        {
+
+
+
+
+
+                            @Html.AntiForgeryToken()
+
+                            @Html.Partial("_CreateorUpdate", Model)
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-success btn-rounded" name="send"> <i class="fa fa-check"></i> ثبت</button>
+                                <button type="submit" class="btn btn-default btn-rounded" name="print"> <i class="fa fa-print"></i> چاپ</button>
+                                <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="/Scaffolding/Index"><i class="fa fa-times"></i> بازگشت</a>
+
+                            </div>
+                        }
+                    </section>
+                    <section id="section-bar-2" class="">
+
+                        <div class="row register-box">
+                            <div id="msform" style="width:100% !important;">
+                                <!-- progressbar -->
+                                <ul id="eliteregister">
+                                    <li class="active">تخمین متریال </li>
+                                    <li class="active">رسم نمودار</li>
+                                    <li class="active">محاسبه نیروی انسانی </li>
+                                </ul>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="panel panel-info">
+                            <div class="panel-heading" style="background-color: #01c0c8 !important;">
+                                فرم تخمین متریال
+
+                                <div class="pull-left">
+                                    <span class="clickable filter" title="راهنما">
+                                        <a href="javascript:void" onclick="AddFunction('/Scaffolding/Help')"> <i class="ti-help-alt"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <form action="#" class="form-horizontal form-bordered">
+                                        <div class="form-body">
+                                            @*<h3 class="box-title">نوع داربست </h3>
+
+                                                @Html.DropDownListFor(model => model.ScaffoldTypeId, Model.ScaffoldTypes, new { @class = "form-control select2 ScaffoldType" })*@
+
+                                            <div id="result"></div>
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+                <!-- /content -->
+            </div>
+            <!-- /tabs -->
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function myFunction() {
+        window.print();
+    }
+
+    $("#WorkOrderId").change(function () {
+
+        $("#Title").text('');
+        $("#Title").val();
+        $("#Title").text("DR/" + $("#WorkOrderId option:selected").text());
+        $("#Title").val("DR/" + $("#WorkOrderId option:selected").text());
+
+
+    });
+    $(".ScaffoldType").change(function () {
+
+        $("#result").html('');
+        $.ajax({
+            url: '/scaffolding/CreateForm',
+            data: { scaffoldingTypeId: $(this).val() },
+            type: 'Post',
+
+            dataType: "html",
+            success: function (data) {
+
+                $("#result").html(data).slideDown('slow');;
+
+            }
+
+
+        });
+
+
+    });
+
+    function getCompanies(event, type) {
+
+
+        var companyId = $(event).val();
+
+        $("#UnitId").select2("destroy");
+        $("#SectionId").select2("destroy");
+        jQuery.ajax({
+            url: "/Scaffolding/GetCompaniesByParentId",
+            datatype: "json",
+            method: "POST",
+            data: { parentId: companyId },
+            success: function (data) {
+                if (type == "unit") {
+
+
+                    $('#UnitId').html('');
+                    $('#UnitId').change();
+
+                    $('#SectionId').html('');
+                    $('#SectionId').change();
+                    $.each(data, function (i, company) {
+
+                        $('#UnitId').append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+
+                }
+                else {
+
+
+                    $('#SectionId').html('');
+                    $.each(data, function (i, company) {
+
+                        $('#SectionId').append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+
+
+                }
+
+                //.each(function () {
+
+                //    if ($(this).hasClass("selectRoomType")) {
+
+
+                //    }
+
+                //    if ($(this).hasClass("roomTypeNumber")) {
+                //        number = parseInt($(this).val());
+                //    }
+
+
+
+
+                //});
+
+
+
+
+            }
+
+
+
+        });
+        $("#UnitId").select2();
+        $("#SectionId").select2();
+        getWorkorders(event);
+
+
+
+    }
+    function getWorkorders(event) {
+
+        var companyId = $(event).val();
+        $("#WorkOrderId").select2("destroy");
+        jQuery.ajax({
+            url: "/Scaffolding/GetWorkOrderByCompanyID",
+            datatype: "json",
+            method: "POST",
+            data: { companyID: companyId },
+            success: function (data) {
+
+
+                $("#WorkOrderId").html('');
+                $.each(data, function (i, company) {
+
+                    $("#WorkOrderId").append('<option value="'
+
+                        + company.Value + '">'
+
+                        + company.Text + '</option>');
+
+                });
+                //.each(function () {
+
+                //    if ($(this).hasClass("selectRoomType")) {
+
+
+                //    }
+
+                //    if ($(this).hasClass("roomTypeNumber")) {
+                //        number = parseInt($(this).val());
+                //    }
+
+
+
+
+                //});
+
+
+
+
+            }
+
+
+
+        });
+
+        $("#WorkOrderId").select2("destroy");
+
+
+    }
+</script>

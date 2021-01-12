@@ -1,0 +1,43 @@
+﻿@model Store.Models.Stores.StoreRoom.EquipmentHasPropertyModel
+@{
+    ViewBag.Title = "مدیریت اختصاص ویژگی به تجهیزات ";
+}
+
+
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">فرم اختصاص  ویژگی به تجهیزات </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/EquipmentProperties/Index">نمایش لیست  ویژگی تجهیزات  </a></li>
+            <li class="active"> اختصاص  ویژگی جدید  </li>
+        </ol>
+    </div>
+  
+</div>
+<div class="row"> 
+    <div class="col-md-12">
+        <div class="white-box">
+            @using (Ajax.BeginForm("Create", "EquipmentProperties", null, new AjaxOptions { Url = "/EquipmentProperties/Create", HttpMethod = "Post", OnSuccess = "addSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+
+                @Html.AntiForgeryToken()
+
+                @Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="/EquipmentProperties/Index"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+

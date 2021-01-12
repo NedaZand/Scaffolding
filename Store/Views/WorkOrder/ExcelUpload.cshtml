@@ -1,0 +1,67 @@
+﻿
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title"> ثبت دستورکار از طریق فایل اکسل</h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+      
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/Company/Index">لیست دستورکار  </a></li>
+            <li class="active">ثبت دستور کار </li>
+        </ol>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+
+            @using (Html.BeginForm("Upload", "WorkOrder", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+            {
+                <input type="file"  class="btn btn-primary" id="fileUpload" name="FileUpload" /><br />
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded" id="fileUploadExcel"> <i class="fa fa-check"></i> آپلود فایل</button>
+
+                    
+                </div>
+
+            }
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+@*<div align="center">
+
+        <br />
+        <div align="right" class="btn btn-default">
+            @using (Html.BeginForm("Upload", "Attendance", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+            {
+                <input type="file" id="fileUpload" class="btn btn-primary" name="FileUpload" /><br />
+                <input type="submit" class="btn btn-primary" name="UploadNewEmployee" id="fileUploadExcel" value="Upload New Employee Details" />
+            }
+        </div>
+
+
+    </div>*@
+
+<script>
+    $('#fileUploadExcel').click(function (e) {
+        if ($('#fileUpload').val() === "") {
+            sweetAlert("خطاااا...!!!", "لطفا فایل اکسل را انتخاب کنید", "error");
+            return false;
+        }
+
+
+    });
+
+</script>
+

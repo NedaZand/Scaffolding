@@ -1,0 +1,122 @@
+﻿@model Store.Models.Stores.CompanyModel
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.Title, new { @class = "col-sm-6 col-form-label " })
+            @Html.TextBoxFor(model => model.Title, new { required = "عنوان الزامی است", @class = "form-control", placeholder = "نام شرکت را وارد نمایید." })
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+    </div>
+    @if (Model.Id == 0)
+    {
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.CompanyId, new { @class = "col-sm-4 col-form-label " })
+                @Html.DropDownListFor(model => model.CompanyId, Model.Companies, new { @class = "form-control select2" })
+
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.UnitId, new { @class = "col-sm-4 col-form-label " })
+                @Html.DropDownListFor(model => model.UnitId, Model.Sections, new { @class = "form-control select2" })
+
+
+            </div>
+        </div>
+    }
+
+</div>
+       <div class="row">
+           <div class="col-md-12">
+               <div class="form-group m-b-40">
+
+                   @Html.LabelFor(model => model.Address, new { @class = "col-sm-4 col-form-label " })
+                   @Html.TextAreaFor(model => model.Address, new { @class = "form-control", placeholder = "آدرس را وارد نمایید." })
+                   
+               </div>
+           </div>
+       </div>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2();
+    });
+
+
+    $("#CompanyId").change(function () {
+
+        var parentID = $("#CompanyId").val();
+        $("#Address").text();
+        $("#Address").val('').empty();
+
+        jQuery.ajax({
+
+            url: "/Company/GetAddress",
+            datatype: "json",
+            method: "POST",
+            data: { companyId: parentID },
+
+            success: function (data) {
+
+                //$("#Address").html('');
+              
+                //$("#Address").html(data);
+
+                $("#Address").val(data);
+
+
+            }
+
+
+
+        });
+        getCompanyByParent(parentID);
+
+    });
+
+  
+    function getCompanyByParent(parentId,target) {
+        $("#UnitId").html('');
+        $("#UnitId").text('');
+        jQuery.ajax({
+
+            url: "/Company/GetCompaniesByParentId",
+            datatype: "json",
+            method: "POST",
+            data: { parentId: parentId },
+
+            success: function (data) {
+
+                $("#UnitId").select2('destroy');
+                $("#UnitId").select2();
+                $('#UnitId').html('');
+                $.each(data, function (i, company) {
+
+                    $("#UnitId").append('<option value="'
+
+                        + company.Value + '">'
+
+                        + company.Text + '</option>');
+
+                });
+
+            }
+
+
+
+        });
+    }
+  
+</script>

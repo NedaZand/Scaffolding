@@ -1,0 +1,84 @@
+﻿@model Store.Models.Stores.StoreRoom.EquipmentHasPropertyModel
+
+
+
+<div class="form-group m-b-40">
+
+    @Html.LabelFor(model => model.EquipmentId, new { @class = "col-sm-4 col-form-label " })
+    @Html.DropDownListFor(model => model.EquipmentId, Model.EquipmentList, new { @class = "form-control select2" })
+    @Html.ValidationMessageFor(model => model.EquipmentId)
+
+</div>
+
+
+
+
+
+<div class="row">
+
+    <table class="tablesaw table-bordered table-hover table  color-table success-table">
+        <thead>
+            <tr>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">ویژگی</th>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">واحد</th>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">مقدار</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @*@for (var i = 0; i < Model.Properties.Count() - 1; i++)
+        {*@
+            @for (var i = 0; i < Model.Properties.Take(5).Count() -1; i++)
+            { 
+                <tr>
+                    <td style="width:30%;">
+                        <div class="form-group m-b-40">
+
+                            @Html.DropDownListFor(model => model.PropertyId, Model.Properties, new { @class = "select2 form-control" })
+
+
+                        </div>
+                    </td>
+
+                    @*<td style="width:30%;">@Model.Properties[i].Text</td>
+
+                <input type="hidden" name="PropertyId[@i]" value="@Model.Properties[i].Value"/>*@
+
+                    <td style="width:30%;">
+                        <div class="form-group m-b-40">
+
+                            @Html.DropDownListFor(model => model.UnitId, Model.Units, new { @class = "select2 form-control" })
+
+
+                        </div>
+                    </td>
+
+                    <td style="width:30%;">
+                        <div class="form-group m-b-40">
+
+                            <input id="Values" name="Values[]" type="text" value="0" class="form-control" min="0" />
+                            @*@Html.TextBoxFor(model => model.Value, new { @class = "form-control", placeholder = "مقدار را وارد نمایید.", @min = "0" })*@
+
+                        </div>
+                    </td>
+                </tr>
+
+
+            }
+
+
+
+        </tbody>
+    </table>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+   
+        $(".select2").select2();
+    });
+
+
+
+</script>

@@ -1,0 +1,100 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldModel
+
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>ScaffoldModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+
+        <div class="col-md-10">
+            <input class="form-control onlyfloat" id="Height" />
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-md-10">
+            <input class="form-control" id="first" placeholder="فاصله محزن از زمین" />
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-md-10">
+            <input class="form-control " id="third" placeholder="قطر محزن" />
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-md-10">
+            <input class="form-control" id="second" placeholder="ارتفاع سطح دسترسی1" />
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <div class="col-md-10">
+            <input class="form-control " onkeyup="" placeholder="قطر محزن" />
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" value="Create" id="sabt" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script>
+    $("#sabt").click(function (event) {
+        var fir = document.getElementById("first").value;
+        var thir = document.getElementById("third").value;
+        var sec = document.getElementById("second").value;
+        
+        var sum = Number(fir) + Number(thir);
+        //if (Number(sec) > Number(fir)) {
+        //    alert('دومی از اولی بزرگتره');
+        //    return;
+        //}
+        if (Number(sec) > Number(sum)) {
+            swal({
+                title: "اخطار",
+                text: "مقدار سطح دسترسی وارد شده از مجموع او دوتا زیاده ",
+                type: "warning",
+                showCancelButton: false,
+                confirmButtonColor: "#DD6B55",
+               
+                cancelButtonText: "بازگشت",
+                closeOnConfirm: false
+            });
+            return;
+        }
+           
+        
+        alert('درسته');
+    });
+    
+</script>
+<script>
+    document.querySelector(".onlyfloat").addEventListener("keypress", function (evt) {
+        if (evt.which != 46 && evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57) {
+            evt.preventDefault();
+        }
+    });
+
+</script>

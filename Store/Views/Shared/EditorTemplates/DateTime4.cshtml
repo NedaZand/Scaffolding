@@ -1,0 +1,87 @@
+﻿@using System.Globalization
+@using System.Net.Mime
+@using Microsoft.Ajax.Utilities
+@*<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>*@
+@model System.DateTime?
+@{
+
+    var otherId = ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty) + "fa";
+    var otherName = ViewData.TemplateInfo.GetFullHtmlFieldName(string.Empty) + "fa";
+
+}
+@functions
+{
+
+    string ConvertAdToJalali(DateTime date)
+    {
+        var miladi = date;
+        var shamsi = new System.Globalization.PersianCalendar();
+
+        return string.Format("{0}/{1}/{2}", shamsi.GetYear(miladi), shamsi.GetMonth(miladi), shamsi.GetDayOfMonth(miladi));
+
+    }
+    string ConvertJalaliToAd(string date)
+    {
+        DateTime dt = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+        //var jalali = date;
+        var jalali = new DateTime(dt.Year, dt.Month, dt.Day, new PersianCalendar());
+        //var ad = new System.Globalization.PersianCalendar();
+        return string.Format("{0}/{1}/{2}", jalali.Year, jalali.Month, jalali.Day);
+
+    }
+
+}
+
+
+@*<input type="hidden" id="@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)" name="@ViewData.TemplateInfo.GetFullHtmlFieldName(string.Empty)" value="@(Model > DateTime.MinValue || Model.HasValue ? Model.Value.ToShortDateString() : null)" />*@
+<input type="hidden" id="@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)" name="EidtEndDate" value="@(Model > DateTime.MinValue || Model.HasValue ? Model.Value.ToShortDateString() : null)" />
+<div class="input-group date">
+    @*<span class="input-group-addon datepickerbtn" id="datepickerbtn@(otherId)"><i class="fa fa-calendar"></i></span>*@
+    <input id="@otherId" name="@otherName" value="@(Model.HasValue ? ConvertAdToJalali(Model.Value) : null)" class="form-control" type="text" />
+
+
+    <span class="input-group-addon" datepickerbtn" id="datepickerbtn@(otherId)"><i class="icon-calender"></i></span>
+</div>
+@*<script src="@Url.Content("~/Scripts/kendo/2014.1.318/JalaliDateTime/JalaliDate.js")></script>*@
+@*<script src="@Url.Content("~/Scripts/kendo/2014.1.318/JalaliDateTime/fa-IR.js")></script>*@
+@*<script type="text/javascript" src="~/Scripts/jquery.ui.datepicker-cc.js"></script>
+    <script type="text/javascript" src="~/Scripts/calendar.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.ui.datepicker-cc-ar.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.ui.datepicker-cc-fa.js"></script>*@
+<script>
+            jQuery(function ($) {
+                $('#@(otherId)').datepicker({
+                    showButtonPanel: true,
+                    isRTL: true,
+                    dateFormat: "yy/mm/dd",
+                    changeMonth: true,
+                    changeYear: true,
+                    //minDate: 0,
+                    //maxDate: "+90D"
+                });
+                $("#datepickerbtn@(otherId)").click(function (event) {
+                    event.preventDefault();
+                    $("#@(otherId)").focus();
+                });
+                $('#@(otherId)').change(function () {
+                    $.ajax({
+                        url: '/Common/ConvertJalaliToAd',
+                        data: { 'date': $('#@(otherId)').val() },
+                        type:"GET",
+                        success: function (data) {
+
+                            $("#@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)").val(data);
+                        },
+                        error: function () {
+
+
+                        }
+
+                    });
+                });
+
+
+            });
+</script>
+
+

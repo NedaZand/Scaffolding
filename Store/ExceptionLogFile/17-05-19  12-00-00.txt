@@ -1,0 +1,16 @@
+----------- Exception Details on  2019/05/17 01:13:33 -----------------
+
+
+Log Written Date: 2019/05/17 01:13:33
+Error Line No : line 97
+Error Method Name : Update Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_dbo.Personnels_dbo.EmployeeTypes_EmployeeTypeId". The conflict occurred in database "StoreDB", table "dbo.EmployeeTypes", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

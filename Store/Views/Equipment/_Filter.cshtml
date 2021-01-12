@@ -1,0 +1,94 @@
+﻿
+
+@model Store.Models.StoreRoom.EquipmentModel
+
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.Title, new { @class = "col-sm-6 col-form-label " })
+            @Html.TextBoxFor(model => model.Title, new { required = "", @class = "form-control", placeholder = "عنوان را وارد نمایید." })
+
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.Date, new { @class = "col-sm-6 col-form-label " })
+            @Html.EditorFor(model => model.Date, new { required = "تاریخ الزامی است", @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.TypeId, new { @class = "col-sm-6 col-form-label " })
+            @Html.DropDownListFor(model => model.TypeId, Model.Types, new { required = "", @class = "form-control select2" })
+
+            @Html.ValidationMessageFor(model => model.TypeId)
+        </div>
+
+
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.ExpireDate, new { @class = "col-sm-4 col-form-label " })
+            @Html.EditorFor(model => model.ExpireDate, new { required = "تاریخ الزامی است", @class = "form-control", @placeholder = "mm/dd/yyyy" })
+            @Html.ValidationMessageFor(model => model.Date)
+
+
+        </div>
+
+
+    </div>
+    <div class="col-md-6">
+
+        <div class="form-group m-b-40">
+            @*@Html.LabelFor(model => model.Tag, new { @class = "col-sm-6 col-form-label " })*@
+            @*@Html.TextBoxFor(model => model.Tag, new { required = "", @class = "form-control", @placeholder = "تگ را وارد نمایید." })*@
+            @*@Html.ValidationMessageFor(model => model.Tag)*@
+        </div>
+
+
+        <div class="form-group m-b-40">
+            @*@Html.LabelFor(model => model.Status, new { @class = "col-sm-6 col-form-label " })*@
+            @*@Html.DropDownListFor(model => model.Status, Model.Statuses, new { required = "required", @class = "form-control select2" })*@
+            @*@Html.ValidationMessageFor(model => model.Status)*@
+        </div>
+        <div class="form-group m-b-40">
+            @*@Html.LabelFor(model => model.PriorityId, new { @class = "col-sm-6 col-form-label " })*@
+            @*@Html.DropDownListFor(model => model.PriorityId, Model.Priorities, new { required = "", @class = "form-control select2" })*@
+            @*@Html.ValidationMessageFor(model => model.PriorityId)*@
+        </div>
+        <div class="form-group m-b-40">
+
+            @*@Html.LabelFor(model => model.ExpireDate, new { @class = "col-sm-4 col-form-label " })*@
+            @*@Html.EditorFor(model => model.ExpireDate, new { required = "تاریخ انقضاالزامی است", @class = "form-control", @placeholder = "mm/dd/yyyy" })*@
+            @*@Html.ValidationMessageFor(model => model.ExpireDate)*@
+
+        </div>
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.Description, new { @class = "col-sm-6 col-form-label " })
+            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @placeholder = "توضیحات را وارد نمایید." })
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2();
+    });
+
+
+
+</script>

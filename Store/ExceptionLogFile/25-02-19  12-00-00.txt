@@ -1,0 +1,16 @@
+----------- Exception Details on  2019/02/25 22:13:05 -----------------
+
+
+Log Written Date: 2019/02/25 22:13:05
+Error Line No : ine 243
+Error Method Name : DeleteMethodInScaffoldTypeController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/ScaffoldType/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

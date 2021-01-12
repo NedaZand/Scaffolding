@@ -1,0 +1,15 @@
+----------- Exception Details on  5/3/2019 7:52:58 AM -----------------
+
+
+Log Written Date: 5/3/2019 7:52:58 AM
+Error Line No :  model)
+Error Method Name : EditRoutinActionInAssignedTaskController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/AssignedTask/EditRoutin
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

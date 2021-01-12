@@ -1,0 +1,428 @@
+﻿@using Microsoft.AspNet.Identity;
+@using Store.Core.Domain.StoreTables.User;
+@using Store.Service;
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>پنل مدیریت داربست - @ViewBag.Title</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="~/Content/Theme/assets/plugins/animate/animate.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="~/Content/Theme/assets/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- page CSS -->
+    <link href="~/Content/Theme/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Theme/assets/plugins/custom-select/custom-select.css" rel="stylesheet" type="text/css">
+
+    <link href="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/multiselect/css/multi-select.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="~/Content/Theme/assets/css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="~/Content/Theme/assets/css/colors/default.css" id="theme" rel="stylesheet">
+    <!-- Icons -->
+    <link href="~/Content/Theme/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/linea-icons/css/linea-icons.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/weather-icons/css/weather-icons.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+
+    <!--dataTable-->
+    <link href="~/Content/Theme/assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <!--alerts CSS -->
+    <link href="~/Content/Theme/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+
+    <!-- Wizard CSS -->
+    <link href="~/Content/Theme/assets/plugins/jquery-wizard-master/css/wizard.css" rel="stylesheet">
+    <!-- JalaliDatePicker-->
+    <link href="~/content/bootstrap-jalali-datepicker-master/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/Theme/assets/plugins/tablesaw-master/dist/tablesaw.css" rel="stylesheet">
+    <link href="~/Content/Theme/assets/plugins/icheck/skins/all.css" rel="stylesheet">
+
+    @*print*@
+    <link href="~/Content/Theme/assets/plugins/bootstrap/dist/css/bootstrap.min.css" media="print" rel="stylesheet">
+    <link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/css/style.css">
+    <link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/css/colors/default.css">
+    <link rel="stylesheet" media="print" type="text/css" href="~/Content/Theme/assets/plugins/bootstrap-extension/css/bootstrap-extension.css">
+
+    @*<link href="~/Content/Theme/assets/plugins/icheck/skins/all.css" rel="stylesheet">
+        <link href="~/Content/Theme/assets/plugins/custom-select/custom-select.css" rel="stylesheet" type="text/css">*@
+
+    @RenderSection("Style", false)
+    <!-- jQuery -->
+    <script src="~/Content/Theme/assets/plugins/jquery/dist/jquery.min.js"></script>
+</head>
+<body class="fix-header fix-sidebar">
+    <!-- Preloader -->
+    <div class="preloader">
+        <svg class="circular" viewbox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+        </svg>
+    </div>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
+                <div class="top-left-part"></div>
+                <ul class="nav navbar-top-links navbar-left hidden-xs">
+                    <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-right-circle ti-menu"></i></a></li>
+
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-left">
+                    <li class="dropdown">
+                        @*<a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#">
+                                <i class="icon-envelope"></i>
+                                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                            </a>*@
+                        <ul class="dropdown-menu mailbox scale-up">
+                            <li>
+                                <div class="drop-title">شما 4 پیام جدید دارید</div>
+                            </li>
+                            <li>
+                                <div class="message-center">
+                                    <a href="#">
+                                        <div class="user-img"> <img src="assets/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-left"></span> </div>
+                                        <div class="mail-content">
+                                            <h5>بابک جهانبخش</h5>
+                                            <span class="mail-desc">ادمین پنل شما بسیار زیباست!</span> <span class="time">9:30 AM</span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="user-img"> <img src="assets/images/users/sonu.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-left"></span> </div>
+                                        <div class="mail-content">
+                                            <h5>محمد علیزاده</h5>
+                                            <span class="mail-desc">آهنگ جدید مرا دریافت کنید!</span> <span class="time">9:10 AM</span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="user-img"> <img src="assets/images/users/arijit.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-left"></span> </div>
+                                        <div class="mail-content">
+                                            <h5>سپهر آریا</h5>
+                                            <span class="mail-desc">من یک خواننده هستم!</span> <span class="time">9:08 AM</span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="user-img"> <img src="assets/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-left"></span> </div>
+                                        <div class="mail-content">
+                                            <h5>بابک جهانبخش</h5>
+                                            <span class="mail-desc">ادمین پنل شما بسیار زیباست!</span> <span class="time">9:02 AM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="text-center" href="javascript:void(0);"> <strong>مشاهده همه پیام ها</strong> <i class="fa fa-angle-left"></i> </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-messages -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        @*<a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#">
+                                <i class="icon-note"></i>
+                                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                            </a>*@
+                        <ul class="dropdown-menu dropdown-tasks scale-up">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p> <strong>وظیفه 1</strong> <span class="pull-left text-muted">40% انجام شده</span> </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">پیشرفت 40% (موفقیت)</span> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"> </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p> <strong>وظیفه 2</strong> <span class="pull-left text-muted">20% انجام شده</span> </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"> <span class="sr-only">20% انجام شده</span> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"> </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p> <strong>وظیفه 3</strong> <span class="pull-left text-muted">60% انجام شده</span> </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> <span class="sr-only">60% پیشرفت (هشدار)</span> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"> </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p> <strong>وظیفه 4</strong> <span class="pull-left text-muted">80% انجام شده</span> </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"> <span class="sr-only">80% انجام شده (اخطار)</span> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"> </li>
+                            <li>
+                                <a class="text-center" href="#"> <strong>مشاهده همه وظایف</strong> <i class="fa fa-angle-left"></i> </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-tasks -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="~/Content/Theme/assets/images/User.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">@User.Identity.Name </b> </a>
+                        <ul class="dropdown-menu dropdown-user scale-up">
+                            @*<li><a href="#"><i class="ti-user"></i> پروفایل من</a></li>
+                                <li><a href="#"><i class="ti-wallet"></i> معاملات من</a></li>
+                                <li><a href="#"><i class="ti-email"></i> لیست پیام ها</a></li>
+                                <li role="separator" class="divider"> </li>
+                                <li><a href="#"><i class="ti-settings"></i> تنظیمات حساب</a></li>
+                                <li role="separator" class="divider"> </li>*@
+                            <li><a href="/Account/LogOff"><i class="fa fa-power-off"></i> خروج</a></li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- .Megamenu -->
+                    @*<li class="mega-dropdown">
+                            <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"><span class="hidden-xs">مگامنو</span> <i class="icon-options-vertical"></i></a>
+                            <ul class="dropdown-menu mega-dropdown-menu animated bounceInDown">
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">فرم ها</li>
+                                        <li><a href="form-basic.html">فرم های پایه</a></li>
+                                        <li><a href="form-layout.html">طرح های فرم</a></li>
+                                        <li><a href="form-advanced.html">افزونه های فرم</a></li>
+                                        <li><a href="form-material-elements.html">فرم متریال</a></li>
+                                        <li><a href="form-float-input.html">فرم با ورودی شناور</a></li>
+                                        <li><a href="form-upload.html">آپلود فایل</a></li>
+                                        <li><a href="form-mask.html">ماسک فرم</a></li>
+                                        <li><a href="form-img-cropper.html">برش تصویر</a></li>
+                                        <li><a href="form-validation.html">اعتبارسنجی فرم</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">فرم های پیشرفته</li>
+                                        <li><a href="form-dropzone.html">رهاسازی فایل</a></li>
+                                        <li><a href="form-pickers.html">انتخاب‌گرهای فرم</a></li>
+                                        <li><a href="icheck-control.html">کنترل های فرم iCheck</a></li>
+                                        <li><a href="form-wizard.html">فرم مرحله‌ای</a></li>
+                                        <li><a href="form-typeahead.html">Typeahead</a></li>
+                                        <li><a href="form-xeditable.html">X-editable</a></li>
+                                        <li><a href="form-summernote.html">Summernote</a></li>
+                                        <li><a href="form-bootstrap-wysihtml5.html">ویرایشگر متن بوت استرپ</a></li>
+                                        <li><a href="form-tinymce-wysihtml5.html">ویرایشگر متن Tinymce</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">نمونه جدول</li>
+                                        <li><a href="basic-table.html">جدول‌های پایه</a></li>
+                                        <li><a href="table-layouts.html">طرح‌های جداول</a></li>
+                                        <li><a href="data-table.html">جدول اطلاعات</a></li>
+                                        <li><a href="bootstrap-tables.html">جدول‌های بوت‌استرپ</a></li>
+                                        <li><a href="responsive-tables.html">جدول‌های واکنشگرا</a></li>
+                                        <li><a href="editable-tables.html">جداول قابل ویرایش</a></li>
+                                        <li><a href="foo-tables.html">جدول های FooTables</a></li>
+                                        <li><a href="jsgrid.html">جدول‌های JsGrid</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">نمودار ها</li>
+                                        <li> <a href="flot.html">نمودارهای Flot</a> </li>
+                                        <li><a href="morris-chart.html">نمودارهای Morris</a></li>
+                                        <li><a href="chart-js.html">نمودارهای Chart-js</a></li>
+                                        <li><a href="peity-chart.html">نمودارهای Peity</a></li>
+                                        <li><a href="knob-chart.html">نمودارهای دستگیره‌ای</a></li>
+                                        <li><a href="sparkline-chart.html">نمودارهای Sparkline</a></li>
+                                        <li><a href="extra-charts.html">نمودارهای بیشتر</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-12 m-t-40 demo-box">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="white-box text-center bg-purple"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i><br>گزینه نمایشی 1</a></div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="white-box text-center bg-success"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i><br>گزینه نمایشی 2</a></div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="white-box text-center bg-info"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i><br>گزینه نمایشی 3</a></div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="white-box text-center bg-inverse"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i><br>گزینه نمایشی 4</a></div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="white-box text-center bg-warning"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i><br>گزینه نمایشی 5</a></div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="white-box text-center bg-danger"><a href="#" target="_blank" class="text-white"><i class="linea-icon linea-ecommerce fa-fw" data-icon="d"></i><br>خرید قالب</a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>*@
+                    <!-- /.Megamenu -->
+                    <!-- /.dropdown -->
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- Left navbar-header -->
+        <div class="navbar-default sidebar" role="navigation">
+            @Html.Partial("_menu")
+        </div>
+        <!-- Left navbar-header end -->
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                @Html.Partial("_notification")
+                @RenderBody()
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+        @*<footer class="footer text-center">ارائه شده در وب‌سایت <a href="https://www.rtl-theme.com" target="_blank">راست‌چین</a></footer>*@
+    </div>
+    <!-- /#wrapper -->
+    <!---داربست اسکریپت-->
+    <script src="~/scripts/CommonScripts/MatGHafaciSys.js"></script>
+    <script src="~/scripts/CommonScripts/MatSingleWallSys.js"></script>
+    <script src="~/scripts/CommonScripts/MatSingleWall.js"></script>
+    <script src="~/scripts/CommonScripts/material.js"></script>
+    <script src="~/scripts/CommonScripts/MatCharkh.js"></script>
+    <script src="~/scripts/CommonScripts/MATpoli.js"></script>
+    <script src="~/scripts/CommonScripts/MATdayere.js"></script>
+    <script src=" ~/scripts/CommonScripts/MatGhafasi.js"></script>
+
+    <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/bootstrap/dist/js/tether.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <!--Wave Effects -->
+    <script src="~/Content/Theme/assets/plugins/waves/waves.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/Theme/assets/js/custom.js"></script>
+    <script src="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/custom-select/custom-select.min.js" type="text/javascript"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="~/Content/Theme/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Content/Theme/assets/plugins/multiselect/js/jquery.multi-select.js"></script>
+
+    <script src="~/Content/Theme/assets/plugins/tablesaw-master/dist/tablesaw.js"></script>
+    <script src="~/Content/Theme/assets/js/tablesaw-init.js"></script>
+    <!-- icheck -->
+    <script src="~/Content/Theme/assets/plugins/icheck/icheck.min.js"></script>
+    <script src="~/Content/Theme/assets/js/icheck.init.js"></script>
+    @*<script>
+        jQuery(document).ready(function () {
+            // Switchery
+            var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+            $('.js-switch').each(function () {
+                new Switchery($(this)[0], $(this).data());
+
+            });*@
+
+    <!--Style Switcher -->
+    <script src="~/Content/Theme/assets/js/style-switcher.js"></script>
+    <!--dataTable -->
+    <script src="~/Content/Theme/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+    <!-- Switchery -->
+    <script src="~/Content/Theme/assets/plugins/switchery/dist/switchery.min.js"></script>
+
+    <!-- Sweet-Alert  -->
+    <script src="~/Content/Theme/assets/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="~/Content/Theme/assets/js/jquery.sweet-alert.custom.js"></script>
+
+    <!-- JalaliDatePicker-->
+
+    <script src="~/content/bootstrap-jalali-datepicker-master/bootstrap-datepicker.fa.min.js"></script>
+
+    <script src="~/content/bootstrap-jalali-datepicker-master/bootstrap-datepicker.min.js"></script>
+
+    <!-- bootbox-->
+    <script src="~/scripts/bootbox.min.js"></script>
+    <!-- CommonJS-->
+    <script src="~/scripts/CommonScripts/Common.js"></script>
+    <!-- icheck -->
+    @*<script src="~/Content/Theme/assets/plugins/icheck/icheck.min.js"></script>
+        <script src="~/Content/Theme/assets/js/icheck.init.js"></script>
+        <script src="~/Content/Theme/assets/plugins/custom-select/custom-select.min.js" type="text/javascript"></script>*@
+    <script src="~/Content/Theme/assets/plugins/cbpFWTabs/cbpFWTabs.min.js"></script>
+
+    <!--slimscroll JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Form Wizard JavaScript -->
+    <script src="~/Content/Theme/assets/plugins/jquery-wizard-master/dist/jquery-wizard.min.js"></script>
+    <!-- FormValidation -->
+    <link rel="stylesheet" href="~/Content/Theme/assets/plugins/jquery-wizard-master/libs/formvalidation/formValidation.min.css">
+    <!-- FormValidation plugin and the class supports validating Bootstrap form -->
+    <script src="~/Content/Theme/assets/plugins/jquery-wizard-master/libs/formvalidation/formValidation.min.js"></script>
+
+    @*<script src="~/scripts/CommonScripts/orbit.js"></script>
+        <script src="~/scripts/CommonScripts/WebGL.js"></script>*@
+
+    @RenderSection("Script", false)
+    <script>
+        (function () {
+
+            [].slice.call(document.querySelectorAll('.sttabs')).forEach(function (el) {
+                new CBPFWTabs(el);
+            });
+
+        })();
+        $(".myadmin-alert .closed").click(function (event) {
+            $(this).parents(".myadmin-alert").fadeToggle(350);
+
+            return false;
+        });
+
+
+        $(document).ajaxStart(function () {
+            $("button[type='submit']").prop("disabled", true);
+        });
+        $(document).ajaxStop(function () {
+            $("button[type='submit']").prop("disabled", false);
+        });
+
+    </script>
+</body>
+</html>

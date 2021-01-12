@@ -1,0 +1,267 @@
+﻿@model Store.Models.User.PersonnelReportModel
+@{
+    ViewBag.Title = "مدیریت پرسنل";
+}
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">لیست پرسنل</h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+       
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            @*<li><a href="javascript:void()" onclick="AddFunction('/Personnel/Create')">ثبت پرسنل  جدید </a></li>*@
+            <li><a href="/Personnel/Create">ثبت پرسنل </a></li>
+            <li class="active">لیست پرسنل</li>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            <div class="panel-group" id="exampleAccordionDefault" aria-multiselectable="true" role="tablist">
+                <div class="panel">
+                    <div class="panel-heading" id="exampleHeadingDefaultOne" role="tab">
+                        <h4 class="panel-title"> <a class="font-bold collapsed" data-toggle="collapse" href="#exampleCollapseDefaultOne" data-parent="#exampleAccordionDefault" aria-expanded="false" aria-controls="exampleCollapseDefaultOne"><i class="zmdi zmdi-search zmdi-hc-fw" style="font-size:20px!important;"></i> جستجو پیشرفته </a> </h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="exampleCollapseDefaultOne" aria-labelledby="exampleHeadingDefaultOne" role="tabpanel" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body">@Html.Partial("_Filter", Model)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <div id="example_wrapper" class="dataTables_wrapper ">
+
+                    <table id="PersonnelGrid" class="table table-striped table-condensed table-bordered no-margin">
+                        <thead>
+                            <tr>
+                                <th>ردیف</th>
+                                <th>عملیات</th>
+                                <th>تغییر وضعیت حضور</th>
+                                <th>نام و نام خانوادگی  </th>
+                                <th>کد پرسنلی</th>
+                                <th>وضعیت تاهل</th>
+                                <th>تاریخ تولد</th>
+                                <th>تاریخ استخدام</th>
+                                <th>کد ملی</th>
+                                <th>نوع همکاری</th>
+                                <th>پست سازمانی  </th>
+                                <th>تاریخ ایجاد</th>
+                                <th> کاربر ایجاد  کننده</th>
+                                <th>تاریخ ویرایش</th>
+                                <th>کاربر ویرایش کننده </th>
+
+                            </tr>
+                        </thead>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        var table = $("#PersonnelGrid").DataTable({
+            "language": {
+                "sEmptyTable": "هیچ داده ای در جدول وجود ندارد",
+                "sInfo": "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                "sInfoEmpty": "نمایش 0 تا 0 از 0 رکورد",
+                "sInfoFiltered": "(فیلتر شده از _MAX_ رکورد)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "نمایش _MENU_ رکورد",
+                "sLoadingRecords": "در حال بارگزاری...",
+                "sProcessing": "در حال پردازش...",
+                "sSearch": "جستجو:",
+                "sZeroRecords": "رکوردی با این مشخصات پیدا نشد",
+                "oPaginate": {
+                    "sFirst": "ابتدا",
+                    "sLast": "انتها",
+                    "sNext": "بعدی",
+                    "sPrevious": "قبلی"
+                },
+                "oAria": {
+                    "sSortAscending": ": فعال سازی نمایش به صورت صعودی",
+                    "sSortDescending": ": فعال سازی نمایش به صورت نزولی"
+                }
+            },
+            "processing": true,
+            "serverSide": true,
+            "info": true,
+            "searching": true,
+            "stateSave": false,
+            "lenghtMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+            "responsive": true,
+
+            "ajax": {
+                 "url": "/Personnel/List?StatusPresence=@Store.Core.Domain.StoreTables.PersonnelStatus.NonSuspended",
+                "type": "get",
+
+            },
+            "columns": [
+
+                { "data": "", "orderable": false },
+               
+                { "data": "PersonnelCode", "orderable": false },
+
+                { "data": "PersonnelCode", "orderable": false },
+
+                { "data": "UserNameFmaily", "orderable": false },
+
+                { "data": "PersonnelCode", "orderable": false },
+
+                { "data": "MaritalStatusTitle", "orderable": false },
+
+                { "data": "ShamsiBirthDate", "orderable": false },
+
+                { "data": "ShamsiDateEmployeement", "orderable": false },
+
+                { "data": "NationalCode", "orderable": false },
+
+                { "data": "EmployeeName", "orderable": false },
+
+                { "data": "PositionName", "orderable": false },
+
+                { "data": "ShamsiCreateDate", "orderable": false },
+
+                { "data": "ActionUserName", "orderable": false },
+
+                { "data": "ShamsiEditDate", "orderable": false },
+
+                { "data": "EditUserName", "orderable": false },
+
+
+
+            ],
+            "columnDefs": [
+
+               
+                {
+                    targets: 0,
+                    width: "20px",
+                    render: function (data, type, row, meta) {
+                        return meta.row + meta.settings._iDisplayStart + 1;
+                    }
+                    //render: function (data, type, row, meta) {
+                    //    return '<span >' + (meta.row + 1) + '</span>';
+                    //}
+
+                },
+                {
+                    targets: 1,
+                    render: function (data, type, row, meta) {
+                        return '<div class="button-box"><div class="btn-group m-l-10"><button aria-expanded="false" data-toggle="dropdown" class="btn btn-danger dropdown-toggle waves-effect waves-light" type="button" > عملیات &nbsp; &nbsp; <span class="caret"></span></button><ul role="menu" class="dropdown-menu animated flipInX"><li><a class="btn btn-info waves-effect btn-rounded waves-light"  href="/Personnel/Edit/' + data + '"> <i class="zmdi zmdi-edit zmdi-hc-fw"></i> ویرایش  </a></li><li class="divider"></li><li><a href="javascript:void();" class="btn btn-youtube waves-effect btn-rounded waves-light" onclick="Remove(' + data + ')"> <i class="zmdi zmdi-delete zmdi-hc-fw"></i> حذف</a></li></ul></div>'
+                    }
+
+
+                },
+                  {
+
+                    targets: 2,
+                    render: function (data, type, row, meta) {
+                      
+                        return '<select onchange="ChangeStatusPresence(' + data + ',this)">' + '<option value="0">انتخاب کنید</option>'  + '<option value="@(Store.Core.Domain.StoreTables.PersonnelStatus.Absent)">عدم حضور</option>'+ '<option value="@(Store.Core.Domain.StoreTables.PersonnelStatus.Suspended)">تعلیق </option> '+'</select>';
+                    }
+
+
+                },
+               
+
+            ],
+
+            "order": []
+        });
+        
+    });
+
+    function Remove(id) {
+        swal({
+            title: "رکورد حذف شود؟",
+            text: " درصورت حذف شما نمیتوانید این رکورد را بازیابی کنید!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "بله",
+            cancelButtonText: "خیر",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+
+                if (isConfirm) {
+                    $.ajax({
+                        url: '/Personnel/Delete',
+                        data: { id: id },
+                        type: 'Post',
+
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.ResultType == 0) {
+                                swal("حذف شد!", data.Message, "success");
+                                $('#PersonnelGrid').DataTable().ajax.reload();
+                            }
+                            else if (data.ResultType == 1) {
+                                swal("خطا", "امکان حذف رکورد وجود ندارد!", "error");
+                            }
+
+
+                        }
+
+
+                    });
+
+                } else {
+                    swal("کنسل", "حذف کنسل شد :)", "error");
+                }
+            });
+
+    };
+
+    function ChangeStatusPresence(id, object) {
+        jQuery.ajax({
+            type: 'Get',
+            url: '/Personnel/ChangeStatusPresence',
+            dataType: 'json',
+            data: { id: id, status: $(object).val() },
+            success: function (data) {
+                if (data.ResultType == 0) {
+
+                    $('#PersonnelGrid').DataTable().ajax.reload();
+
+                    $(".alert-success").hide();
+                    $('.alert-success b').html();
+                    $('.alert-success b').html(data.Message);
+                    $('.alert-danger').hide();
+                    $('.alert-warning').hide();
+                    $(".alert-success").fadeToggle(350);
+
+
+
+                }
+                else {
+
+
+                    $('.alert-danger b').html();
+                    $('.alert-danger b').html(data.Message);
+                    $('.alert-success').hide();
+                    $('.alert-danger').hide();
+                    $('.alert-warning').hide();
+                    $(".alert-danger").fadeToggle(350);
+
+
+
+                }
+              
+            }
+        });
+    }
+
+</script>

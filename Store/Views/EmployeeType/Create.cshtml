@@ -1,0 +1,76 @@
+﻿@model Store.Models.Stores.EmployeeTypeModel
+@{
+    ViewBag.Title = "فرم ثبت نوع همکاری";
+
+}
+
+@*<div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-12">
+            <h4 class="page-title">فرم ثبت نوع همکاری</h4>
+        </div>
+        <div class="col-lg-9 col-md-8 col-12">
+            <a href="#" target="_blank" class="btn btn-danger pull-left m-r-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">خرید قالب</a>
+            <ol class="breadcrumb">
+                <li><a href="/Home/Index">داشبورد</a></li>
+                <li><a href="/EmployeeType/Index">نمایش نوع همکاری</a></li>
+                <li class="active">ثبت نوع همکاری</li>
+            </ol>
+        </div>
+    </div>*@
+<div class="row">
+    <div class="col-md-12">
+        
+            @using (Ajax.BeginForm("Create", "EmployeeType", null, new AjaxOptions { Url = "/EmployeeType/Create", HttpMethod = "Post", OnSuccess = "addSuccessEmployeeType" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+
+                @Html.AntiForgeryToken()
+
+                @Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="bootboxHideAll()"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+
+            </div>
+                    </div>
+             
+
+
+            @*<script>
+
+
+                    function addSuccess(data) {
+                        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+                        if (data.ResultType == 0) {
+                            bootboxHideAll();
+                            document.getElementById("form").reset();
+
+                            $(".alert-success").hide();
+                            $('.alert-success b').html();
+                            $('.alert-success b').html(data.Message);
+                            $('.alert-danger').hide();
+                            $('.alert-warning').hide();
+                            $(".alert-success").fadeToggle(350);
+
+
+                        }
+                        else if (data.ResultType == 1) {
+                            bootboxHideAll();
+                            $('.alert-danger b').html();
+                            $('.alert-danger b').html(data.Message);
+                            $('.alert-success').hide();
+                            $('.alert-warning').hide();
+                            $(".alert-danger").fadeToggle(350);
+
+
+
+                        }
+
+                    }
+
+                </script>*@

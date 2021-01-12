@@ -1,0 +1,80 @@
+﻿@model Store.Models.Stores.StoreRoom.BuyMaterialModel
+
+
+<div class="row">
+    @if (Model.Id == 0)
+    {
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.EquipmentId, new { @class = "col-sm-12 col-form-label " })
+                @Html.DropDownListFor(model => model.EquipmentId, Model.EquipmentList, new { @class = "form-control select2" })
+
+            </div>
+
+        </div>
+    }
+
+    <div class="col-md-4">
+        <div class="form-group  m-b-40">
+
+
+            @Html.LabelFor(model => model.CompanyStoreRoomId, new { @class = "col-sm-12 col-form-label " })
+            @Html.DropDownListFor(model => model.CompanyStoreRoomId, Model.CompanyList, new { @class = "form-control select2" })
+
+
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.BuyDate, new { @class = "col-sm-12 col-form-label " })
+            @Html.EditorFor(model => model.BuyDate, new { @class = "form-control" })
+
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.UnitId, new { @class = "col-sm-12 col-form-label " })
+            @Html.DropDownListFor(model => model.UnitId, Model.Units, new { @class = "select2 form-control" })
+
+        </div>
+
+        </div>
+    
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.Count, new { @class = "col-sm-12 col-form-label " })
+            @Html.TextBoxFor(model => model.Count, new { @class = "form-control", @type = "number", @min = 0 })
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.Price, new { @class = "col-sm-12 col-form-label " })
+            @Html.TextBoxFor(model => model.Price, new { @class = "form-control", @type = "number", @min = 0 })
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+    });
+
+
+
+</script>

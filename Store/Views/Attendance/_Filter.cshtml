@@ -1,0 +1,76 @@
+﻿@model Store.Models.Stores.AttendanceModel
+
+@*<form id="search">*@
+    @using (Html.BeginForm("Report", "Attendance", FormMethod.Post, new { @enctype = "multipart/form-data", id = "search", @class = "", @target = "_blank" }))
+    {
+
+        @Html.AntiForgeryToken()
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group  m-b-40">
+
+                    @Html.LabelFor(model => model.PersonnelCode, new { @class = "col-sm-4 col-form-label " })
+
+                    @Html.DropDownListFor(model => model.SinglePersonnelCode, Model.PersonnelList, new { @class = "select2 form-control", @placeholder = "یک یا چند پرسنل را انتخاب نمایید " })
+                    @Html.ValidationMessageFor(model => model.SinglePersonnelCode)
+
+                </div>
+            </div>
+            <div class="col-md-3">
+
+
+                <div class="form-group  m-b-40">
+
+                    @Html.LabelFor(model => model.PresenceStatus, new { @class = "col-sm-4 col-form-label " })
+
+                    @Html.DropDownListFor(model => model.PresenceStatus, Model.PresenceStatusList, new { @class = "form-control select2" })
+
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group m-b-40">
+
+                    @Html.LabelFor(model => model.FromDate, new { @class = "col-sm-4 col-form-label " })
+
+                    @Html.EditorFor(model => model.FromDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group m-b-40">
+
+                    @Html.LabelFor(model => model.ToDate, new { @class = "col-sm-4 col-form-label " })
+
+                    @Html.EditorFor(model => model.ToDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+            <button type="button" class="btn btn-success btn-rounded" onclick="AttendanceSearch()"> <i class="fa fa-search"></i> فیلتر</button>
+            <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="Cancel()"><i class="fa fa-times"></i> بازگشت</a>
+
+        </div>
+    }
+    @*</form>*@
+<script>
+    $(document).ready(function () {
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+
+    });
+
+
+
+</script>

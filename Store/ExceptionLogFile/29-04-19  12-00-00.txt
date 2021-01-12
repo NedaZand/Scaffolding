@@ -1,0 +1,128 @@
+----------- Exception Details on  2019/04/29 17:21:56 -----------------
+
+
+Log Written Date: 2019/04/29 17:21:56
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/29 17:22:01 -----------------
+
+
+Log Written Date: 2019/04/29 17:22:01
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/29 17:22:06 -----------------
+
+
+Log Written Date: 2019/04/29 17:22:06
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/29 17:22:11 -----------------
+
+
+Log Written Date: 2019/04/29 17:22:11
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/29 17:22:35 -----------------
+
+
+Log Written Date: 2019/04/29 17:22:35
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/29 17:22:41 -----------------
+
+
+Log Written Date: 2019/04/29 17:22:41
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/29 17:23:41 -----------------
+
+
+Log Written Date: 2019/04/29 17:23:41
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/29 17:56:12 -----------------
+
+
+Log Written Date: 2019/04/29 17:56:12
+Error Line No : ine 382
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

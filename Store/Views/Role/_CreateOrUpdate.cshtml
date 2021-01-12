@@ -1,0 +1,90 @@
+﻿@model Store.Models.User.ApplicationRoleModel
+
+<div class="form-group m-b-40">
+    @Html.LabelFor(model => model.Name, new { @class = "col-sm-2 col-form-label " })
+    @Html.TextBoxFor(model => model.Name, new { required = "عنوان نقش الزامی است", @class = "form-control", placeholder = "عنوان را وارد نمایید." })
+
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="form-group  m-b-40">
+
+    @Html.LabelFor(model => model.IsActive, new { @class = "col-sm-2 col-form-label " })
+    @Html.CheckBoxFor(model => model.IsActive, new { @class = "form-control js-switch" })
+
+    <br />
+
+    <label class="col-sm-12 col-form-label h4">انتخاب همه
+    <input type="checkbox" id="select-all" class="h4"/>
+    </label>    
+
+</div>
+
+
+
+<div class="row">
+    
+    <table class="tablesaw table-bordered table-hover table  color-table success-table" data-tablesaw-mode="swipe">
+        <thead>
+            <tr>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">عنوان فرم</th>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">رویت</th>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">ایجاد</th>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">ویرایش </th>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">حذف</th>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="5">گزارش</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Permissions.GroupBy(x => x.Category).ToList())
+            {
+                <tr>
+                    <td>@item.FirstOrDefault().PersianCategoryame</td>
+
+                    @foreach (var per in item)
+                    {
+
+
+                        <td>
+                            <input type="checkbox" @(per.IsChecked ? "checked" : "") class="check" name="PermissionId" value="@per.Id" id="PermissionId" data-checkbox="icheckbox_flat-green">
+                        </td>
+
+
+                    }
+
+                </tr>
+
+
+            }
+
+
+
+        </tbody>
+    </table>
+
+</div>
+<script>
+    $(document).ready(function () {
+        //$('.i-checks').iCheck({
+        //    checkboxClass: 'icheckbox_square-green',
+        //    radioClass: 'iradio_square-green',
+        //});
+        var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, { color: '#1AB394' });
+    });
+
+    $('#select-all').click(function (event) {
+        if (this.checked) {
+            // Iterate each checkbox
+            $(':checkbox').each(function () {
+                $('.check').iCheck('check');
+                
+            });
+        } else {
+            $(':checkbox').each(function () {
+                $('.check').iCheck('uncheck');
+            });
+        }
+    });
+
+</script>

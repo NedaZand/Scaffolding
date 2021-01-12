@@ -1,0 +1,16 @@
+----------- Exception Details on  5/2/2019 10:34:01 AM -----------------
+
+
+Log Written Date: 5/2/2019 10:34:01 AM
+Error Line No : ine 393
+Error Method Name : DeleteMethodInWorkingGroupController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.WorkingGroupPersonnels_dbo.Workgroups_WorkgroupId". The conflict occurred in database "StoreDB2", table "dbo.WorkingGroupPersonnels", column 'WorkgroupId'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkingGroup/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

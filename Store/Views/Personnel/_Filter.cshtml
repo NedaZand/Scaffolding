@@ -1,0 +1,150 @@
+﻿@model Store.Models.User.PersonnelReportModel
+
+@*<form id="search">*@
+@using (Html.BeginForm("Report", "Personnel", FormMethod.Post, new { @enctype = "multipart/form-data", id = "search", @class = "" , @target = "_blank" }))
+{
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.UserNameFmaily, new { @class = "col-sm-6 col-form-label " })
+                @Html.TextBoxFor(model => model.UserNameFmaily, new {  @class = "form-control", placeholder = "نام و نام خانوادگی را وارد نمایید." })
+            
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.PersonnelCode, new { @class = "col-sm-4 col-form-label " })
+                @Html.TextBoxFor(model => model.PersonnelCode, new { @class = "form-control", placeholder = "کد پرسنلی را وارد نمایید." })
+                @Html.ValidationMessageFor(model => model.PersonnelCode)
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.NationalCode, new { @class = "col-sm-4 col-form-label " })
+                @Html.TextBoxFor(model => model.NationalCode, new { @class = "form-control", placeholder = "کد ملی را وارد نمایید." })
+                @Html.ValidationMessageFor(model => model.NationalCode)
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.BirthDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.BirthDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group m-b-40">
+                @Html.LabelFor(model => model.ToBirthDate, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.ToBirthDate, new {  @class = "form-control" })
+
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.DateEmployeement, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.DateEmployeement, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group m-b-40">
+
+                @Html.LabelFor(model => model.ToDateEmployeement, new { @class = "col-sm-6 col-form-label " })
+                @Html.EditorFor(model => model.ToDateEmployeement, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+
+
+
+        <div class="col-md-4">
+
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.MaritalStatus, new { @class = "col-sm-6 col-form-label " })
+                @Html.DropDownListFor(model => model.MaritalStatus, Model.MaritalStatuses, new { @class = "form-control select2" })
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+
+                @Html.LabelFor(model => model.EmployeeId, new { @class = "col-sm-6 col-form-label " })
+
+                @Html.DropDownListFor(model => model.EmployeeId, Model.Employees, new { @class = "form-control select2" })
+
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group  m-b-40">
+                @Html.LabelFor(model => model.PositionId, new { @class = "col-sm-6 col-form-label " })
+
+                @Html.DropDownListFor(model => model.PositionId, Model.Positions, new { @class = "form-control select2" })
+
+
+            </div>
+        </div>
+        @*<div class="col-md-3">
+
+            <div class="form-group  m-b-40">
+                @Html.LabelFor(model => model.CompanyId, new { @class = "col-sm-6 col-form-label " })
+
+                @Html.DropDownListFor(model => model.CompanyId, Model.Companies, new { @class = "form-control select2" })
+
+
+            </div>
+
+
+        </div>*@
+    </div>
+
+
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+        <button type="button" class="btn btn-success btn-rounded" onclick="PersonnelSearch()"> <i class="fa fa-search"></i> فیلتر</button>
+        <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="Cancel()"><i class="fa fa-times"></i> بازگشت</a>
+
+    </div>
+}
+    @*</form>*@
+    <script>
+        $(document).ready(function () {
+            $(".select2").select2("destroy");
+            $(".select2").select2();
+
+        });
+
+
+
+    </script>

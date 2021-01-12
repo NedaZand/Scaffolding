@@ -1,0 +1,153 @@
+﻿@model Store.Models.Stores.StoreRoom.ScaffoldModel
+@{
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <title>چاپ مشخصات دستور کار </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            font-size:20px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+   
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading"> مشخصات دستور کار </div>
+                    <div class="panel-wrapper collapse in" aria-expanded="true">
+                        <div class="panel-body">
+                           
+                            <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">شماره درخواست</th>
+                                        <th  width="30%">تگ</th>
+                                        <th  width="30%">تاریخ</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td tabindex="1">@Model.WorkOrderModel.Title</td>
+                                        <td tabindex="1">@Model.WorkOrderModel.Tag</td>
+                                        <td tabindex="1">@Model.WorkOrderModel.ShamsiDate</td>
+                                    </tr>
+                                    <tr>
+                                        <th>شرکت</th>
+                                        <th>واحد</th>
+                                        <th>سکشن</th>
+                                    </tr>
+                                    <tr>
+                                        <td tabindex="1">@Model.WorkOrderModel.CompanyName</td>
+                                        <td tabindex="1">@Model.WorkOrderModel.UnitName</td>
+                                        <td tabindex="1">@Model.WorkOrderModel.SectionName</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading"> ثبت مشخصات داربست </div>
+                    <div class="panel-wrapper collapse in" aria-expanded="true">
+                        <div class="panel-body">
+
+                            <form action="#" class="form-inline">
+                                <div class="form-body">
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">نوع داربست :</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">نوع بنا:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">نوع زمین:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">طول :</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">عرض:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">ارتفاع:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2">توضیحات:</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea class="form-control" cols="10" rows="15"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

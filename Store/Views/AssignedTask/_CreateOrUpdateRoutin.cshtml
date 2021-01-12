@@ -1,0 +1,68 @@
+﻿@model Store.Models.Stores.AssignedWorkorderViewModel
+<style>
+    form {
+        text-align: right !important;
+    }
+</style>
+
+@for (int i = 0; i < Model.Routins.Count; i++)
+{
+
+    using (Ajax.BeginForm("CreateAssignedRoutin", "AssignedTask", null, new AjaxOptions { Url = "/AssignedTask/CreateAssignedRoutin", HttpMethod = "Post", OnSuccess = "addSuccessRoutin" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+    {
+        <input type="hidden" name="Model.RoutineId" value="@Model.Routins[i].RoutineId" />
+        <div class="content-wrap">
+            <div class="container-fluid" style="background-color:#edf1f5!important; border-radius:5px">
+                <h4> @Model.Routins[i].RoutineTitle</h4>
+                <div id="workOrderDIV" class="row">
+                    <div class="col-md-6">
+                        <div class="form-group m-b-0">
+                            <label class="col-sm-6 col-form-label">تاریخ فعالیت</label>
+                            <input class="form-control Date" id="Model.Routins[@i].Date" readonly placeholder="جهت انتخاب تاریخ فعالیت کلیک کنید" name="Model.Date" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group m-b-0">
+                            <label class="col-sm-6 col-form-label">انتخاب پرسنل</label>
+                            <select class="select2 persons" multiple id="Model.UserIds" name="Model.UserIds"></select>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <div class="row col-md-12" dir="ltr">
+                        <div class="form-group m-b-0">
+                            <button type="submit" class="btn btn-success btn-block"> اختصاص نیرو به روتین ها</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    }
+}
+
+
+<script>
+
+    $(document).ready(function () {
+        var personells = @Html.Raw(Json.Encode(Model.Personnels));
+        $.each(personells, function (i, person) {
+
+            $(".persons").append('<option value="'
+
+                + person.Value + '">'
+
+                + person.Text + '</option>');
+
+        });
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+
+        $('.Date').datepicker({
+            showButtonPanel: true
+        });
+    });
+
+
+</script>

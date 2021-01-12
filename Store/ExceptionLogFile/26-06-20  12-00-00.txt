@@ -1,0 +1,45 @@
+----------- Exception Details on  6/26/2020 7:45:23 PM -----------------
+
+
+Log Written Date: 6/26/2020 7:45:23 PM
+Error Line No : line 85
+Error Method Name : RemoveMethodInInputMaterialService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/InputMaterial/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/26/2020 7:45:37 PM -----------------
+
+
+Log Written Date: 6/26/2020 7:45:37 PM
+Error Line No : line 85
+Error Method Name : RemoveMethodInInputMaterialService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/InputMaterial/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  6/26/2020 11:34:42 PM -----------------
+
+
+Log Written Date: 6/26/2020 11:34:42 PM
+Error Line No : line 85
+Error Method Name : RemoveMethodInInputMaterialService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/InputMaterial/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

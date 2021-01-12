@@ -1,0 +1,46 @@
+﻿@model Store.Models.Stores.StoreRoom.CompanyStoreRoomModel
+@{
+    ViewBag.Title = "مدیریت فروشندگان";
+
+}
+
+
+
+@*<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">ویرایش مشتری </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+        <a href="#" target="_blank" class="btn btn-danger pull-left m-r-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">خرید قالب</a>
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/Company/Index">نمایش مشتری</a></li>
+            <li class="active">ویرایش مشتری </li>
+        </ol>
+    </div>
+</div>*@
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+
+        @using (Ajax.BeginForm("Edit", "CompanyStoreRoom", null, new AjaxOptions { Url = "/CompanyStoreRoom/Edit", HttpMethod = "Post", OnSuccess = "editSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+        {
+            @Html.HiddenFor(m => m.Id)
+
+            @Html.AntiForgeryToken()
+
+            @Html.Partial("_CreateorUpdate", Model)
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ویرایش</button>
+                <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="bootboxHideAll()"><i class="fa fa-times"></i> بازگشت</a>
+
+            </div>
+
+        }
+
+        </div>
+    </div>
+</div>
+
+

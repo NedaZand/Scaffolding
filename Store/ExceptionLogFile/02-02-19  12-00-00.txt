@@ -1,0 +1,138 @@
+----------- Exception Details on  2/2/2019 3:02:35 PM -----------------
+
+
+Log Written Date: 2/2/2019 3:02:35 PM
+Error Line No : ine 554
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 3:10:41 PM -----------------
+
+
+Log Written Date: 2/2/2019 3:10:41 PM
+Error Line No : Upload)
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 3:13:04 PM -----------------
+
+
+Log Written Date: 2/2/2019 3:13:04 PM
+Error Line No : Upload)
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 3:25:50 PM -----------------
+
+
+Log Written Date: 2/2/2019 3:25:50 PM
+Error Line No : Upload)
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 3:30:33 PM -----------------
+
+
+Log Written Date: 2/2/2019 3:30:33 PM
+Error Line No : Upload)
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 3:33:26 PM -----------------
+
+
+Log Written Date: 2/2/2019 3:33:26 PM
+Error Line No : Upload)
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : An error occurred while updating the entries. See the inner exception for details.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 3:52:25 PM -----------------
+
+
+Log Written Date: 2/2/2019 3:52:24 PM
+Error Line No : ine 599
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.WorkOrders' with unique index 'IX_Title'. The duplicate key value is (FA/PGGWSP/1397/529).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 5:34:34 PM -----------------
+
+
+Log Written Date: 2/2/2019 5:34:34 PM
+Error Line No : ine 102
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (ذ).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/2/2019 5:34:56 PM -----------------
+
+
+Log Written Date: 2/2/2019 5:34:56 PM
+Error Line No : ine 102
+Error Method Name : CreateMethodInCompanyController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (ذ).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Company/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

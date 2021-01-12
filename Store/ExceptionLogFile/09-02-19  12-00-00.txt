@@ -1,0 +1,77 @@
+----------- Exception Details on  2/9/2019 10:56:53 AM -----------------
+
+
+Log Written Date: 2/9/2019 10:56:53 AM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/9/2019 12:36:10 PM -----------------
+
+
+Log Written Date: 2/9/2019 12:36:10 PM
+Error Line No : ine 107
+Error Method Name : UpdateMethodInInputMaterialService
+Error Message: ArgumentException
+Exception Type: System.ArgumentException
+Error Location : The number of primary key values passed must match number of primary key values defined on the entity.
+Parameter name: keyValues
+Error Page Url: http://localhost:1839/InputMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/9/2019 12:36:39 PM -----------------
+
+
+Log Written Date: 2/9/2019 12:36:39 PM
+Error Line No : ine 107
+Error Method Name : UpdateMethodInInputMaterialService
+Error Message: ArgumentException
+Exception Type: System.ArgumentException
+Error Location : The number of primary key values passed must match number of primary key values defined on the entity.
+Parameter name: keyValues
+Error Page Url: http://localhost:1839/InputMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/9/2019 12:54:25 PM -----------------
+
+
+Log Written Date: 2/9/2019 12:54:25 PM
+Error Line No : entity)
+Error Method Name : UpdateMethodInInputMaterialService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Attaching an entity of type 'Store.Core.Domain.StoreTables.StoreRoom.InputMaterial' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+Error Page Url: http://localhost:1839/InputMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/9/2019 12:55:43 PM -----------------
+
+
+Log Written Date: 2/9/2019 12:55:43 PM
+Error Line No : entity)
+Error Method Name : UpdateMethodInInputMaterialService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Attaching an entity of type 'Store.Core.Domain.StoreTables.StoreRoom.InputMaterial' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+Error Page Url: http://localhost:1839/InputMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

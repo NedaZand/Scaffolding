@@ -1,0 +1,70 @@
+﻿@model List<Store.Models.Stores.StoreRoom.ScaffoldModel>
+@{
+    
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <title>داربست های منقضی شده </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+                <h3 class="box-title">داربست های منقضی شده </h3>
+                
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                             
+                                <th>عنوان</th>
+                                <th>تگ</th>
+                                <th>تاریخ درخواست</th>
+                                <th>تاریخ انقضا</th>
+                                <th>ثبت برچسب ایمنی</th>
+                                <th>نوع داربست</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            @for (int i = 0; i < Model.Count(); i++)
+                            {
+                            <tr>
+                               
+                                <td>@Model[i].Title</td>
+                                <td>@Model[i].Tag</td>
+                                <td>@Model[i].ShamsiDate</td>
+                                <td>@Model[i].ShamsiExpireDate</td>
+                                <td>@Model[i].ShamsiSafetyTagExpire</td>
+                                <td>@Model[i].ScaffoldTypeTitle</td>
+                            </tr>
+                                    }
+                            
+
+                            </tbody>
+                    </table>
+                
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>
+

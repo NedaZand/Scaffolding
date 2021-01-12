@@ -1,0 +1,185 @@
+﻿@model Store.Models.Stores.AssignedWorkorderViewModel
+
+
+
+    <div class="content-wrap col-md-12">
+        <div class="container-fluid" style="background-color:#edf1f5!important; border-radius:5px">
+            <div id="workOrderDIV" class="row">
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">شرکت</label>
+                        <select class="form-control select2" id="CompanyId" name="CompanyId" onchange="getCompanies(this,'unit')"></select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">واحد</label>
+                        <select class="form-control select2" id="UnitId" name="UnitId" onchange="getCompanies(this,'section')"></select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">سکشن</label>
+                        <select class="form-control select2" id="SectionId" name="SectionId"></select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">انتخاب دستورکار</label>
+                        <select class="form-control select2" id="WorkorderId" name="WorkorderId"></select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">متراژ داربست</label>
+                        <input class="form-control" type="number" id="RealArea" name="RealArea" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">تاریخ فعالیت</label>
+                        <input class="form-control" readonly id="ActivityDate" placeholder="جهت انتخاب تاریخ فعالیت کلیک کنید" name="ActivityDate" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">تاریخ شروع</label>
+                        <input class="form-control" readonly  id="StartDate" placeholder="جهت انتخاب تاریخ شروع کلیک کنید" name="StartDate" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group m-b-0">
+                        <label class="col-sm-12 col-form-label">تاریخ پایان</label>
+                        <input class="form-control" readonly id="EndDate" placeholder="جهت انتخاب تاریخ پایان کلیک کنید" name="EndDate" />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group m-b-10">
+                        <label class="col-sm-12 col-form-label">گروه های کاری</label>
+                        <select class="select2" multiple id="WorkgroupIds" name="WorkgroupIds"></select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row col-md-12" dir="ltr">
+                    <div class="form-group m-b-0">
+                        <button type="submit" class="btn btn-success btn-block">ذخیره دستور کار</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+
+        $("#ActivityDate").datepicker({
+            showButtonPanel: true
+        });
+        $("#StartDate").datepicker({
+            showButtonPanel: true
+        });
+        $("#EndDate").datepicker({
+            showButtonPanel: true
+        });
+
+        PrepareItems();
+
+    });
+    
+    function getCompanies(event, type) {
+        var companyId = $(event).val();
+        jQuery.ajax({
+            url: "/AssignedTask/GetCompaniesByParentId",
+            datatype: "json",
+            method: "POST",
+            data: { parentId: companyId },
+            success: function (data) {
+                if (type == "unit") {
+                    $("#UnitId").html('');
+                    $("#SectionId").html('');
+                    $.each(data, function (i, company) {
+
+                        $("#UnitId").append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+                }
+                else {
+
+                    $("#SectionId").html('');
+                    $.each(data, function (i, company) {
+
+                        $("#SectionId").append('<option value="'
+
+                            + company.Value + '">'
+
+                            + company.Text + '</option>');
+
+                    });
+                }
+            }
+        });
+        getWorkorders(event);
+    }
+    function getWorkorders(event) {
+
+        var companyId = $(event).val();
+
+
+        $($(event).parents('div .scop').find('#WorkorderId').next()).select2("destroy");
+
+        $("#WorkorderId").html('');
+
+        jQuery.ajax({
+            url: "/AssignedTask/GetWorkOrderByCompanyID",
+            datatype: "json",
+            method: "POST",
+            data: { companyID: companyId },
+            success: function (data) {
+
+                $("#WorkorderId").html('');
+                $.each(data, function (i, company) {
+
+                    $("#WorkorderId").append('<option value="'
+
+                        + company.Value + '">'
+
+                        + company.Text + '</option>');
+
+                });
+            }
+        });
+        $($(event).parents('div .scop').find('#WorkorderId').next()).select2();
+
+    }
+    function getScaffoldSize(event) {
+
+        var workorderId = $(event).val();
+        var getShowDiv = $(event).parents('div .scop').find('#RealArea');
+        $(getShowDiv).val(0);
+        $(getShowDiv).html('');
+        jQuery.ajax({
+            url: "/AssignedTask/GetScaffoldSizeByWorkorderId",
+            datatype: "json",
+            method: "POST",
+            data: { workorderId: workorderId },
+            success: function (data) {
+
+                $(getShowDiv).val(0);
+                $(getShowDiv).val(data);
+            }
+        });
+    }
+</script>

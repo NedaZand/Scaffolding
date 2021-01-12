@@ -1,0 +1,46 @@
+----------- Exception Details on  2019/04/23 00:54:53 -----------------
+
+
+Log Written Date: 2019/04/23 00:54:53
+Error Line No : line 44
+Error Method Name : InsertMethodInScaffoldingService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Scaffoldings' with unique index 'IX_Title'. The duplicate key value is (DR/FA/PWSP/1397/657).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Scaffolding/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/23 10:00:18 -----------------
+
+
+Log Written Date: 2019/04/23 10:00:18
+Error Line No : ine 148
+Error Method Name : UpdateMethodInBuyService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/BuyMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2019/04/23 10:00:30 -----------------
+
+
+Log Written Date: 2019/04/23 10:00:30
+Error Line No : ine 148
+Error Method Name : UpdateMethodInBuyService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/BuyMaterial/Edit
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

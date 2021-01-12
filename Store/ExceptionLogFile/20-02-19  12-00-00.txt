@@ -1,0 +1,336 @@
+----------- Exception Details on  2/20/2019 6:15:01 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:01 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:02 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:02 AM
+Error Line No : ine 569
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 554
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:03 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:03 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:04 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:04 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:04 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:04 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:04 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:04 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:04 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:04 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:04 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:04 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:04 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:04 AM
+Error Line No : ine 539
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 6:15:24 AM -----------------
+
+
+Log Written Date: 2/20/2019 6:15:24 AM
+Error Line No : ine 602
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Cannot insert duplicate key row in object 'dbo.Companies' with unique index 'IX_Title'. The duplicate key value is (نام شرکت سفارش دهنده).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/20/2019 11:26:45 AM -----------------
+
+
+Log Written Date: 2/20/2019 11:26:45 AM
+Error Line No : ine 555
+Error Method Name : CreateAssignedWorkOrderActionInAssignedTaskController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.AssignedTaskUsers_dbo.Personnels_PersonnelCode". The conflict occurred in database "StoreDB", table "dbo.Personnels", column 'PersonnelCode'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

@@ -1,0 +1,46 @@
+﻿@model Store.Models.Stores.StoreRoom.CompanyStoreRoomModel
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group m-b-40">
+            @Html.LabelFor(model => model.Title, new { @class = "col-sm-6 col-form-label " })
+            @Html.TextBoxFor(model => model.Title, new { required = "نام شرکت الزامی است", @class = "form-control", placeholder = "نام شرکت را وارد نمایید." })
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <div class="form-group  m-b-40">
+
+            @Html.LabelFor(model => model.Phone, new { @class = "col-sm-4 col-form-label " })
+            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", placeholder = "تلفن شرکت را وارد نمایید." })
+            @Html.ValidationMessageFor(model => model.Phone)
+
+        </div>
+    </div>
+</div>
+       <div class="row">
+           <div class="col-md-12">
+               <div class="form-group m-b-40">
+
+                   @Html.LabelFor(model => model.Address, new { @class = "col-sm-4 col-form-label " })
+                   @Html.TextAreaFor(model => model.Address, new { @class = "form-control", placeholder = "آدرس را وارد نمایید." })
+                   @Html.ValidationMessageFor(model => model.Address)
+               </div>
+           </div>
+       </div>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2();
+    });
+
+
+
+</script>

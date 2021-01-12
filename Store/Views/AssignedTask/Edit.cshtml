@@ -1,0 +1,111 @@
+﻿@model Store.Models.Stores.WorkOrderModel
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+        <div class="white-box">
+            @using (Ajax.BeginForm("EditAssignedWorkOrder", "AssignedTask", null, new AjaxOptions { Url = "/AssignedTask/EditAssignedWorkOrder", HttpMethod = "Post", OnSuccess = "editSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+            {
+
+                @Html.HiddenFor(model => model.Id)
+
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="form-group  m-b-40">
+
+                            @Html.LabelFor(model => model.Status, new { @class = "col-sm-12 col-form-label " })
+                            @Html.DropDownListFor(model => model.Status, Model.Statuses, new { @class = "form-control select2" })
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.RealArea, new { @class = "col-sm-12 col-form-label " })
+                            @Html.TextBoxFor(model => model.RealArea, new { @class = "form-control", @placeholder = "متراژ ثبت شده توسط کارشناس", @type = "number", @min = "0" })
+                            @Html.ValidationMessageFor(model => model.RealArea)
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.StartDate, new { @class = "col-sm-12 col-form-label " })
+                            @Html.EditorFor(model => model.StartDate, new { required = "تاریخ شروع الزامی است", @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group m-b-40">
+
+                            @Html.LabelFor(model => model.EndDate, new { @class = "col-sm-12 col-form-label " })
+                            @Html.EditorFor(model => model.EndDate, new { @class = "form-control", @placeholder = "mm/dd/yyyy" })
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                //@Html.Partial("_CreateorUpdate", Model)
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                    <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="bootboxHideAll()"><i class="fa fa-times"></i> بازگشت</a>
+
+                </div>
+
+            }
+        </div>
+
+
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".select2").select2("destroy");
+
+
+        $(".select2").select2({
+            // width: 'resolve'
+        });
+
+
+
+    });
+
+
+
+</script>
+
+
+@*<script>
+        $(document).ready(function () {
+
+
+
+           var userSelected = @Html.Raw(Json.Encode(Model.UserSelected));
+
+            $(".select2").val(userSelected).trigger("change");
+
+        });
+
+
+    </script>*@
+

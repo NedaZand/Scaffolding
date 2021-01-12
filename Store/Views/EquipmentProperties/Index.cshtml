@@ -1,0 +1,201 @@
+﻿@model Store.Models.Stores.StoreRoom.EquipmentHasPropertyModel
+@{
+    ViewBag.Title = "مدیریت اختصاص ویژگی به تجهیزات ";
+}
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title">نمایش لیست ویژگی تجهیزات </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+    
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            @*<li><a href="javascript:void()" onclick="AddFunction('/Company/Create')">ثبت مشتری جدید </a></li>*@
+            <li><a href="/EquipmentProperties/Create">اختصاص ویژگی جدید</a></li>
+            <li class="active"> لیست ویژگی  تجهیزات</li>
+        </ol>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+
+            <div class="table-responsive">
+                <div id="example_wrapper" class="dataTables_wrapper">
+
+                    <table id="EquipmentPropertiesGrid" class="table table-striped table-condensed table-bordered no-margin">
+                        <thead>
+                            <tr>
+
+                                <th>عملیات</th>
+                                <th> عنوان تجهیز</th>
+                                <th>عنوان ویژگی</th>
+                                <th>مقدار</th>
+                                <th>واحد</th>
+                                <th>کاربر ایجاد کننده</th>
+                                <th>تاریخ ایجاد </th>
+                                <th>آخرین کاربر ویرایش کننده</th>
+                                <th>تاریخ آخرین ویرایش </th>
+
+
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        var table = $("#EquipmentPropertiesGrid").DataTable({
+            "language": {
+                "sEmptyTable": "هیچ داده ای در جدول وجود ندارد",
+                "sInfo": "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                "sInfoEmpty": "نمایش 0 تا 0 از 0 رکورد",
+                "sInfoFiltered": "(فیلتر شده از _MAX_ رکورد)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "نمایش _MENU_ رکورد",
+                "sLoadingRecords": "در حال بارگزاری...",
+                "sProcessing": "در حال پردازش...",
+                "sSearch": "جستجو:",
+                "sZeroRecords": "رکوردی با این مشخصات پیدا نشد",
+                "oPaginate": {
+                    "sFirst": "ابتدا",
+                    "sLast": "انتها",
+                    "sNext": "بعدی",
+                    "sPrevious": "قبلی"
+                },
+                "oAria": {
+                    "sSortAscending": ": فعال سازی نمایش به صورت صعودی",
+                    "sSortDescending": ": فعال سازی نمایش به صورت نزولی"
+                }
+            },
+            "processing": true,
+            "serverSide": true,
+            "info": true,
+            "searching": true,
+
+            "stateSave": false,
+            "lenghtMenu": [[10, 20, 50, -1], [10, 20, 50, "All"]],
+            "responsive": true,
+            //dom: '<"html5buttons"B>lTfgitp',
+            //buttons: [
+
+            //    { extend: 'excel', title: 'ExampleFile' },
+            //    {extend: 'pdf', title: 'ExampleFile'},
+
+            //    {extend: 'print',
+            //        customize: function (win){
+            //            $(win.document.body).addClass('white-bg');
+            //            $(win.document.body).css('font-size', '10px');
+
+            //            $(win.document.body).find('table')
+            //                    .addClass('compact')
+            //                    .css('font-size', 'inherit');
+            //        }
+            //    }
+            //],
+            "ajax": {
+                "url": "/EquipmentProperties/List",
+                "type": "get",
+
+            },
+            "columns": [
+
+                { "data": "Id", "orderable": false },
+
+                { "data": "EquipmentTitle", "orderable": false },
+
+                { "data": "PropertyTitle", "orderable": false },
+
+                { "data": "Value", "orderable": false },
+
+                { "data": "UnitTitle", "orderable": false },
+
+                { "data": "ActionUserName", "orderable": false },
+
+                { "data": "ShamsiCreateDate", "orderable": false },
+                
+                { "data": "EditUserName", "orderable": false },
+
+                { "data": "ShamsiEditDate", "orderable": false }
+
+
+
+            ],
+            "columnDefs": [
+
+                {
+                    targets: 0,
+                    render: function (data, type, row, meta) {
+                        return '<div class="button-box"><div class="btn-group m-l-10"><button aria-expanded="false" data-toggle="dropdown" class="btn btn-danger dropdown-toggle waves-effect waves-light" type="button" > عملیات &nbsp; &nbsp; <span class="caret"></span></button><ul role="menu" class="dropdown-menu animated flipInX"><li><a class="btn btn-info waves-effect btn-rounded waves-light"  onclick="EditFunction(\'' + "/EquipmentProperties/Edit" + '\',' + data + ');"> <i class="zmdi zmdi-edit zmdi-hc-fw"></i> ویرایش  </a></li><li class="divider"></li><li><a href="javascript:void();" class="btn btn-youtube waves-effect btn-rounded waves-light" onclick="Remove(' + data + ')"> <i class="zmdi zmdi-delete zmdi-hc-fw"></i> حذف</a></li></ul></div>'
+                    }
+
+                }
+            ],
+
+            "order": []
+        });
+
+
+    });
+
+    function Remove(id) {
+        swal({
+            title: "رکورد حذف شود؟",
+            text: " درصورت حذف شما نمیتوانید این رکورد را بازیابی کنید!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "بله",
+            cancelButtonText: "خیر",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+
+                if (isConfirm) {
+                    $.ajax({
+                        url: '/EquipmentProperties/Delete',
+                        data: { id: id },
+                        type: 'Post',
+
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.ResultType == 0) {
+                                swal("حذف شد!", data.Message, "success");
+                                $('#EquipmentPropertiesGrid').DataTable().ajax.reload();
+                            }
+                            else if (data.ResultType == 1) {
+
+                                swal("خطا", "امکان حذف رکورد وجود ندارد!", "error");
+                            }
+                            else if (data.ResultType == 2) {
+
+                                swal("فاقد مجوز دسترسی", data.Message, "error");
+                            }
+
+
+                        }
+
+
+                    });
+
+                } else {
+                    swal("کنسل", "حذف کنسل شد :)", "error");
+                }
+            });
+
+    };
+
+
+</script>

@@ -1,0 +1,95 @@
+----------- Exception Details on  1/25/2019 10:35:31 AM -----------------
+
+
+Log Written Date: 1/25/2019 10:35:31 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInEquipmentController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/Equipment/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/25/2019 10:36:22 AM -----------------
+
+
+Log Written Date: 1/25/2019 10:36:22 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInEquipmentController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/Equipment/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/25/2019 10:37:51 AM -----------------
+
+
+Log Written Date: 1/25/2019 10:37:51 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : The object cannot be deleted because it was not found in the ObjectStateManager.
+Error Page Url: http://localhost:1839/InputMaterial/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/25/2019 10:56:40 AM -----------------
+
+
+Log Written Date: 1/25/2019 10:56:40 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInEquipmentController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/Equipment/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/25/2019 10:56:53 AM -----------------
+
+
+Log Written Date: 1/25/2019 10:56:53 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInEquipmentController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/Equipment/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  1/25/2019 10:57:35 AM -----------------
+
+
+Log Written Date: 1/25/2019 10:57:35 AM
+Error Line No : t32 id)
+Error Method Name : DeleteMethodInEquipmentController
+Error Message: ArgumentNullException
+Exception Type: System.ArgumentNullException
+Error Location : Value cannot be null.
+Parameter name: entity
+Error Page Url: http://localhost:1839/Equipment/Delete
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

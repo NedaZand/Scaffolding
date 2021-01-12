@@ -1,0 +1,387 @@
+----------- Exception Details on  2/8/2019 11:53:51 AM -----------------
+
+
+Log Written Date: 2/8/2019 11:53:51 AM
+Error Line No : ine 600
+Error Method Name : UploadMethodInWorkOrderController
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/WorkOrder/Upload
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:27:16 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:27:16 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:29:49 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:29:49 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:30:12 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:30:12 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:31:46 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:31:46 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:32:46 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:32:46 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:34:00 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:34:00 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:34:29 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:34:29 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:35:48 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:35:48 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 1:36:19 PM -----------------
+
+
+Log Written Date: 2/8/2019 1:36:19 PM
+Error Line No : line 33
+Error Method Name : Insert Method In PersonnelService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : Violation of PRIMARY KEY constraint 'PK_dbo.Personnels'. Cannot insert duplicate key in object 'dbo.Personnels'. The duplicate key value is (123456).
+The statement has been terminated.
+Error Page Url: http://localhost:1839/Personnel/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 8:05:48 PM -----------------
+
+
+Log Written Date: 2/8/2019 8:05:48 PM
+Error Line No : ine 180
+Error Method Name : EditMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/InputMaterial/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 8:06:14 PM -----------------
+
+
+Log Written Date: 2/8/2019 8:06:14 PM
+Error Line No : ine 180
+Error Method Name : EditMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/InputMaterial/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 8:06:17 PM -----------------
+
+
+Log Written Date: 2/8/2019 8:06:17 PM
+Error Line No : ine 180
+Error Method Name : EditMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/InputMaterial/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 8:06:24 PM -----------------
+
+
+Log Written Date: 2/8/2019 8:06:24 PM
+Error Line No : ine 180
+Error Method Name : EditMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/InputMaterial/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 8:06:26 PM -----------------
+
+
+Log Written Date: 2/8/2019 8:06:26 PM
+Error Line No : ine 180
+Error Method Name : EditMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/InputMaterial/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 8:07:04 PM -----------------
+
+
+Log Written Date: 2/8/2019 8:07:04 PM
+Error Line No : ine 180
+Error Method Name : EditMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/InputMaterial/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 8:08:12 PM -----------------
+
+
+Log Written Date: 2/8/2019 8:08:12 PM
+Error Line No : ine 180
+Error Method Name : EditMethodInInputMaterialController
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : Nullable object must have a value.
+Error Page Url: http://localhost:1839/InputMaterial/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 9:16:59 PM -----------------
+
+
+Log Written Date: 2/8/2019 9:16:59 PM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 10:29:55 PM -----------------
+
+
+Log Written Date: 2/8/2019 10:29:55 PM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 10:31:54 PM -----------------
+
+
+Log Written Date: 2/8/2019 10:31:54 PM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 11:13:35 PM -----------------
+
+
+Log Written Date: 2/8/2019 11:13:35 PM
+Error Line No : line 53
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 11:17:28 PM -----------------
+
+
+Log Written Date: 2/8/2019 11:17:28 PM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 11:18:49 PM -----------------
+
+
+Log Written Date: 2/8/2019 11:18:49 PM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: InvalidOperationException
+Exception Type: System.InvalidOperationException
+Error Location : An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 11:21:42 PM -----------------
+
+
+Log Written Date: 2/8/2019 11:21:42 PM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Answers_dbo.Questions_QuestionId". The conflict occurred in database "StoreDB", table "dbo.Questions", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  2/8/2019 11:23:04 PM -----------------
+
+
+Log Written Date: 2/8/2019 11:23:04 PM
+Error Line No :  score)
+Error Method Name : InsertMethodInAnswerService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.Answers_dbo.Questions_QuestionId". The conflict occurred in database "StoreDB", table "dbo.Questions", column 'Id'.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/safetychecklist/Create
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+

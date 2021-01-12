@@ -1,0 +1,62 @@
+﻿@model Store.Models.Stores.StoreRoom.BuySearchModel
+
+@using (Html.BeginForm("Report", "BuyMaterial", FormMethod.Post, new { @enctype = "multipart/form-data", id = "search", @class = "", @target = "_blank" }))
+{
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.EquipmentId, new { @class = "col-sm-12 col-form-label " })
+            @Html.DropDownListFor(model => model.EquipmentId, Model.EquipmentList, new { @class = "form-control select2" })
+
+        </div>
+
+    </div>
+    <div class="col-md-3">
+        <div class="form-group  m-b-40">
+
+
+            @Html.LabelFor(model => model.CompanyStoreRoomId, new { @class = "col-sm-12 col-form-label " })
+            @Html.DropDownListFor(model => model.CompanyStoreRoomId, Model.CompanyList, new { @class = "form-control select2" })
+
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.BuyDate, new { @class = "col-sm-12 col-form-label " })
+            @Html.EditorFor(model => model.BuyDate, new { @class = "form-control" })
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group m-b-40">
+
+            @Html.LabelFor(model => model.ToBuyDate, new { @class = "col-sm-12 col-form-label " })
+            @Html.EditorFor(model => model.ToBuyDate, new { @class = "form-control" })
+
+        </div>
+    </div>
+</div>
+    
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-info btn-rounded"> <i class="fa fa-print"></i> گزارش</button>
+        <button type="button" class="btn btn-success btn-rounded" onclick="BuyMaterialSearch()"> <i class="fa fa-search"></i> فیلتر</button>
+        <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="javascript:void()" onclick="Cancel()"><i class="fa fa-times"></i> بازگشت</a>
+
+    </div>
+
+}
+
+<script>
+    $(document).ready(function () {
+        $(".select2").select2("destroy");
+        $(".select2").select2();
+
+    });
+
+
+
+</script>

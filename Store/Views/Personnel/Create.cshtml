@@ -1,0 +1,83 @@
+﻿@model Store.Models.User.PersonnelModel
+@{
+    ViewBag.Title = "مدیریت پرسنل";
+
+}
+
+
+
+
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-12">
+        <h4 class="page-title"> ثبت  پرسنل  </h4>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+       
+        <ol class="breadcrumb">
+            <li><a href="/Home/Index">داشبورد</a></li>
+            <li><a href="/Personnel/Index"> لیست پرسنل </a></li>
+            <li class="active">ثبت پرسنل جدید</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+        @using (Ajax.BeginForm("Create", "Personnel", null, new AjaxOptions { Url = "/Personnel/Create", HttpMethod = "Post", OnSuccess = "addSuccess" }, new { @enctype = "multipart/form-data", id = "form", @class = "" }))
+        {
+
+            @Html.AntiForgeryToken()
+
+            @Html.Partial("_CreateorUpdate", Model)
+
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success btn-rounded"> <i class="fa fa-check"></i> ثبت</button>
+                <a class="btn btn-inverse waves-effect waves-light btn-rounded" href="/Personnel/Index"><i class="fa fa-times"></i> بازگشت</a>
+
+            </div>
+
+        }
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@*<script>
+
+    function addSuccess(data) {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        if (data.ResultType == 0) {
+
+            document.getElementById("form").reset();
+    
+            $(".alert-success").hide();
+            $('.alert-success b').html();
+            $('.alert-success b').html(data.Message);
+            $('.alert-danger').hide();
+            $('.alert-warning').hide();
+            $(".alert-success").fadeToggle(350);
+
+
+        }
+        else if (data.ResultType == 1) {
+            
+            $('.alert-danger b').html();
+            $('.alert-danger b').html(data.Message);
+            $('.alert-success').hide();
+            $('.alert-warning').hide();
+            $(".alert-danger").fadeToggle(350);
+
+
+
+        }
+
+    }
+
+</script>*@

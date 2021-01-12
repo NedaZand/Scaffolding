@@ -1,0 +1,91 @@
+----------- Exception Details on  3/30/2019 4:07:24 AM -----------------
+
+
+Log Written Date: 3/30/2019 4:07:24 AM
+Error Line No : ine 831
+Error Method Name : CreateAssignedWorkOrderActionInAssignedTaskController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/EditAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/30/2019 4:35:03 AM -----------------
+
+
+Log Written Date: 3/30/2019 4:35:03 AM
+Error Line No : ine 831
+Error Method Name : CreateAssignedWorkOrderActionInAssignedTaskController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/EditAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/30/2019 6:48:59 AM -----------------
+
+
+Log Written Date: 3/30/2019 6:48:59 AM
+Error Line No : entity)
+Error Method Name : Update Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/EditAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/30/2019 6:51:14 AM -----------------
+
+
+Log Written Date: 3/30/2019 6:51:14 AM
+Error Line No : entity)
+Error Method Name : Update Method In AssignedWorkorderDetailService
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/EditAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/30/2019 6:51:39 AM -----------------
+
+
+Log Written Date: 3/30/2019 6:51:39 AM
+Error Line No : entity)
+Error Method Name : Update Method In AssignedWorkorderDetailService
+Error Message: DbUpdateException
+Exception Type: System.Data.Entity.Infrastructure.DbUpdateException
+Error Location : The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+Error Page Url: http://localhost:1839/AssignedTask/EditAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
+----------- Exception Details on  3/30/2019 12:20:40 PM -----------------
+
+
+Log Written Date: 3/30/2019 12:20:40 PM
+Error Line No : ine 688
+Error Method Name : CreateAssignedWorkOrderActionInAssignedTaskController
+Error Message: NullReferenceException
+Exception Type: System.NullReferenceException
+Error Location : Object reference not set to an instance of an object.
+Error Page Url: http://localhost:1839/AssignedTask/CreateAssignedWorkOrder
+User Host IP: 
+
+-----------------------------------------*End*------------------------------------------
+
+
